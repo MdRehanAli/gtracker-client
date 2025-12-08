@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
+import axios from 'axios';
 
 const Register = () => {
 
@@ -10,22 +11,34 @@ const Register = () => {
 
     const handleRegister = (data) => {
         console.log("After Register Data: ", data);
+        const profileImage = data.photo[0];
+
         registerUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
 
-                const usersProfile = {
-                    displayName: data.name,
-                    photoURL: data.photo,
-                }
+                const formdata = new FormData();
+                formdata.append('image', profileImage);
 
-                updateUser(usersProfile)
-                    .then(() => {
-                        console.log("User Profile Updated.")
+                const image_API_URL = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_image_host_key}`
+
+                axios.post(image_API_URL, formdata)
+                    .then(res => {
+
+                        const usersProfile = {
+                            displayName: data.name,
+                            photoURL: res.data.data.url,
+                        }
+
+                        updateUser(usersProfile)
+                            .then(() => {
+                                console.log("User Profile Updated.")
+                            })
+                            .catch(error => {
+                                console.log(error.message);
+                            })
                     })
-                    .catch(error => {
-                        console.log(error.message);
-                    })
+
             })
             .catch(error => {
                 console.log(error.message);
