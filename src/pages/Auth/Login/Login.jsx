@@ -19,7 +19,7 @@ const Login = () => {
         signInUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
-            
+
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -30,8 +30,8 @@ const Login = () => {
 
                 navigate(location?.state || '/')
             })
-            .catch(error => {
-                toast.error(error.message);
+            .catch(() => {
+                toast.error("Provide Correct Email and Password");
             })
     }
 

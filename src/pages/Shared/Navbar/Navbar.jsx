@@ -25,7 +25,15 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/' className="rounded-4xl font-semibold">Home</NavLink></li>
+        <li><NavLink to='/all-product' className="rounded-4xl font-semibold">All-Product</NavLink></li>
+        <li><NavLink to='/about-us' className="rounded-4xl font-semibold">About Us</NavLink></li>
+        <li><NavLink to='/contact' className="rounded-4xl font-semibold">Contact</NavLink></li>
+        {
+            user && <>
+                <li><NavLink to='/dashboard' className="rounded-4xl font-semibold">Dashboard</NavLink></li>
+            </>
+        }
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -48,10 +56,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                
                 {
-                    user ? <a onClick={handleLogOut} to='/' className="btn">LogOut</a>
+                    user ?
+                        <div className="flex gap-2">
+                            <div className="avatar avatar-online">
+                                <div className="ring-green-500 w-12 rounded-full ring-4">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </div>
+                            <a onClick={handleLogOut} to='/' className="btn">LogOut</a>
+                        </div>
                         :
-                        <Link to='/login' className="btn">Login</Link>
+                        <div className='flex gap-2'>
+                            <Link to='/login' className="btn">Login</Link>
+                            <Link to='/register' className="btn">Register</Link>
+                        </div>
                 }
             </div>
         </div>
