@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import useAuth from '../../../hooks/useAuth';
 
@@ -9,11 +9,15 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { signInUser } = useAuth();
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const handleLogin = (data) => {
         console.log("After LogIn Data: ", data);
         signInUser(data.email, data.password)
             .then(result => {
                 console.log(result.user);
+                navigate(location?.state || '/')
             })
             .catch(error => {
                 console.log(error.message);
@@ -42,7 +46,7 @@ const Login = () => {
                         <div><a className="link link-hover">Forgot password?</a></div>
                         <button className="btn btn-neutral mt-4">Login</button>
                     </fieldset>
-                    <p>New to GTracker? Please <Link to='/register' className='font-bold underline text-red-500'>Register</Link></p>
+                    <p>New to GTracker? Please <Link to='/register' state={location.state} className='font-bold underline text-red-500'>Register</Link></p>
                 </form>
                 <SocialLogin></SocialLogin>
             </div>

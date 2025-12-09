@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import axios from 'axios';
 
@@ -8,6 +8,9 @@ const Register = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { registerUser, updateUser } = useAuth()
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = (data) => {
         console.log("After Register Data: ", data);
@@ -33,6 +36,7 @@ const Register = () => {
                         updateUser(usersProfile)
                             .then(() => {
                                 console.log("User Profile Updated.")
+                                navigate(location?.state || "/")
                             })
                             .catch(error => {
                                 console.log(error.message);
@@ -88,7 +92,7 @@ const Register = () => {
 
                         <button className="btn btn-neutral mt-4">Register</button>
                     </fieldset>
-                    <p>Already have an Account? Please <Link to='/login' className='font-bold underline text-red-500'>Login</Link></p>
+                    <p>Already have an Account? Please <Link to='/login' state={location.state} className='font-bold underline text-red-500'>Login</Link></p>
                 </form>
             </div>
         </div>
