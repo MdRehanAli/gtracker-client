@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
+import Toggle from '../../../components/Toggle/Toggle';
 
 const Navbar = () => {
 
@@ -55,8 +56,8 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                
+            <div className="navbar-end flex gap-2">
+                <Toggle></Toggle>
                 {
                     user ?
                         <div className="flex gap-2">
@@ -70,7 +71,7 @@ const Navbar = () => {
                         :
                         <div className='flex gap-2'>
                             <Link to='/login' className="btn">Login</Link>
-                            <Link to='/register' className="btn">Register</Link>
+                            {/* <Link to='/register' className="btn">Register</Link> */}
                         </div>
                 }
             </div>
