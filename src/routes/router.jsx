@@ -4,11 +4,13 @@ import Home from "../pages/Home/Home/Home";
 import Register from "../pages/Auth/Register/Register";
 import Login from "../pages/Auth/Login/Login";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Loading from "../components/Loading/Loading";
 
 const router = createBrowserRouter([
     {
         path: '/',
         Component: RootLayout,
+        hydrateFallbackElement: <Loading></Loading>,
         children: [
             {
                 index: true,
