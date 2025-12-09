@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+import { toast } from 'react-toastify';
 
 const Register = () => {
 
@@ -35,17 +37,25 @@ const Register = () => {
 
                         updateUser(usersProfile)
                             .then(() => {
-                                console.log("User Profile Updated.")
+                                // console.log("User Profile Updated.");
+
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: "success",
+                                    title: "Login Successfully",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
                                 navigate(location?.state || "/")
                             })
                             .catch(error => {
-                                console.log(error.message);
+                                toast.error(error.message);
                             })
                     })
 
             })
             .catch(error => {
-                console.log(error.message);
+                toast.error(error.message);
             })
     }
 

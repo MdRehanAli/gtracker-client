@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
+import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
 
@@ -8,11 +10,17 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         signOutUser()
-            .then(result => {
-                console.log(result.user);
+            .then(() => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Log Out Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
             .catch(error => {
-                console.log(error.message);
+                toast.error(error.message);
             })
     }
 
