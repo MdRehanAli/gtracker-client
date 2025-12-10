@@ -9,8 +9,16 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: ;
-  --color-secondary: ;
+  --color-primary: #1af4e5;
+  --color-secondary: #543685;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[#4d8149] to-[#467470] border-none text-white
+}
+
+.btn-primary:hover {
+  @apply opacity-80
 }
 
 * {
