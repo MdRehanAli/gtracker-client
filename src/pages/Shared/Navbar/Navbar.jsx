@@ -4,6 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import Toggle from '../../../components/Toggle/Toggle';
+import './Navbar.css'
 
 const Navbar = () => {
 
@@ -26,13 +27,13 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink to='/' className="rounded-4xl font-semibold">Home</NavLink></li>
-        <li><NavLink to='/all-product' className="rounded-4xl font-semibold">All-Product</NavLink></li>
-        <li><NavLink to='/about-us' className="rounded-4xl font-semibold">About Us</NavLink></li>
-        <li><NavLink to='/contact' className="rounded-4xl font-semibold">Contact</NavLink></li>
+        <li><NavLink to='/' className="rounded-2xl font-semibold px-4">Home</NavLink></li>
+        <li><NavLink to='/all-products' className="rounded-2xl font-semibold px-4">All-Products</NavLink></li>
+        <li><NavLink to='/about-us' className="rounded-2xl font-semibold px-4">About Us</NavLink></li>
+        <li><NavLink to='/contact' className="rounded-2xl font-semibold px-4">Contact</NavLink></li>
         {
             user && <>
-                <li><NavLink to='/dashboard' className="rounded-4xl font-semibold">Dashboard</NavLink></li>
+                <li><NavLink to='/dashboard' className="rounded-2xl font-semibold px-4">Dashboard</NavLink></li>
             </>
         }
     </>

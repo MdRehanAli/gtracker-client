@@ -1,9 +1,12 @@
 import React from 'react';
+import Products from '../Home/Products/Products';
+
+const productsPromise = fetch('/products.json').then(res => res.json())
 
 const AllProduct = () => {
     return (
         <div>
-            <h1>All Products Are here</h1>
+            <Products productsPromise={productsPromise}></Products>
         </div>
     );
 };

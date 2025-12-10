@@ -20,7 +20,7 @@ const router = createBrowserRouter([
                 Component: Home
             },
             {
-                path: '/all-product',
+                path: '/all-products',
                 Component: AllProduct,
             },
             {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 Component: Contact,
-            },
+            },  
             {
                 path: '/login',
                 Component: Login

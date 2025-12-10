@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "677fd1a4b23f91a1001a0011",
+        "image": "https://i.ibb.co.com/CpJH8TTj/Premium-Cotton-Shirt.png",
+        "name": "Premium Cotton Shirt",
+        "description": "Soft, breathable cotton shirt perfect for summer wear.",
+        "largeDescription": "This premium cotton shirt is crafted from 100% breathable fabric, providing exceptional comfort during hot and humid weather. It features a tailored fit, reinforced stitching, and a lightweight structure that ensures long-lasting durability. Ideal for office, casual outings, and everyday wear. The soft cotton fibers keep moisture away from your skin, ensuring you stay cool and fresh throughout the day.",
+        "price": 18.50
+    },
+    {
+        "_id": "677fd1a4b23f91a1001a0012",
+        "image": "https://i.ibb.co.com/PsPVZnZC/Classic-Denim-Jeans.png",
+        "name": "Classic Denim Jeans",
+        "description": "Durable blue denim with a modern slim-fit look.",
+        "largeDescription": "Our classic denim jeans are designed with premium-grade denim fabric that offers both durability and style. The slim-fit design provides a sleek silhouette while maintaining comfort and flexibility for daily movement. With reinforced seams, fade-resistant color, and a soft inner lining, these jeans are perfect for long wear. Suitable for casual events, office environments, and outdoor activities.",
+        "price": 32.00
+    },
+    {
+        "_id": "677fd1a4b23f91a1001a0013",
+        "image": "https://i.ibb.co.com/XRwR1cf/Winter-Softshell-Jacket.png",
+        "name": "Winter Softshell Jacket",
+        "description": "Windproof and water-resistant jacket ideal for cold seasons.",
+        "largeDescription": "This softshell winter jacket combines warmth, functionality, and modern style. Built using advanced fiber insulation, it protects you from cold winds while maintaining breathability. The outer layer is coated with water-resistant material to keep you dry during light rain or snow. It features multiple pockets, a secure zipper system, and an adjustable hood for added protection. Perfect for winter travel, hiking, and daily wear.",
+        "price": 45.75
+    },
+    {
+        "_id": "677fd1a4b23f91a1001a0014",
+        "image": "https://i.ibb.co.com/6R3Bxk9f/Mens-Polo-T-Shirt.png",
+        "name": "Men’s Polo T-Shirt",
+        "description": "Comfort-fit polo t-shirt with embroidered collar design.",
+        "largeDescription": "This men’s polo t-shirt offers a classy balance between casual and semi-formal style. Made from breathable cotton-blend fabric, it ensures comfort throughout the day. The embroidered collar and sleeve edges add a premium touch, while the tailored fit makes it suitable for office use, outings, and weekend wear. Its moisture-wicking properties help keep you dry even during warm temperatures.",
+        "price": 22.00
+    },
+    {
+        "_id": "677fd1a4b23f91a1001a0015",
+        "image": "https://i.ibb.co.com/LXBGfh81/Fleece-Hoodie.png",
+        "name": "Fleece Hoodie",
+        "description": "Warm hoodie with premium fleece lining for everyday comfort.",
+        "largeDescription": "This fleece hoodie is designed for warmth, comfort, and everyday usability. The interior is lined with soft premium fleece that provides exceptional insulation without feeling heavy. The hoodie includes a kangaroo pocket, adjustable drawstrings, and elastic cuffs for a snug fit. Ideal for casual wear, workouts, travel, or lounging. Its durable stitching and fade-resistant color ensure long-term use.",
+        "price": 28.00
+    },
+    {
+        "_id": "677fd1a4b23f91a1001a0016",
+        "image": "https://i.ibb.co.com/V0KtxKyd/Sports-Cap.png",
+        "name": "Sports Cap",
+        "description": "Lightweight adjustable cap for outdoor activities.",
+        "largeDescription": "This sports cap is crafted from lightweight, quick-dry material that keeps your head cool during outdoor activities. It features an adjustable strap for a custom fit and a breathable mesh design to enhance airflow. Perfect for running, hiking, cycling, gym sessions, or daily wear. The curved brim provides excellent sun protection, making it ideal for both sports and casual use.",
+        "price": 12.00
+    }
+]
