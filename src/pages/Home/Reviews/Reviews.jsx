@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import Review from './Review';
+import { FaQuoteLeft } from 'react-icons/fa6';
 
 const Reviews = ({ reviewsPromise }) => {
 
@@ -8,6 +9,7 @@ const Reviews = ({ reviewsPromise }) => {
     return (
         <div className='my-20'>
             <div className='text-center'>
+                <div className='flex justify-center text-7xl mb-5 '><FaQuoteLeft className='p-4 bg-gray-300 rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>Customer Feedback</h1>
                 <p className='my-5'>Trusted by businesses and individuals, see how our service quality speaks through our customers.</p>
             </div>
