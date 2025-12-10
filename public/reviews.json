@@ -2,7 +2,7 @@
     {
         "_id": "5f47ac10b4f1c03e8c123451",
         "name": "Amir Jamal",
-        "photo": "",
+        "photo": "https://i.ibb.co.com/dJbM6hq7/men1.png",
         "reviews": "Smooth delivery and polite staff.",
         "ratings": 4.5,
         "date": "19 June, 2025",
@@ -10,83 +10,173 @@
     },
     {
         "_id": "5f47ac10b4f1c03e8c123452",
-        "name": "Sara Islam",
-        "photo": "",
-        "reviews": "Great product quality, totally satisfied.",
-        "ratings": 5,
-        "date": "12 May, 2025",
-        "location": "Chattogram, Bangladesh"
-    },
-    {
-        "_id": "5f47ac10b4f1c03e8c123453",
-        "name": "Rahim Khan",
-        "photo": "",
-        "reviews": "Fast delivery but packaging could be better.",
-        "ratings": 4,
-        "date": "03 April, 2025",
+        "name": "Rahim Uddin",
+        "photo": "https://i.ibb.co.com/6hcHhKT/men2.png",
+        "reviews": "Quality is excellent at this price range.",
+        "ratings": 4.7,
+        "date": "11 June, 2025",
         "location": "Sylhet, Bangladesh"
     },
     {
+        "_id": "5f47ac10b4f1c03e8c123453",
+        "name": "Tanvir Ahmed",
+        "photo": "https://i.ibb.co.com/mCymhRHm/men3.png",
+        "reviews": "Good service but delivery took a little longer.",
+        "ratings": 3.9,
+        "date": "02 June, 2025",
+        "location": "Rangpur, Bangladesh"
+    },
+    {
         "_id": "5f47ac10b4f1c03e8c123454",
-        "name": "Mitu Akter",
-        "photo": "",
-        "reviews": "Amazing experience! Loved the customer support.",
+        "name": "Farhan Mahmud",
+        "photo": "https://i.ibb.co.com/GQ3KgGLL/men4.png",
+        "reviews": "Very comfortable material, highly recommended.",
         "ratings": 4.8,
-        "date": "27 March, 2025",
+        "date": "28 May, 2025",
         "location": "Khulna, Bangladesh"
     },
     {
         "_id": "5f47ac10b4f1c03e8c123455",
         "name": "Jahid Hasan",
-        "photo": "",
-        "reviews": "Affordable price and great value.",
+        "photo": "https://i.ibb.co.com/WNM680XL/men5.png",
+        "reviews": "Affordable price and fast delivery.",
         "ratings": 4.6,
-        "date": "15 February, 2025",
+        "date": "17 May, 2025",
         "location": "Rajshahi, Bangladesh"
     },
     {
         "_id": "5f47ac10b4f1c03e8c123456",
-        "name": "Nusrat Noor",
-        "photo": "",
-        "reviews": "Product exactly as shown in images. Highly recommended!",
-        "ratings": 5,
-        "date": "09 February, 2025",
-        "location": "Barishal, Bangladesh"
-    },
-    {
-        "_id": "5f47ac10b4f1c03e8c123457",
-        "name": "Tanvir Ahmed",
-        "photo": "",
-        "reviews": "Good service but delivery took a bit longer.",
-        "ratings": 3.8,
-        "date": "22 January, 2025",
-        "location": "Rangpur, Bangladesh"
-    },
-    {
-        "_id": "5f47ac10b4f1c03e8c123458",
-        "name": "Sadia Chowdhury",
-        "photo": "",
-        "reviews": "Loved the product quality and quick delivery.",
+        "name": "Kamal Hossain",
+        "photo": "https://i.ibb.co.com/Kc0xtSnW/men6.png",
+        "reviews": "The product is exactly the same as shown.",
         "ratings": 4.9,
-        "date": "05 January, 2025",
-        "location": "Cumilla, Bangladesh"
-    },
-    {
-        "_id": "5f47ac10b4f1c03e8c123459",
-        "name": "Fahim Rahman",
-        "photo": "",
-        "reviews": "Excellent experience overall, will buy again!",
-        "ratings": 4.7,
-        "date": "29 December, 2024",
+        "date": "06 May, 2025",
         "location": "Gazipur, Bangladesh"
     },
     {
+        "_id": "5f47ac10b4f1c03e8c123457",
+        "name": "Fahim Rahman",
+        "photo": "https://i.ibb.co.com/XZDpsmnX/men7.png",
+        "reviews": "Everything went smoothly. Will order again.",
+        "ratings": 4.7,
+        "date": "27 April, 2025",
+        "location": "Narsingdi, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123458",
+        "name": "Shahriar Kabir",
+        "photo": "https://i.ibb.co.com/H14wp77/men8.png",
+        "reviews": "Good packaging and well-behaved rider.",
+        "ratings": 4.4,
+        "date": "14 April, 2025",
+        "location": "Chattogram, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123459",
+        "name": "Masud Rana",
+        "photo": "https://i.ibb.co.com/Y7HHh3rr/men9.png",
+        "reviews": "Loved the material quality.",
+        "ratings": 4.8,
+        "date": "02 April, 2025",
+        "location": "Barishal, Bangladesh"
+    },
+    {
         "_id": "5f47ac10b4f1c03e8c123460",
+        "name": "Abdul Karim",
+        "photo": "https://i.ibb.co.com/6RkHykch/men10.png",
+        "reviews": "Perfect fit, excellent service.",
+        "ratings": 5,
+        "date": "25 March, 2025",
+        "location": "Cumilla, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123461",
+        "name": "Nusrat Jahan",
+        "photo": "https://i.ibb.co.com/zhNZZ77P/women1.png",
+        "reviews": "Amazing quality and fast delivery.",
+        "ratings": 5,
+        "date": "21 June, 2025",
+        "location": "Dhaka, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123462",
         "name": "Mariya Tasnim",
-        "photo": "",
-        "reviews": "Everything was smooth, loved the service.",
+        "photo": "https://i.ibb.co.com/YTL6TXY1/women2.png",
+        "reviews": "Soft fabric, very comfortable to wear.",
+        "ratings": 4.7,
+        "date": "14 June, 2025",
+        "location": "Chattogram, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123463",
+        "name": "Sadia Chowdhury",
+        "photo": "https://i.ibb.co.com/KzGRgCmF/women3.png",
+        "reviews": "Nice design and perfect size.",
         "ratings": 4.6,
-        "date": "11 December, 2024",
+        "date": "08 June, 2025",
+        "location": "Sylhet, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123464",
+        "name": "Afsana Mim",
+        "photo": "https://i.ibb.co.com/cXx8Lvz9/women4.png",
+        "reviews": "Very premium and comfortable.",
+        "ratings": 4.9,
+        "date": "30 May, 2025",
+        "location": "Rajshahi, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123465",
+        "name": "Shanjida Noor",
+        "photo": "https://i.ibb.co.com/cSm8Qgpm/women5.png",
+        "reviews": "Color is exactly the same as the picture.",
+        "ratings": 4.8,
+        "date": "21 May, 2025",
+        "location": "Khulna, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123466",
+        "name": "Farhana Islam",
+        "photo": "https://i.ibb.co.com/qF5bj7WP/women6.png",
+        "reviews": "Nicely packed and delivered on time.",
+        "ratings": 4.5,
+        "date": "10 May, 2025",
+        "location": "Barishal, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123467",
+        "name": "Samia Rahman",
+        "photo": "https://i.ibb.co.com/CjGsvcF/women7.png",
+        "reviews": "Great experience overall.",
+        "ratings": 4.7,
+        "date": "03 May, 2025",
+        "location": "Cumilla, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123468",
+        "name": "Jannatul Mawa",
+        "photo": "https://i.ibb.co.com/wZnbw8bX/women8.png",
+        "reviews": "Loved the fabric quality.",
+        "ratings": 4.8,
+        "date": "22 April, 2025",
+        "location": "Rangpur, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123469",
+        "name": "Ayesha Siddiqua",
+        "photo": "https://i.ibb.co.com/SXXdDFWR/women9.png",
+        "reviews": "Item came exactly as described.",
+        "ratings": 4.9,
+        "date": "11 April, 2025",
+        "location": "Gazipur, Bangladesh"
+    },
+    {
+        "_id": "5f47ac10b4f1c03e8c123470",
+        "name": "Mehjabin Akter",
+        "photo": "https://i.ibb.co.com/bwL7R3K/women10.png",
+        "reviews": "Very satisfied with the overall experience.",
+        "ratings": 5,
+        "date": "28 March, 2025",
         "location": "Narsingdi, Bangladesh"
     }
 ]

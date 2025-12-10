@@ -5,12 +5,12 @@ const Review = ({ review }) => {
     const { name, photo, reviews, location, ratings, date } = review;
 
     return (
-        <div className="card border shadow-xl rounded-2xl">
-            <figure className="px-10 pt-10">
+        <div className="card border shadow-xl rounded-xl">
+            <figure className="px-10 pt-10 pb-2 avatar">
                 <img
                     src={photo}
-                    alt={name}
-                    className="w-20" />
+                    alt={name} 
+                    className="ring-green-500 ring-offset-green-300 ring-2 ring-offset-2 rounded-full w-1/2" />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl">{name}</h2>
