@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "1",
+        "name": "Fabric Dyeing",
+        "description": "Fabric dyeing is the process of applying color to textile materials using dyes and chemical treatments. First, the fabric is cleaned to remove impurities so the dye can bond smoothly. Then it is immersed in dye baths where temperature, pH, and timing are carefully controlled to achieve even coloration. After dyeing, the fabric is rinsed, washed, and fixed to ensure colorfastness, making the colors resistant to fading and washing.",
+        "image": "https://i.ibb.co.com/V03f4bqJ/Fabric-Dyeing.png"
+    },
+    {
+        "_id": "2",
+        "name": "Satin Weaving",
+        "description": "Satin weaving is a special weaving technique used to create smooth, glossy, and luxurious fabric surfaces. Unlike plain or twill weaves, satin uses long floating yarns on the fabric surface, which reflect light and produce a shiny appearance. The process involves passing warp yarns over multiple weft yarns before interlacing. This unique structure results in a soft, fluid, and elegant fabric often used in garments, upholstery, and fashion products.",
+        "image": "https://i.ibb.co.com/VYNZnjLk/Satin-Weaving.png"
+    },
+    {
+        "_id": "3",
+        "name": "Digital Fabric Printing",
+        "description": "Digital fabric printing is a modern textile process where designs are printed directly onto fabric using advanced digital printers. The fabric is pre-treated to absorb ink better, after which high-resolution print heads spray the design with precise color control. This method allows detailed patterns, vibrant colors, and small-batch customization without the need for screens or plates. After printing, the fabric is heat-set or steam-fixed to make the colors permanent and long-lasting.",
+        "image": "https://i.ibb.co.com/W46fJjXr/Digital-Fabric-Printing.png"
+    }
+]
