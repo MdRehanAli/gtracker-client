@@ -13,10 +13,10 @@ const Blog = ({ blog }) => {
                     alt="Image"
                     className="rounded-xl" />
             </figure>
-            <div className="card-body items-center text-center">
+            <div className="card-body">
                 <h2 className="card-title text-2xl">{title}</h2>
+                <p className='text-left'>Date: {date}</p>
                 <p className='text-justify'><span className='font-bold ml-8'>Description:</span> {description}</p>
-                <p>Date: {date}</p>
                 <div className=" mt-2 flex justify-between gap-10">
                     <button className="btn btn-ghost">Read More <FaArrowRightLong /></button>
                 </div>
