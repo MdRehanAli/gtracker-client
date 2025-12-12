@@ -12,7 +12,7 @@ const Products = () => {
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5 '><CiShoppingTag className='p-4 bg-gray-300 rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>Our Products</h1>
-                <p className='my-5'>All our latest product are here. You can easily buy products from here</p>
+                <p className='mt-3 mb-12'>All our latest product are here. You can easily buy products from here</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
