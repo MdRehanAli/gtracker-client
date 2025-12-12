@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Product = ({ product }) => {
+    console.log(product);
 
-    const { image, name, description, price } = product
+    const { _id, image, name, category, description, largeDescription, availableQuantity, price } = product
 
     return (
         <div className="card border shadow-xl rounded-2xl">
@@ -14,11 +16,13 @@ const Product = ({ product }) => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-2xl">{name}</h2>
-                <p className=''>{description}</p>
+                <p className=''><span className='font-bold'>Category: </span> {category}</p>
+                <p className=''><span className='font-bold'>Available Quantity: </span> {availableQuantity}</p>
+                {/* <p className=''>{description}</p> */}
                 {/* <p className='text-justify '>{largeDescription}</p> */}
                 <p className='font-bold text-4xl'>${price}</p>
                 <div className="card-actions mt-2">
-                    <button className="btn btn-primary">View Details</button>
+                    <Link to={`/products-details/${_id}`} className="btn btn-primary">View Details</Link>
                 </div>
             </div>
         </div>

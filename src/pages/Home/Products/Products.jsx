@@ -1,11 +1,11 @@
-import React, { use } from 'react';
+import React from 'react';
 import Product from './Product';
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { CiShoppingTag } from "react-icons/ci";
 
-const Products = ({ productsPromise }) => {
+const Products = () => {
 
-    const products = use(productsPromise);
+    const products = useLoaderData();
 
     return (
         <div className=''>
@@ -18,9 +18,6 @@ const Products = ({ productsPromise }) => {
                 {
                     products.map(product => <Product product={product} key={product._id}></Product>)
                 }
-            </div>
-            <div className='flex items-center justify-center mt-10'>
-                <Link to='all-products' className='btn btn-primary px-20'>View All Products</Link>
             </div>
         </div>
     );

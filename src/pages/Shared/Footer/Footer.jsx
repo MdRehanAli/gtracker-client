@@ -5,16 +5,14 @@ import footer from '../../../assets/Footer.png';
 
 const Footer = () => {
     return (
-        <div className='bg-cover bg-no-repeat' style={{ backgroundImage: `url(${footer})` }}>
-            <footer className="footer footer-horizontal footer-center p-10 bg-[#000000e2] text-white">
+        <div className='bg-cover bg-no-repeat mt-20' style={{ backgroundImage: `url(${footer})` }}>
+            <footer className="footer footer-horizontal footer-center p-10 bg-[#000000c7] text-white">
                 <aside>
                     <img className='mx-auto w-1/4 mb-5' src={logo} alt="Logo" />
-                    <p className="font-bold">
+                    <p className="text-2xl font-bold">
                         GTracker Industries Ltd.
-                        <br />
-                        Providing reliable services since 2025
                     </p>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                    <p className='font-bold'>Providing reliable services since 2025</p>
                 </aside>
                 <nav>
                     <div className="grid grid-flow-col gap-5 text-4xl">
@@ -29,6 +27,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </nav>
+                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
             </footer>
         </div>
     );

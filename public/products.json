@@ -1,50 +1,285 @@
 [
     {
-        "_id": "677fd1a4b23f91a1001a0011",
-        "image": "https://i.ibb.co.com/CpJH8TTj/Premium-Cotton-Shirt.png",
+        "image": "https://i.ibb.co.com/j92kg112/Premium-Cotton-Shirt.png",
         "name": "Premium Cotton Shirt",
         "description": "Soft, breathable cotton shirt perfect for summer wear.",
         "largeDescription": "This premium cotton shirt is crafted from 100% breathable fabric, providing exceptional comfort during hot and humid weather. It features a tailored fit, reinforced stitching, and a lightweight structure that ensures long-lasting durability. Ideal for office, casual outings, and everyday wear. The soft cotton fibers keep moisture away from your skin, ensuring you stay cool and fresh throughout the day.",
-        "price": 18.50
+        "price": 18.50,
+        "category": "Clothing",
+        "availableQuantity": 120,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment"
+        ]
     },
     {
-        "_id": "677fd1a4b23f91a1001a0012",
-        "image": "https://i.ibb.co.com/PsPVZnZC/Classic-Denim-Jeans.png",
+        "image": "https://i.ibb.co.com/HTrJg4rq/Classic-Denim-Jeans.png",
         "name": "Classic Denim Jeans",
         "description": "Durable blue denim with a modern slim-fit look.",
         "largeDescription": "Our classic denim jeans are designed with premium-grade denim fabric that offers both durability and style. The slim-fit design provides a sleek silhouette while maintaining comfort and flexibility for daily movement. With reinforced seams, fade-resistant color, and a soft inner lining, these jeans are perfect for long wear. Suitable for casual events, office environments, and outdoor activities.",
-        "price": 32.00
+        "price": 32.00,
+        "category": "Clothing",
+        "availableQuantity": 80,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment",
+            "Bkash"
+        ]
     },
     {
-        "_id": "677fd1a4b23f91a1001a0013",
-        "image": "https://i.ibb.co.com/XRwR1cf/Winter-Softshell-Jacket.png",
+        "image": "https://i.ibb.co.com/HpnKgkmR/Winter-Softshell-Jacket.png",
         "name": "Winter Softshell Jacket",
         "description": "Windproof and water-resistant jacket ideal for cold seasons.",
         "largeDescription": "This softshell winter jacket combines warmth, functionality, and modern style. Built using advanced fiber insulation, it protects you from cold winds while maintaining breathability. The outer layer is coated with water-resistant material to keep you dry during light rain or snow. It features multiple pockets, a secure zipper system, and an adjustable hood for added protection. Perfect for winter travel, hiking, and daily wear.",
-        "price": 45.75
+        "price": 45.75,
+        "category": "Winter Wear",
+        "availableQuantity": 60,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment",
+            "Bkash"
+        ]
     },
     {
-        "_id": "677fd1a4b23f91a1001a0014",
-        "image": "https://i.ibb.co.com/6R3Bxk9f/Mens-Polo-T-Shirt.png",
+        "image": "https://i.ibb.co.com/bg8rtFmX/Mens-Polo-T-Shirt.png",
         "name": "Men’s Polo T-Shirt",
         "description": "Comfort-fit polo t-shirt with embroidered collar design.",
         "largeDescription": "This men’s polo t-shirt offers a classy balance between casual and semi-formal style. Made from breathable cotton-blend fabric, it ensures comfort throughout the day. The embroidered collar and sleeve edges add a premium touch, while the tailored fit makes it suitable for office use, outings, and weekend wear. Its moisture-wicking properties help keep you dry even during warm temperatures.",
-        "price": 22.00
+        "price": 22.00,
+        "category": "Clothing",
+        "availableQuantity": 150,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment"
+        ]
     },
     {
-        "_id": "677fd1a4b23f91a1001a0015",
-        "image": "https://i.ibb.co.com/LXBGfh81/Fleece-Hoodie.png",
+        "image": "https://i.ibb.co.com/v6WfMkZL/Fleece-Hoodie.png",
         "name": "Fleece Hoodie",
         "description": "Warm hoodie with premium fleece lining for everyday comfort.",
         "largeDescription": "This fleece hoodie is designed for warmth, comfort, and everyday usability. The interior is lined with soft premium fleece that provides exceptional insulation without feeling heavy. The hoodie includes a kangaroo pocket, adjustable drawstrings, and elastic cuffs for a snug fit. Ideal for casual wear, workouts, travel, or lounging. Its durable stitching and fade-resistant color ensure long-term use.",
-        "price": 28.00
+        "price": 28.00,
+        "category": "Winter Wear",
+        "availableQuantity": 95,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment",
+            "Nagad"
+        ]
     },
     {
-        "_id": "677fd1a4b23f91a1001a0016",
-        "image": "https://i.ibb.co.com/V0KtxKyd/Sports-Cap.png",
+        "image": "https://i.ibb.co.com/zhF2Kj8q/Sports-Cap.png",
         "name": "Sports Cap",
         "description": "Lightweight adjustable cap for outdoor activities.",
         "largeDescription": "This sports cap is crafted from lightweight, quick-dry material that keeps your head cool during outdoor activities. It features an adjustable strap for a custom fit and a breathable mesh design to enhance airflow. Perfect for running, hiking, cycling, gym sessions, or daily wear. The curved brim provides excellent sun protection, making it ideal for both sports and casual use.",
-        "price": 12.00
+        "price": 12.00,
+        "category": "Accessories",
+        "availableQuantity": 200,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Bkash"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/d0KnTKyM/Skinny-Fit-Jeans.png",
+        "name": "Skinny Fit Jeans",
+        "description": "Modern skinny-fit denim for everyday wear.",
+        "largeDescription": "Crafted with stretchable denim fabric, these skinny-fit jeans offer maximum flexibility and comfort. The slim silhouette pairs well with both t-shirts and formal shirts.",
+        "price": 34.00,
+        "category": "Clothing",
+        "availableQuantity": 100,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/2wsKrgs/Men-s-Casual-Shirt.png",
+        "name": "Men’s Casual Shirt",
+        "description": "Soft, lightweight casual shirt for daily use.",
+        "largeDescription": "Made from breathable cotton-blend fabric, this casual shirt keeps you comfortable throughout the day. Features a relaxed fit and stylish pattern.",
+        "price": 20.00,
+        "category": "Clothing",
+        "availableQuantity": 140,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment",
+            "Bkash"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/zWR0KHwS/Men-s-Track-Pant.png",
+        "name": "Men’s Track Pant",
+        "description": "Comfortable athletic pant made with soft fabric.",
+        "largeDescription": "These track pants are ideal for sports, jogging, and casual wear. Features breathable fabric, adjustable waist strings, and side pockets.",
+        "price": 18.00,
+        "category": "Sportswear",
+        "availableQuantity": 160,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Bkash",
+            "Cash on Delivery"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/d4C2R8rY/Women-s-Stylish-Kurti.png",
+        "name": "Women’s Stylish Kurti",
+        "description": "Elegant kurti with soft cotton feel.",
+        "largeDescription": "Designed with premium cotton and modern embroidery, this kurti offers exceptional comfort and a stylish appearance.",
+        "price": 22.50,
+        "category": "Clothing",
+        "availableQuantity": 85,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment",
+            "Cash on Delivery"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/dwzd1G8P/Men-s-Stylish-Hoodie.png",
+        "name": "Men’s Stylish Hoodie",
+        "description": "Warm hoodie with front zipper.",
+        "largeDescription": "Made with premium fleece fabric, this hoodie offers excellent warmth and durability. Features ribbed cuffs, drawstrings, and a stylish fit.",
+        "price": 30.00,
+        "category": "Winter Wear",
+        "availableQuantity": 110,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment",
+            "Nagad"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/LVXHqyk/Women-s-Cotton-T-Shirt.png",
+        "name": "Women’s Cotton T-Shirt",
+        "description": "Soft and breathable women's cotton t-shirt.",
+        "largeDescription": "This premium cotton t-shirt offers soft comfort and durability. Perfect for daily wear, walking, or pairing with jeans.",
+        "price": 12.00,
+        "category": "Clothing",
+        "availableQuantity": 200,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment",
+            "Cash on Delivery"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/bRWscHGC/Men-s-Joggers.png",
+        "name": "Men’s Joggers",
+        "description": "Slim-fit joggers for sports and casual wear.",
+        "largeDescription": "These joggers offer stretch comfort with an elastic waistband and breathable knit fabric. Ideal for jogging and daily activities.",
+        "price": 19.00,
+        "category": "Sportswear",
+        "availableQuantity": 150,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Bkash"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/5g1QP84r/Men-s-Casual-Jacket.png",
+        "name": "Men’s Casual Jacket",
+        "description": "Lightweight jacket perfect for autumn and winter.",
+        "largeDescription": "Designed with a water-resistant outer layer and soft interior lining, this jacket keeps you comfortable and stylish.",
+        "price": 40.00,
+        "category": "Winter Wear",
+        "availableQuantity": 70,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/fzZ2cXPX/Women-s-Stretch-Pants.png",
+        "name": "Women’s Stretch Pants",
+        "description": "Comfort-fit stretchable pants.",
+        "largeDescription": "Made with premium elastic cotton, these pants provide stretch and comfort for all-day wear. Ideal for office and casual outings.",
+        "price": 24.00,
+        "category": "Clothing",
+        "availableQuantity": 100,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment",
+            "Cash on Delivery",
+            "Bkash"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/f6Yjz5f/Men-s-Cargo-Pants.png",
+        "name": "Men’s Cargo Pants",
+        "description": "Durable cargo pants with multiple pockets.",
+        "largeDescription": "These cargo pants feature a rugged design with multiple utility pockets, perfect for daily use or outdoor activities.",
+        "price": 28.00,
+        "category": "Clothing",
+        "availableQuantity": 140,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Bkash"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/kVbzqjdp/Women-s-Oversized-Hoodie.png",
+        "name": "Women’s Oversized Hoodie",
+        "description": "Warm oversized hoodie for winter.",
+        "largeDescription": "Made from ultra-soft fleece fabric, this oversized hoodie offers a stylish and cozy feel during winter seasons.",
+        "price": 32.00,
+        "category": "Winter Wear",
+        "availableQuantity": 130,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/8nGh6621/Men-s-Sweatshirt.png",
+        "name": "Men’s Sweatshirt",
+        "description": "Comfortable sweatshirt for winter.",
+        "largeDescription": "Made from premium cotton fleece, this sweatshirt gives warmth while maintaining great breathability.",
+        "price": 26.00,
+        "category": "Winter Wear",
+        "availableQuantity": 150,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment",
+            "Cash on Delivery"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/N6BYHPbQ/Women-s-Slim-Jeans.png",
+        "name": "Women’s Slim Jeans",
+        "description": "Stylish slim-fit jeans for women.",
+        "largeDescription": "These jeans come with stretch-fit comfort and modern styling, perfect for casual outings and office wear.",
+        "price": 30.00,
+        "category": "Clothing",
+        "availableQuantity": 160,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Cash on Delivery",
+            "Online Payment"
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/r2KpYRSk/Men-s-Graphic-T-Shirt.png",
+        "name": "Men’s Graphic T-Shirt",
+        "description": "Soft and stylish graphic printed t-shirt.",
+        "largeDescription": "Made using high-quality cotton fabric, this graphic tee offers comfort and modern fashion styling. Suitable for daily and casual wear.",
+        "price": 15.00,
+        "category": "Clothing",
+        "availableQuantity": 220,
+        "minimumOrder": 1,
+        "paymentOptions": [
+            "Online Payment",
+            "Cash on Delivery"
+        ]
     }
 ]

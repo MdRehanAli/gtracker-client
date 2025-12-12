@@ -8,6 +8,7 @@ import Loading from "../components/Loading/Loading";
 import AllProduct from "../pages/AllProduct/AllProduct";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Contact from "../pages/Contact/Contact";
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,11 +18,18 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: () => fetch('http://localhost:5000/products'),
                 Component: Home
             },
             {
                 path: '/all-products',
+                loader: () => fetch('http://localhost:5000/all-products'),
                 Component: AllProduct,
+            },
+            {
+                path: '/products-details/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                Component: ProductDetails,
             },
             {
                 path: '/about-us',
@@ -30,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 Component: Contact,
-            },  
+            },
             {
                 path: '/login',
                 Component: Login

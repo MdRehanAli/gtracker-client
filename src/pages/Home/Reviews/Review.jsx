@@ -5,8 +5,8 @@ const Review = ({ review }) => {
     const { name, photo, reviews, location, ratings, date } = review;
 
     return (
-        <div className="card border shadow-xl rounded-xl">
-            <figure className="px-10 pt-10 pb-2 avatar">
+        <div className="card border shadow-xl rounded-xl max-w-[400px] bg-gray-300">
+            <figure className="px-10 pt-10 pb-2 avatar w-1/2">
                 <img
                     src={photo}
                     alt={name} 
