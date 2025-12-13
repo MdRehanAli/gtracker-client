@@ -42,7 +42,8 @@ const router = createBrowserRouter([
                 Component: Contact,
             },
             {
-                path: '/order',
+                path: '/order/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
                 element: <PrivateRoute><Order></Order></PrivateRoute>
             },
             {

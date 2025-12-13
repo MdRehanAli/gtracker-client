@@ -1,7 +1,6 @@
 import React from 'react';
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 import { BiLogoGmail } from 'react-icons/bi';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall } from 'react-icons/io5';
 import { MdOutlineMarkUnreadChatAlt } from 'react-icons/md';
@@ -13,14 +12,7 @@ const Contact = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const handleMessage = (data) => {
-        // data.preventDefault();
-        // const form = event.target;
-        // const firstName = form.firstName.value;
-        // const lastName = form.lastName.value;
-        // const email = form.email.value;
-        // const message = form.message.value;
-
-        // console.log(firstName, lastName, email, message);
+        console.log(data);
 
         Swal.fire({
             position: "center",
@@ -29,8 +21,6 @@ const Contact = () => {
             showConfirmButton: false,
             timer: 1500
         });
-
-        // form.reset();
     }
 
     return (
@@ -44,66 +34,48 @@ const Contact = () => {
             </div>
             <div className='flex flex-col md:flex-row justify-between items-center gap-16'>
                 <div className=''>
-
+                    <h1 className='text-3xl md:text-5xl font-bold mb-10'>Contact US</h1>
                     <div className="flex justify-center items-center gap-5">
-                        <div>
-
-                            <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-                                <div className='flex items-center gap-2'>
-                                    <div className='bg-gray-300 w-fit p-3 rounded-full'>
-                                        <BiLogoGmail className='text-4xl' />
-                                    </div>
-                                    <div className='flex gap-2 flex-col pl-4'>
-                                        <h2 className='font-bold text-xl'>Email</h2>
-                                        <p className='text-gray-400'>To reach out us send mail</p>
-                                        <p className='text-gray-500 font-bold'>gtracker24@gmail.com</p>
-                                    </div>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+                            <div className='flex items-center gap-2'>
+                                <div className='bg-gray-300 w-fit p-3 rounded-full'>
+                                    <BiLogoGmail className='text-4xl' />
                                 </div>
-                                <div className='flex items-center gap-2'>
-                                    <div className='bg-gray-300 w-fit p-3 rounded-full'>
-                                        <MdOutlineMarkUnreadChatAlt className='text-4xl' />
-                                    </div>
-                                    <div className='flex gap-2 flex-col pl-4'>
-                                        <h2 className='font-bold text-xl'>Live chat</h2>
-                                        <p className='text-gray-400'>We are very friendly here to help.</p>
-                                        <p className='text-gray-500 font-bold'>Start new chat</p>
-                                    </div>
-                                </div>
-                                <div className='flex items-center gap-2'>
-                                    <div className='bg-gray-300 w-fit p-3 rounded-full'>
-                                        <FaLocationDot className='text-4xl' />
-                                    </div>
-                                    <div className='flex gap-2 flex-col pl-4'>
-                                        <h2 className='font-bold text-xl'>Address</h2>
-                                        <p className='text-gray-400'>We are currently staying in</p>
-                                        <p className='text-gray-500 font-bold'>Dhaka, Bangladesh</p>
-                                    </div>
-                                </div>
-                                <div className='flex items-center gap-2'>
-                                    <div className='bg-gray-300 w-fit p-3 rounded-full'>
-                                        <IoCall className='text-4xl' />
-                                    </div>
-                                    <div className='flex gap-2 flex-col pl-4'>
-                                        <h2 className='font-bold text-xl'>Phone</h2>
-                                        <p className='text-gray-400'>Call us for order/booking.</p>
-                                        <p className='text-gray-500 font-bold'>01854-465273</p>
-                                    </div>
+                                <div className='flex gap-2 flex-col pl-4'>
+                                    <h2 className='font-bold text-xl'>Email</h2>
+                                    <p className='text-gray-400'>To reach out us send mail</p>
+                                    <p className='text-gray-500 font-bold'>gtracker24@gmail.com</p>
                                 </div>
                             </div>
-
-                            <div className="flex justify-center gap-4 mt-10">
-                                <a className='hover:scale-110 transition-all duration-200 text-5xl' href="https://www.linkedin.com/in/rehanali21/" target="_blank"><FaLinkedin /></a>
-
-                                <a className='hover:scale-110 transition-all duration-200 text-5xl' href="https://github.com/MdRehanAli" target="_blank"><FaGithub /></a>
-
-                                <a
-                                    href="https://mail.google.com/mail/?view=cm&to=rehanali21d@gmail.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:scale-110 transition-all duration-200 text-5xl"
-                                >
-                                    <BiLogoGmail />
-                                </a>
+                            <div className='flex items-center gap-2'>
+                                <div className='bg-gray-300 w-fit p-3 rounded-full'>
+                                    <MdOutlineMarkUnreadChatAlt className='text-4xl' />
+                                </div>
+                                <div className='flex gap-2 flex-col pl-4'>
+                                    <h2 className='font-bold text-xl'>Live chat</h2>
+                                    <p className='text-gray-400'>We are very friendly here to help.</p>
+                                    <p className='text-gray-500 font-bold'>Start new chat</p>
+                                </div>
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <div className='bg-gray-300 w-fit p-3 rounded-full'>
+                                    <FaLocationDot className='text-4xl' />
+                                </div>
+                                <div className='flex gap-2 flex-col pl-4'>
+                                    <h2 className='font-bold text-xl'>Address</h2>
+                                    <p className='text-gray-400'>We are currently staying in</p>
+                                    <p className='text-gray-500 font-bold'>Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <div className='bg-gray-300 w-fit p-3 rounded-full'>
+                                    <IoCall className='text-4xl' />
+                                </div>
+                                <div className='flex gap-2 flex-col pl-4'>
+                                    <h2 className='font-bold text-xl'>Phone</h2>
+                                    <p className='text-gray-400'>Call us for order/booking.</p>
+                                    <p className='text-gray-500 font-bold'>01854-465273</p>
+                                </div>
                             </div>
                         </div>
                     </div>

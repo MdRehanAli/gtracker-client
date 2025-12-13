@@ -38,7 +38,7 @@ const ProductDetails = () => {
                             </div>)
                         }
                     </div>
-                    <Link to='/order' className="btn btn-primary my-10">Order Now</Link>
+                    <Link to={`/order/${_id}`} className="btn btn-primary my-10">Order Now</Link>
                 </div>
             </div>
         </div>
