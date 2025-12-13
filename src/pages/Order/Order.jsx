@@ -4,26 +4,49 @@ import { LiaHandsHelpingSolid } from "react-icons/lia";
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
 import { useLoaderData } from 'react-router';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const Order = () => {
     const products = useLoaderData();
-    const { name, price } = products;
+    const { name, price, minimumOrder, availableQuantity, } = products;
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useAuth();
 
-    const handleOrderSubmit = (data, event) => {
+    const axiosSecure = useAxiosSecure()
+
+    const handleOrderSubmit = (data) => {
         console.log(data);
 
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Order has been Placed!",
-            showConfirmButton: false,
-            timer: 1500
-        });
+        const perPrice = data.orderPrice
+        const quantity = data.orderQuantity;
+        let totalPrice = 0;
+        totalPrice = perPrice * quantity;
+        // data.orderPrice= totalPrice;
+        // document.getElementById('orderPrice').defaultValue(totalPrice);
 
-        event.target.reset()
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Order Now"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.post('/order', data)
+                    .then(res => {
+                        console.log("After Saving data: ", res.data);
+                    })
+                Swal.fire({
+                    title: "Order has been Placed!",
+                    text: "Your order has been Placed successfully!.",
+                    icon: "success"
+                });
+            }
+        });
     }
 
     return (
@@ -70,12 +93,14 @@ const Order = () => {
                         <div className='flex-1'>
                             {/* Order Quantity Field  */}
                             <label className="label mt-2">Order Quantity</label>
-                            <input type="number" {...register('orderQuantity', { required: true, })} className="input w-full" placeholder="Order Quantity" />
+                            <input type="number" {...register('orderQuantity', { required: true, min: { minimumOrder }, max: { availableQuantity }, })} className="input w-full" placeholder="Order Quantity" />
                             {errors.orderQuantity?.type === "required" && <p className='text-red-500'>Order Quantity is Required</p>}
+                            {errors.orderQuantity?.type === "min" && <p className='text-red-500'>Order Minimum {minimumOrder} Product</p>}
+                            {errors.orderQuantity?.type === "max" && <p className='text-red-500'>Order Maximum {availableQuantity} Product</p>}
 
                             {/* Order Price Field  */}
                             <label className="label mt-2">Order Price</label>
-                            <input type="number" {...register('orderPrice', { required: true, })} className="input w-full" placeholder="Order Price" readOnly />
+                            <input type="number" {...register('orderPrice', { required: true, })} className="input w-full" placeholder="Order Price" />
                             {errors.orderPrice?.type === "required" && <p className='text-red-500'>Order Price is Required</p>}
 
                             {/* Contact Number Field  */}

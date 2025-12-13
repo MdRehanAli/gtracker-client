@@ -11,6 +11,8 @@ import Contact from "../pages/Contact/Contact";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import PrivateRoute from "./PrivateRoute";
 import Order from "../pages/Order/Order";
+import DashboardLayout from "../layouts/DashboardLayout";
+import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
 
 const router = createBrowserRouter([
     {
@@ -59,6 +61,18 @@ const router = createBrowserRouter([
                 Component: ErrorPage
             },
         ]
+    },
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        hydrateFallbackElement: <Loading></Loading>,
+        children: [
+            {
+                path: 'my-order',
+                Component: MyOrder,
+            }
+        ]
+
     }
 ]);
 
