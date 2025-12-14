@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import Order from "../pages/Order/Order";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
+import AuthLayout from "../layouts/AuthLayout";
 
 const router = createBrowserRouter([
     {
@@ -49,16 +50,23 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><Order></Order></PrivateRoute>
             },
             {
+                path: '/*',
+                Component: ErrorPage
+            },
+        ]
+    },
+    {
+        path: '/',
+        Component: AuthLayout,
+        hydrateFallbackElement: <Loading></Loading>,
+        children: [
+            {
                 path: '/login',
                 Component: Login
             },
             {
                 path: '/register',
                 Component: Register
-            },
-            {
-                path: '/*',
-                Component: ErrorPage
             },
         ]
     },

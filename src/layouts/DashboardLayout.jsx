@@ -36,7 +36,7 @@ const DashboardLayout = () => {
                         {/* Our dashboard links  */}
 
                         <li>
-                            <NavLink to="/dashboard/my-order" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="myOrder">
+                            <NavLink to="/dashboard/my-order" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Order">
                                 <LiaHandsHelpingSolid className='text-2xl'></LiaHandsHelpingSolid>
                                 <span className="is-drawer-close:hidden">My Order</span>
                             </NavLink>

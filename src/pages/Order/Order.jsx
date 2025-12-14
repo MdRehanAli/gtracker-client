@@ -18,12 +18,11 @@ const Order = () => {
     const handleOrderSubmit = (data) => {
         console.log(data);
 
-        const perPrice = data.orderPrice
+        const perPrice = data.price
         const quantity = data.orderQuantity;
         let totalPrice = 0;
         totalPrice = perPrice * quantity;
-        // data.orderPrice= totalPrice;
-        // document.getElementById('orderPrice').defaultValue(totalPrice);
+        data.orderPrice = totalPrice;
 
 
         Swal.fire({
@@ -100,8 +99,8 @@ const Order = () => {
 
                             {/* Order Price Field  */}
                             <label className="label mt-2">Order Price</label>
-                            <input type="number" {...register('orderPrice', { required: true, })} className="input w-full" placeholder="Order Price" />
-                            {errors.orderPrice?.type === "required" && <p className='text-red-500'>Order Price is Required</p>}
+                            <input type="number" {...register('orderPrice', )} className="input w-full" placeholder="Order Price" />
+                            {/* {errors.orderPrice?.type === "required" && <p className='text-red-500'>Order Price is Required</p>} */}
 
                             {/* Contact Number Field  */}
                             <label className="label mt-2">Contact Number</label>
