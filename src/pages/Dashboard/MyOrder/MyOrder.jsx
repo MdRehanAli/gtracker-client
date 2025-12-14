@@ -37,7 +37,7 @@ const MyOrder = () => {
 
                         if (res.data.deletedCount) {
                             refetch();
-                            
+
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
@@ -81,7 +81,7 @@ const MyOrder = () => {
                                         order.status === 'pending' ?
                                             <span className='text-primary'>Pending</span>
                                             :
-                                            <Link>
+                                            <Link to={`/dashboard/payment/${order._id}`}>
                                                 <button className="btn btn-primary">Pay</button>
                                             </Link>
                                     }

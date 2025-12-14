@@ -18,10 +18,10 @@ const Order = () => {
     const handleOrderSubmit = (data) => {
         console.log(data);
 
-        const perPrice = data.price
+        const perPrice = parseFloat(data.price)
         const quantity = data.orderQuantity;
-        let totalPrice = 0;
-        totalPrice = perPrice * quantity;
+        // let totalPrice = 0;
+        const totalPrice = perPrice * quantity;
         data.orderPrice = totalPrice;
 
 
@@ -99,7 +99,7 @@ const Order = () => {
 
                             {/* Order Price Field  */}
                             <label className="label mt-2">Order Price</label>
-                            <input type="number" {...register('orderPrice', )} className="input w-full" placeholder="Order Price" />
+                            <input type="number" {...register('orderPrice',)} className="input w-full" placeholder="Order Price" />
                             {/* {errors.orderPrice?.type === "required" && <p className='text-red-500'>Order Price is Required</p>} */}
 
                             {/* Contact Number Field  */}

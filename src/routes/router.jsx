@@ -14,6 +14,9 @@ import Order from "../pages/Order/Order";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
 import AuthLayout from "../layouts/AuthLayout";
+import Payment from "../pages/Dashboard/Payment/Payment";
+import PaymentSuccess from "../pages/Dashboard/Payment/PaymentSuccess";
+import PaymentCancelled from "../pages/Dashboard/Payment/PaymentCancelled";
 
 const router = createBrowserRouter([
     {
@@ -78,7 +81,19 @@ const router = createBrowserRouter([
             {
                 path: 'my-order',
                 Component: MyOrder,
-            }
+            },
+            {
+                path: 'payment/:orderId',
+                Component: Payment,
+            },
+            {
+                path: 'payment-success',
+                Component: PaymentSuccess,
+            },
+            {
+                path: 'payment-cancelled',
+                Component: PaymentCancelled,
+            },
         ]
 
     }
