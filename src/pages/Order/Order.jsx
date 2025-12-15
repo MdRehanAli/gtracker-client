@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { LiaHandsHelpingSolid } from "react-icons/lia";
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const Order = () => {
@@ -12,6 +12,8 @@ const Order = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useAuth();
+
+    const navigate = useNavigate()
 
     const axiosSecure = useAxiosSecure()
 
@@ -32,18 +34,25 @@ const Order = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, Order Now"
+            confirmButtonText: "Confirm and Pay"
         }).then((result) => {
             if (result.isConfirmed) {
                 axiosSecure.post('/order', data)
                     .then(res => {
                         console.log("After Saving data: ", res.data);
+
+                        if (res.data.insertedId) {
+                            navigate('/dashboard/my-order')
+                            Swal.fire({
+                                position: "top-end",
+                                icon: "success",
+                                title: "Order has created. Please Pay.",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
                     })
-                Swal.fire({
-                    title: "Order has been Placed!",
-                    text: "Your order has been Placed successfully!.",
-                    icon: "success"
-                });
+
             }
         });
     }

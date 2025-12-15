@@ -17,7 +17,6 @@ const Payment = () => {
         }
     })
 
-
     const handlePayment = async () => {
         const paymentInfo = {
             orderPrice: order.orderPrice,

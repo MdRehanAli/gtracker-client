@@ -50,6 +50,20 @@ const MyOrder = () => {
         });
     }
 
+    const handlePayment = async (order) => {
+        const paymentInfo = {
+            orderPrice: order.orderPrice,
+            productTitle: order.productTitle,
+            email: order.email,
+            orderId: order._id
+        }
+
+        const res = await axiosSecure.post('payment-checkout-session', paymentInfo);
+        console.log(res.data);
+
+        window.location.assign(res.data.url);
+    }
+
     return (
         <div>
             <h1>All Order: {orders.length}</h1>
@@ -78,12 +92,10 @@ const MyOrder = () => {
                                 <td>{order.orderQuantity}</td>
                                 <td>
                                     {
-                                        order.status === 'pending' ?
-                                            <span className='text-primary'>Pending</span>
+                                        order.payment_status === 'paid' ?
+                                            <span className='text-green-500'>Paid</span>
                                             :
-                                            <Link to={`/dashboard/payment/${order._id}`}>
-                                                <button className="btn btn-primary">Pay</button>
-                                            </Link>
+                                            <button onClick={() => handlePayment(order)} className="btn btn-primary">Pay</button>
                                     }
                                 </td>
                                 <td>Payment</td>
