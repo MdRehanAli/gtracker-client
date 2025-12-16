@@ -5,6 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const Register = () => {
 
@@ -13,14 +14,13 @@ const Register = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
+    const axiosSecure = useAxiosSecure();
 
     const handleRegister = (data) => {
-        console.log("After Register Data: ", data);
         const profileImage = data.photo[0];
 
         registerUser(data.email, data.password)
-            .then(result => {
-                console.log(result.user);
+            .then(() => {
 
                 const formdata = new FormData();
                 formdata.append('image', profileImage);
@@ -30,9 +30,24 @@ const Register = () => {
                 axios.post(image_API_URL, formdata)
                     .then(res => {
 
+                        const photoURL = res.data.data.url;
+
+                        // Create user in the database 
+                        const userInfo = {
+                            email: data.email,
+                            displayName: data.name,
+                            photoURL: photoURL,
+                        }
+                        axiosSecure.post('/users', userInfo)
+                            .then(res => {
+                                if(res.data.insertedId){
+                                    console.log("User created in the database.")
+                                }
+                            })
+
                         const usersProfile = {
                             displayName: data.name,
-                            photoURL: res.data.data.url,
+                            photoURL: photoURL,
                         }
 
                         updateUser(usersProfile)
@@ -84,8 +99,8 @@ const Register = () => {
 
                         {/* Role Field  */}
                         <label className="label">Role</label>
-                        <select {...register('role', { required: true })} defaultValue="Pick a Role" className="select">
-                            <option disabled={true}>Pick a Role</option>
+                        <select {...register('role', { required: true })} defaultValue="user" className="select">
+                            <option disabled={true}>user</option>
                             <option value="buyer">Buyer</option>
                             <option value="manager">Manager</option>
                         </select>
