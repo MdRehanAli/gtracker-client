@@ -17,6 +17,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import PaymentSuccess from "../pages/Dashboard/Payment/PaymentSuccess";
 import PaymentCancelled from "../pages/Dashboard/Payment/PaymentCancelled";
+import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 
 const router = createBrowserRouter([
     {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
             {
                 path: 'payment/:orderId',
                 Component: Payment,
+            },
+            {
+                path: 'payment-history',
+                Component: PaymentHistory,
             },
             {
                 path: 'payment-success',

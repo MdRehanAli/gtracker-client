@@ -12,8 +12,8 @@ const AboutUs = () => {
             <Banner></Banner>
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5'><IoIosInformationCircleOutline className='p-4 bg-gray-300 rounded-3xl' /></div>
-                <h1 class='text-3xl md:text-5xl font-bold'>About GTracker</h1>
-                <p class='mt-3 mb-12 md:w-2/3 mx-auto'>Discover who we are, what we stand for, and how we're transforming the textile and apparel industry with smart, innovative technology designed for seamless production and business growth.</p>
+                <h1 className='text-3xl md:text-5xl font-bold'>About GTracker</h1>
+                <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Discover who we are, what we stand for, and how we're transforming the textile and apparel industry with smart, innovative technology designed for seamless production and business growth.</p>
             </div>
             <div className='flex flex-col lg:flex-row justify-between items-start gap-10'>
                 <div className='mx-auto'>
