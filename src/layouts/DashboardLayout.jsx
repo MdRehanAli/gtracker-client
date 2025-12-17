@@ -1,6 +1,7 @@
 import React from 'react';
 import { LiaHandsHelpingSolid } from 'react-icons/lia';
 import { FaRegCreditCard } from 'react-icons/fa6';
+import { FaUserCog } from "react-icons/fa";
 import { Link, NavLink, Outlet } from 'react-router';
 
 const DashboardLayout = () => {
@@ -46,6 +47,12 @@ const DashboardLayout = () => {
                             <NavLink to="/dashboard/payment-history" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payment History">
                                 <FaRegCreditCard></FaRegCreditCard>
                                 <span className="is-drawer-close:hidden">Payment History</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/manage-users" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Manage Users">
+                                <FaUserCog />
+                                <span className="is-drawer-close:hidden">Manage Users</span>
                             </NavLink>
                         </li>
                         {/* List item */}
