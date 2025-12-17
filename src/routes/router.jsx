@@ -19,6 +19,7 @@ import PaymentSuccess from "../pages/Dashboard/Payment/PaymentSuccess";
 import PaymentCancelled from "../pages/Dashboard/Payment/PaymentCancelled";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
+import AdminRoute from "./AdminRoute";
 // import ManageManagers from "../pages/Dashboard/ManageManagers/ManageManagers";
 
 const router = createBrowserRouter([
@@ -103,7 +104,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'manage-users',
-                Component: ManageUsers,
+                element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
             },
         ]
 
