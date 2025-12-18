@@ -18,7 +18,7 @@ const SocialLogin = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
-                const newRole = 'manager';
+                const newRole = 'user';
 
                 // Create user in the database 
                 const userInfo = {

@@ -54,6 +54,26 @@ const DashboardLayout = () => {
                                 <span className="is-drawer-close:hidden">Payment History</span>
                             </NavLink>
                         </li>
+
+                        {/* Manager only Links  */}
+                        {
+                            role === 'manager' && <>
+                                <li>
+                                    <NavLink to="/dashboard/pending-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Pending Orders">
+                                        <FaBusinessTime />
+                                        <span className="is-drawer-close:hidden">Pending Orders</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/approved-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approved Orders">
+                                        <FaCalendarCheck />
+                                        <span className="is-drawer-close:hidden">Approved Orders</span>
+                                    </NavLink>
+                                </li>
+                            </>
+                        }
+
+                        {/* Admin only Links  */}
                         {
                             role === 'admin' && <>
                                 <li>
@@ -76,18 +96,7 @@ const DashboardLayout = () => {
                                 </li>
                             </>
                         }
-                        <li>
-                            <NavLink to="/dashboard/pending-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Pending Orders">
-                                <FaBusinessTime />
-                                <span className="is-drawer-close:hidden">Pending Orders</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/dashboard/approved-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approved Orders">
-                                <FaCalendarCheck />
-                                <span className="is-drawer-close:hidden">Approved Orders</span>
-                            </NavLink>
-                        </li>
+
                         {/* List item */}
                         <li>
                             <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">

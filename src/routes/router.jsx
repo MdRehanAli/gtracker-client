@@ -24,6 +24,7 @@ import AllProducts from "../pages/Dashboard/AllProducts/AllProducts";
 import AllOrders from "../pages/Dashboard/AllOrders/AllOrders";
 import PendingOrders from "../pages/Dashboard/PendingOrders/PendingOrders";
 import ApprovedOrders from "../pages/Dashboard/ApprovedOrders/ApprovedOrders";
+import ManagerRoute from "./ManagerRoute";
 // import ManageManagers from "../pages/Dashboard/ManageManagers/ManageManagers";
 
 const router = createBrowserRouter([
@@ -106,6 +107,18 @@ const router = createBrowserRouter([
                 path: 'payment-cancelled',
                 Component: PaymentCancelled,
             },
+
+            // Manager Routes 
+            {
+                path: 'pending-orders',
+                element: <ManagerRoute><PendingOrders></PendingOrders></ManagerRoute>
+            },
+            {
+                path: 'approved-orders',
+                element: <ManagerRoute><ApprovedOrders></ApprovedOrders></ManagerRoute>
+            },
+
+            // Admin Routes 
             {
                 path: 'manage-users',
                 element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
@@ -118,14 +131,7 @@ const router = createBrowserRouter([
                 path: 'all-orders',
                 element: <AdminRoute><AllOrders></AllOrders></AdminRoute>
             },
-            {
-                path: 'pending-orders',
-                element: <PendingOrders></PendingOrders>
-            },
-            {
-                path: 'approved-orders',
-                element: <ApprovedOrders></ApprovedOrders>
-            },
+
         ]
 
     }
