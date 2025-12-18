@@ -20,6 +20,8 @@ import PaymentCancelled from "../pages/Dashboard/Payment/PaymentCancelled";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import ManageUsers from "../pages/Dashboard/ManageUsers/ManageUsers";
 import AdminRoute from "./AdminRoute";
+import AllProducts from "../pages/Dashboard/AllProducts/AllProducts";
+import AllOrders from "../pages/Dashboard/AllOrders/AllOrders";
 // import ManageManagers from "../pages/Dashboard/ManageManagers/ManageManagers";
 
 const router = createBrowserRouter([
@@ -105,6 +107,14 @@ const router = createBrowserRouter([
             {
                 path: 'manage-users',
                 element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
+            },
+            {
+                path: 'all-products',
+                element: <AdminRoute><AllProducts></AllProducts></AdminRoute>
+            },
+            {
+                path: 'all-orders',
+                element: <AdminRoute><AllOrders></AllOrders></AdminRoute>
             },
         ]
 

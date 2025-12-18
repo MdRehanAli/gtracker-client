@@ -2,8 +2,10 @@ import React from 'react';
 import { LiaHandsHelpingSolid } from 'react-icons/lia';
 import { FaRegCreditCard } from 'react-icons/fa6';
 import { FaUserCog } from "react-icons/fa";
+import { BsCartCheck } from "react-icons/bs";
 import { Link, NavLink, Outlet } from 'react-router';
 import useRole from '../hooks/useRole';
+import { CiShoppingTag } from 'react-icons/ci';
 
 const DashboardLayout = () => {
 
@@ -58,6 +60,18 @@ const DashboardLayout = () => {
                                     <NavLink to="/dashboard/manage-users" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Manage Users">
                                         <FaUserCog />
                                         <span className="is-drawer-close:hidden">Manage Users</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/all-products" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="All Products">
+                                        <CiShoppingTag></CiShoppingTag>
+                                        <span className="is-drawer-close:hidden">All Products</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/all-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="All Orders">
+                                        <BsCartCheck></BsCartCheck>
+                                        <span className="is-drawer-close:hidden">All Orders</span>
                                     </NavLink>
                                 </li>
                             </>

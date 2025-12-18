@@ -101,7 +101,6 @@ const Register = () => {
                         <label className="label">Role</label>
                         <select {...register('role', { required: true })} defaultValue="user" className="select">
                             <option disabled={true}>user</option>
-                            <option value="buyer">Buyer</option>
                             <option value="manager">Manager</option>
                         </select>
                         {errors.role?.type === "required" && <p className='text-red-500'>Role is Required</p>}

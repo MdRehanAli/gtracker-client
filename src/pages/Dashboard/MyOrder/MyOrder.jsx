@@ -75,10 +75,11 @@ const MyOrder = () => {
                         <tr>
                             <th>No.</th>
                             <th>Order ID</th>
+                            <th>User</th>
                             <th>Product</th>
                             <th>Quantity</th>
-                            <th>Status</th>
                             <th>Payment</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -88,6 +89,7 @@ const MyOrder = () => {
                             orders.map((order, index) => <tr key={order._id}>
                                 <th>{index + 1}</th>
                                 <td>{order._id}</td>
+                                <td>{order.firstName} {order.lastName}</td>
                                 <td>{order.productTitle}</td>
                                 <td>{order.orderQuantity}</td>
                                 <td>
@@ -98,7 +100,7 @@ const MyOrder = () => {
                                             <button onClick={() => handlePayment(order)} className="btn btn-primary">Pay</button>
                                     }
                                 </td>
-                                <td>Payment</td>
+                                <td>{order.status}</td>
                                 <td>
                                     <button className='btn btn-primary mr-2'>View</button>
                                     <button onClick={() => handleCancelOrder(order._id)} className='btn btn-primary'>Cancel</button>

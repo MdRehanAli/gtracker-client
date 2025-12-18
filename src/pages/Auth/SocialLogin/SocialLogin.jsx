@@ -18,12 +18,14 @@ const SocialLogin = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
+                const newRole = 'manager';
 
                 // Create user in the database 
                 const userInfo = {
                     email: result.user.email,
                     displayName: result.user.displayName,
                     photoURL: result.user.photoURL,
+                    role: newRole
                 }
 
                 axiosSecure.post('/users', userInfo)
