@@ -1,8 +1,8 @@
 import React from 'react';
 import { LiaHandsHelpingSolid } from 'react-icons/lia';
-import { FaRegCreditCard } from 'react-icons/fa6';
+import { FaBusinessTime, FaCalendarCheck, FaRegCreditCard } from 'react-icons/fa6';
 import { FaUserCog } from "react-icons/fa";
-import { BsCartCheck } from "react-icons/bs";
+import { BsCartPlus } from "react-icons/bs";
 import { Link, NavLink, Outlet } from 'react-router';
 import useRole from '../hooks/useRole';
 import { CiShoppingTag } from 'react-icons/ci';
@@ -70,12 +70,24 @@ const DashboardLayout = () => {
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/all-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="All Orders">
-                                        <BsCartCheck></BsCartCheck>
+                                        <BsCartPlus />
                                         <span className="is-drawer-close:hidden">All Orders</span>
                                     </NavLink>
                                 </li>
                             </>
                         }
+                        <li>
+                            <NavLink to="/dashboard/pending-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Pending Orders">
+                                <FaBusinessTime />
+                                <span className="is-drawer-close:hidden">Pending Orders</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dashboard/approved-orders" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approved Orders">
+                                <FaCalendarCheck />
+                                <span className="is-drawer-close:hidden">Approved Orders</span>
+                            </NavLink>
+                        </li>
                         {/* List item */}
                         <li>
                             <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
