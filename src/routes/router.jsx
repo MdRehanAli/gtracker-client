@@ -25,6 +25,7 @@ import AllOrders from "../pages/Dashboard/AllOrders/AllOrders";
 import PendingOrders from "../pages/Dashboard/PendingOrders/PendingOrders";
 import ApprovedOrders from "../pages/Dashboard/ApprovedOrders/ApprovedOrders";
 import ManagerRoute from "./ManagerRoute";
+import DashboardHome from "../pages/DashboardHome/DashboardHome";
 // import ManageManagers from "../pages/Dashboard/ManageManagers/ManageManagers";
 
 const router = createBrowserRouter([
@@ -35,17 +36,17 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch('http://localhost:5000/products'),
+                loader: () => fetch('https://gtracker-server.vercel.app/products'),
                 Component: Home
             },
             {
                 path: '/all-products',
-                loader: () => fetch('http://localhost:5000/all-products'),
+                loader: () => fetch('https://gtracker-server.vercel.app/all-products'),
                 Component: AllProduct,
             },
             {
                 path: '/products-details/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
             },
             {
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/order/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
                 element: <PrivateRoute><Order></Order></PrivateRoute>
             },
             {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         hydrateFallbackElement: <Loading></Loading>,
         children: [
+            {
+                index: true,
+                Component: DashboardHome
+            },
             {
                 path: 'my-order',
                 Component: MyOrder,
