@@ -119,7 +119,7 @@ const Register = () => {
                             <input type={showPassword ? "text" : "password"} {...register('password', {
                                 required: true, minLength: 6, pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/
                             })} className="input" placeholder="Password" />
-                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</button>
+                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
                         </div>
 
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required</p>}

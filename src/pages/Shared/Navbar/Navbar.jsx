@@ -5,10 +5,13 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import Toggle from '../../../components/Toggle/Toggle';
 import './Navbar.css'
+import useRole from '../../../hooks/useRole';
 
 const Navbar = () => {
 
     const { user, signOutUser } = useAuth();
+
+    const { role } = useRole();
 
     const handleLogOut = () => {
         signOutUser()
@@ -33,7 +36,9 @@ const Navbar = () => {
         <li><NavLink to='/contact' className="rounded-2xl font-semibold px-4">Contact</NavLink></li>
         {
             user && <>
-                <li><NavLink to='/dashboard/my-order' className="rounded-2xl font-semibold px-4">My Order</NavLink></li>
+                {role === 'user' &&
+                    <li><NavLink to='/dashboard/my-order' className="rounded-2xl font-semibold px-4">My Order</NavLink></li>
+                }
                 <li><NavLink to='/dashboard' className="rounded-2xl font-semibold px-4">Dashboard</NavLink></li>
             </>
         }

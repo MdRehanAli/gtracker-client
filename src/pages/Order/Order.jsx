@@ -71,28 +71,28 @@ const Order = () => {
 
                         <div className='flex-1'>
                             {/* Email Field  */}
-                            <label className="label mt-2">Email</label>
+                            <label className="text-black label mt-2">Email</label>
                             <input type="email" {...register('email', { required: true })} className="input w-full" placeholder="Email" defaultValue={user?.email} readOnly />
                             {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                             {/* Product Title Field  */}
-                            <label className="label mt-2">Product Title</label>
+                            <label className="text-black label mt-2">Product Title</label>
                             <input type="text" {...register('productTitle', { required: true })} className="input w-full" placeholder="Name" defaultValue={name} readOnly />
                             {errors.productTitle?.type === "required" && <p className='text-red-500'>Product Title is Required</p>}
 
                             {/* Price Field  */}
-                            <label className="label mt-2">Price</label>
+                            <label className="text-black label mt-2">Price</label>
                             <input type="text" {...register('price', { required: true })} className="input w-full" placeholder="Price" defaultValue={price} readOnly />
                             {errors.price?.type === "required" && <p className='text-red-500'>Price is Required</p>}
 
                             {/* First Name Field  */}
-                            <label className="label mt-2">First Name</label>
+                            <label className="text-black label mt-2">First Name</label>
                             <input type="text" {...register('firstName', { required: true, minLength: 3 })} className="input w-full" placeholder="First Name" />
                             {errors.firstName?.type === "required" && <p className='text-red-500'>First Name is Required</p>}
                             {errors.firstName?.type === "minLength" && <p className='text-red-500'>First Name must have at least 3 Character</p>}
 
                             {/* Last Name Field  */}
-                            <label className="label mt-2">Last Name</label>
+                            <label className="text-black label mt-2">Last Name</label>
                             <input type="text" {...register('lastName', { required: true, minLength: 3 })} className="input w-full" placeholder="Last Name" />
                             {errors.lastName?.type === "required" && <p className='text-red-500'>Last Name is Required</p>}
                             {errors.lastName?.type === "minLength" && <p className='text-red-500'>Last Name must have at least 3 Character</p>}
@@ -100,34 +100,34 @@ const Order = () => {
 
                         <div className='flex-1'>
                             {/* Order Quantity Field  */}
-                            <label className="label mt-2">Order Quantity</label>
+                            <label className="text-black label mt-2">Order Quantity</label>
                             <input type="number" {...register('orderQuantity', { required: true, min: { minimumOrder }, max: { availableQuantity }, })} className="input w-full" placeholder="Order Quantity" />
                             {errors.orderQuantity?.type === "required" && <p className='text-red-500'>Order Quantity is Required</p>}
                             {errors.orderQuantity?.type === "min" && <p className='text-red-500'>Order Minimum {minimumOrder} Product</p>}
                             {errors.orderQuantity?.type === "max" && <p className='text-red-500'>Order Maximum {availableQuantity} Product</p>}
 
                             {/* Order Price Field  */}
-                            <label className="label mt-2">Order Price</label>
+                            <label className="text-black label mt-2">Order Price</label>
                             <input type="number" {...register('orderPrice',)} className="input w-full" placeholder="Order Price" />
                             {/* {errors.orderPrice?.type === "required" && <p className='text-red-500'>Order Price is Required</p>} */}
 
                             {/* Contact Number Field  */}
-                            <label className="label mt-2">Contact Number</label>
+                            <label className="text-black label mt-2">Contact Number</label>
                             <input type="number" {...register('contactNumber', { required: true, })} className="input w-full" placeholder="Contact Number" />
                             {errors.contactNumber?.type === "required" && <p className='text-red-500'>Contact Number is Required</p>}
 
                             {/* Delivery Address Field  */}
-                            <label className="label mt-2">Delivery Address</label>
+                            <label className="text-black label mt-2">Delivery Address</label>
                             <input type="text" {...register('deliveryAddress', { required: true, })} className="input w-full" placeholder="Delivery Address" />
                             {errors.deliveryAddress?.type === "required" && <p className='text-red-500'>Delivery Address is Required</p>}
 
                             {/* Additional Notes/Instructions Field  */}
-                            <label className="label mt-2">Additional Notes/Instructions</label>
+                            <label className="text-black label mt-2">Additional Notes/Instructions</label>
                             <input type="text" {...register('instructions', { required: true, })} className="input w-full" placeholder="Additional Notes/Instructions" />
                             {errors.instructions?.type === "required" && <p className='text-red-500'>Additional Notes/Instructions is Required</p>}
                         </div>
                     </fieldset>
-                    <button className="btn btn-neutral mt-4 w-full">Submit Order</button>
+                    <button className="btn btn-primary mt-4 w-full">Submit Order</button>
 
                 </form>
             </div>
