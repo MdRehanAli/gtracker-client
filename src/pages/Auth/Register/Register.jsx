@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
@@ -6,6 +6,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 const Register = () => {
 
@@ -15,6 +16,12 @@ const Register = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
+
+    const [showPassword, setShowPassword] = useState(false)
+    const handleShowPassword = (event) => {
+        event.preventDefault();
+        setShowPassword(!showPassword);
+    }
 
     const handleRegister = (data) => {
         const profileImage = data.photo[0];
@@ -41,7 +48,7 @@ const Register = () => {
                         }
                         axiosSecure.post('/users', userInfo)
                             .then(res => {
-                                if(res.data.insertedId){
+                                if (res.data.insertedId) {
                                     console.log("User created in the database.")
                                 }
                             })
@@ -76,9 +83,9 @@ const Register = () => {
     }
 
     return (
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
             <div className="card-body">
-                <h1>Welcome to GTracker!</h1>
+                <h1 className='text-center text-2xl font-bold text-secondary mb-3'>Register to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <fieldset className="fieldset">
 
@@ -108,16 +115,20 @@ const Register = () => {
 
                         {/* Password Field  */}
                         <label className="label">Password</label>
-                        <input type="password" {...register('password', {
-                            required: true, minLength: 6, pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/
-                        })} className="input" placeholder="Password" />
+                        <div className='flex items-center relative'>
+                            <input type={showPassword ? "text" : "password"} {...register('password', {
+                                required: true, minLength: 6, pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/
+                            })} className="input" placeholder="Password" />
+                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</button>
+                        </div>
+
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required</p>}
                         {errors.password?.type === "minLength" && <p className='text-red-500'>Password must have at least 6 Character</p>}
                         {errors.password?.type === "pattern" && <p className='text-red-500'>Password must have at least an Uppercase and a Lowercase Character</p>}
 
                         <button className="btn btn-neutral mt-4">Register</button>
                     </fieldset>
-                    <p>Already have an Account? Please <Link to='/login' state={location.state} className='font-bold underline text-red-500'>Login</Link></p>
+                    <p className='mt-2 text-center'>Already have an Account? Please <Link to='/login' state={location.state} className='font-bold underline text-red-500'>Login</Link></p>
                 </form>
             </div>
         </div>

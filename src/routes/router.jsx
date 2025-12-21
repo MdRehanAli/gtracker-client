@@ -26,6 +26,10 @@ import PendingOrders from "../pages/Dashboard/PendingOrders/PendingOrders";
 import ApprovedOrders from "../pages/Dashboard/ApprovedOrders/ApprovedOrders";
 import ManagerRoute from "./ManagerRoute";
 import DashboardHome from "../pages/DashboardHome/DashboardHome";
+import AddProduct from "../pages/Dashboard/AddProduct/AddProduct";
+import ManageProducts from "../pages/Dashboard/ManageProducts/ManageProducts";
+import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
+import TrackOrder from "../pages/Dashboard/TrackOrder/TrackOrder";
 // import ManageManagers from "../pages/Dashboard/ManageManagers/ManageManagers";
 
 const router = createBrowserRouter([
@@ -36,17 +40,17 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch('https://gtracker-server.vercel.app/products'),
+                loader: () => fetch('http://localhost:5000/products'),
                 Component: Home
             },
             {
                 path: '/all-products',
-                loader: () => fetch('https://gtracker-server.vercel.app/all-products'),
+                loader: () => fetch('http://localhost:5000/all-products'),
                 Component: AllProduct,
             },
             {
                 path: '/products-details/:id',
-                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
             },
             {
@@ -59,7 +63,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/order/:id',
-                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
                 element: <PrivateRoute><Order></Order></PrivateRoute>
             },
             {
@@ -97,6 +101,14 @@ const router = createBrowserRouter([
                 Component: MyOrder,
             },
             {
+                path: 'track-order',
+                element: TrackOrder
+            },
+            {
+                path: 'profile',
+                element: MyProfile
+            },
+            {
                 path: 'payment/:orderId',
                 Component: Payment,
             },
@@ -115,12 +127,24 @@ const router = createBrowserRouter([
 
             // Manager Routes 
             {
+                path: 'add-product',
+                element: <ManagerRoute><AddProduct></AddProduct></ManagerRoute>
+            },
+            {
+                path: 'manage-products',
+                element: <ManagerRoute><ManageProducts></ManageProducts></ManagerRoute>
+            },
+            {
                 path: 'pending-orders',
                 element: <ManagerRoute><PendingOrders></PendingOrders></ManagerRoute>
             },
             {
                 path: 'approved-orders',
                 element: <ManagerRoute><ApprovedOrders></ApprovedOrders></ManagerRoute>
+            },
+            {
+                path: 'profile',
+                element: <ManagerRoute><MyProfile></MyProfile></ManagerRoute>
             },
 
             // Admin Routes 

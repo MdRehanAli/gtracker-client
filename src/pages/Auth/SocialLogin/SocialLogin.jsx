@@ -48,8 +48,8 @@ const SocialLogin = () => {
     }
 
     return (
-        <div>
-            <p className='text-center'>Or Login With</p>
+        <div className=''>
+            <p className='text-center mb-2'>Or Login With</p>
             <button onClick={handleGoogleSignIn} className='btn w-full'><FcGoogle className='text-2xl'></FcGoogle> Login with Google</button>
         </div>
     );

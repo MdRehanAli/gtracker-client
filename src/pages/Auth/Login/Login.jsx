@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import useAuth from '../../../hooks/useAuth';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 const Login = () => {
 
@@ -13,6 +14,12 @@ const Login = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
+
+    const [showPassword, setShowPassword] = useState(false)
+    const handleShowPassword = (event) => {
+        event.preventDefault();
+        setShowPassword(!showPassword);
+    }
 
     const handleLogin = (data) => {
         console.log("After LogIn Data: ", data);
@@ -36,9 +43,9 @@ const Login = () => {
     }
 
     return (
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <div className="card-body">
-                <h1>Welcome to GTracker!</h1>
+        <div className="card w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
+            <div className="card-body bg-base-100">
+                <h1 className='text-center text-2xl font-bold text-secondary mb-3'>Welcome to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">
                         {/* Email Field  */}
@@ -48,16 +55,20 @@ const Login = () => {
 
                         {/* Password Field  */}
                         <label className="label">Password</label>
-                        <input type="password" {...register('password', {
-                            required: true, minLength: 6
-                        })} className="input" placeholder="Password" />
+                        <div className='flex items-center relative'>
+                            <input type={showPassword ? "text" : "password"} {...register('password', {
+                                required: true, minLength: 6
+                            })} className="input" placeholder="Password" />
+                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
+                        </div>
+
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required</p>}
                         {errors.password?.type === "minLength" && <p className='text-red-500'>Password must have at least 6 Character</p>}
 
                         <div><a className="link link-hover">Forgot password?</a></div>
                         <button className="btn btn-neutral mt-4">Login</button>
                     </fieldset>
-                    <p>New to GTracker? Please <Link to='/register' state={location.state} className='font-bold underline text-red-500'>Register</Link></p>
+                    <p className='my-2 text-center'>New to GTracker? Please <Link to='/register' state={location.state} className='font-bold underline text-red-500'>Register</Link></p>
                 </form>
                 <SocialLogin></SocialLogin>
             </div>
