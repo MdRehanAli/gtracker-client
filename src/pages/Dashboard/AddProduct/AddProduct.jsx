@@ -102,7 +102,7 @@ const AddProduct = () => {
                             {/* Category Field  */}
                             <label className="text-black label">Select Category</label>
                             <select {...register('category', { required: true })} className="select w-full">
-                                <option >Choose a Category</option>
+                                <option disabled={true}>Choose a Category</option>
                                 <option value="shirt">Shirt</option>
                                 <option value="pant">Pant</option>
                                 <option value="jacket">Jacket</option>
@@ -136,7 +136,8 @@ const AddProduct = () => {
 
                             {/* Demo Video Link Field  */}
                             <label className="text-black label mt-2">Demo Video Link</label>
-                            <input type="text" {...register('video')} className="input w-full" placeholder="Demo Video Link" />
+                            <input type="text" {...register('video', { required: true })} className="input w-full" placeholder="Demo Video Link" />
+                            {errors.video?.type === "required" && <p className='text-red-500'>Product Image is Required.</p>}
 
                             {/* Payment Options Field  */}
                             <label className="text-black label mt-2">Payment Options</label>

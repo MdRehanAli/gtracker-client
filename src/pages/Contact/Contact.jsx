@@ -34,8 +34,8 @@ const Contact = () => {
             </div>
             <div className='flex flex-col md:flex-row justify-between items-center gap-16'>
                 <div className=''>
-                    <h1 className='text-3xl md:text-5xl font-bold mb-10'>Contact US</h1>
-                    <div className="flex justify-center items-center gap-5">
+                    <h1 className='text-3xl md:text-5xl font-bold mb-8 md:mb-14 text-center'>Contact US</h1>
+                    <div className="flex justify-center items-center gap-5 mx-auto w-11/12">
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                             <div className='flex items-center gap-2'>
                                 <div className='bg-gray-300 w-fit p-3 rounded-full'>
@@ -85,7 +85,7 @@ const Contact = () => {
                     <div className=' bg-gray-300 p-8 md:px-12 md:py-12 rounded-2xl'>
                         <form onSubmit={handleSubmit(handleMessage)}>
                             <fieldset className="fieldset">
-                                <label className="label mt-4">Name</label>
+                                <label className="text-black label mt-4">Name</label>
                                 <div className='flex justify-between items-center gap-5'>
                                     <div>
                                         <input type="text" {...register('firstName', { required: true })} className="input w-full" placeholder="First Name" />
@@ -97,11 +97,11 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <label className="label mt-2">Email</label>
+                                <label className="text-black label mt-2">Email</label>
                                 <input type="email" {...register('email', { required: true })} className="input w-full" placeholder="Email" />
                                 {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
-                                <label className="label mt-2">Message</label>
+                                <label className="text-black label mt-2">Message</label>
                                 <textarea rows={5} cols={20} className="w-full bg-white" {...register('message', { required: true })}></textarea>
                                 {errors.message?.type === "required" && <p className='text-red-500'>Message is Required</p>}
 

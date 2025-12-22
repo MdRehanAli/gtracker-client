@@ -43,6 +43,40 @@ const AllOrders = () => {
         updateOrderStatus(order, 'rejected')
     }
 
+
+    const handleDeleteOrder = id => {
+        console.log(id);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosSecure.delete(`/order/${id}`)
+                    .then(res => {
+                        console.log(res.data);
+
+                        if (res.data.deletedCount) {
+                            refetch();
+
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Order has been deleted.",
+                                icon: "success"
+                            });
+
+                        }
+                    })
+            }
+        });
+    }
+
     return (
         <div className='mx-auto md:h-full my-20'>
             <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
@@ -82,7 +116,7 @@ const AllOrders = () => {
                                         <button onClick={() => handleRejection(order)} className='btn'>
                                             <IoPersonRemoveOutline />
                                         </button>
-                                        <button className='btn '>
+                                        <button onClick={()=> handleDeleteOrder(order._id)} className='btn '>
                                             <FaTrash></FaTrash>
                                         </button>
                                     </td>

@@ -132,7 +132,7 @@ const Order = () => {
                             <input
                                 type="number"
                                 {...register('orderPrice', { required: true })}
-                                className="input w-full bg-gray-100 cursor-not-allowed"
+                                className="input w-full"
                                 readOnly
                             />
                             {errors.orderPrice?.type === "required" && (

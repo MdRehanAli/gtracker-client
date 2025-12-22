@@ -8,8 +8,8 @@ const TrackOrder = () => {
                 <div className='flex justify-center text-7xl'><MdOutlineTrackChanges className='p-4 bg-gray-300 rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Track Order</h1>
 
-                <div className='flex items-center justify-center my-20'>
-                    <ul className="timeline">
+                <div className='flex items-center justify-center py-5 text-sm'>
+                    <ul className="timeline timeline-vertical">
                         <li>
                             <div className="timeline-start">10/12/2025</div>
                             <div className="timeline-middle">
