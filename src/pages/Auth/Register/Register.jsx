@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 
@@ -84,6 +85,9 @@ const Register = () => {
 
     return (
         <div className="card bg-base-100 w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
+            <Helmet>
+                <title>GTracker | Registration</title>
+            </Helmet>
             <div className="card-body">
                 <h1 className='text-center text-2xl font-bold text-secondary mb-3'>Register to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleRegister)}>

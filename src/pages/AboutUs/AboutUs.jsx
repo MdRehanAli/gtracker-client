@@ -5,10 +5,14 @@ import about1 from '../../assets/About1.png'
 import about2 from '../../assets/About2.png'
 import Banner from '../Home/Banner/Banner';
 import WhyChoose from './WhyChoose';
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
     return (
         <div className='max-w-7xl mx-auto w-11/12 my-20'>
+            <Helmet>
+                <title>GTracker | About Us</title>
+            </Helmet>
             <Banner></Banner>
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5'><IoIosInformationCircleOutline className='p-4 bg-gray-300 rounded-3xl' /></div>

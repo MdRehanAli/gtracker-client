@@ -6,6 +6,7 @@ import Reviews from '../Reviews/Reviews';
 import Blogs from '../Blog/Blogs';
 import Statistics from '../Statistics/Statistics';
 import { Link } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 // import { Link, useLoaderData } from 'react-router';
 
 // const productsPromise = fetch('/products.json').then(res => res.json())
@@ -18,6 +19,9 @@ const Home = () => {
     // const products = useLoaderData()
     return (
         <div>
+            <Helmet>
+                <title>GTracker | Home</title>
+            </Helmet>
             <div className='max-w-7xl mx-auto w-11/12'>
                 <Banner></Banner>
                 <Products></Products>

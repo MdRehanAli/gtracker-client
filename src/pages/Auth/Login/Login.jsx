@@ -5,6 +5,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import useAuth from '../../../hooks/useAuth';
 import Swal from 'sweetalert2';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
@@ -49,6 +50,9 @@ const Login = () => {
 
     return (
         <div className="card w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
+            <Helmet>
+                <title>GTracker | Login</title>
+            </Helmet>
             <div className="card-body bg-base-100">
                 <h1 className='text-center text-2xl font-bold text-secondary mb-3'>Welcome to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>

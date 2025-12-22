@@ -6,6 +6,7 @@ import { IoCall } from 'react-icons/io5';
 import { MdOutlineMarkUnreadChatAlt } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
 
@@ -25,6 +26,9 @@ const Contact = () => {
 
     return (
         <section className='max-w-7xl mx-auto w-11/12 my-20'>
+            <Helmet>
+                <title>GTracker | Contact</title>
+            </Helmet>
             <div>
                 <div className='text-center'>
                     <div className='flex justify-center text-7xl mb-5'><MdOutlinePermContactCalendar className='p-4 bg-gray-300 rounded-3xl' /></div>
