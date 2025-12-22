@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { HiMiniPencilSquare } from 'react-icons/hi2';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
@@ -10,6 +10,8 @@ const UpdateProduct = () => {
     const products = useLoaderData();
     console.log(products);
     const { _id, image, name, category, largeDescription, minimumOrder, availableQuantity, price, paymentOptions, video } = products;
+
+    const navigate = useNavigate()
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -41,6 +43,7 @@ const UpdateProduct = () => {
                     .patch(`/all-products/${_id}`, productUpdateInfo)
                     .then(res => {
                         if (res.data.modifiedCount > 0) {
+                            navigate('/dashboard/manage-products')
                             Swal.fire("Updated!", "Product updated successfully", "success");
                         }
                     })

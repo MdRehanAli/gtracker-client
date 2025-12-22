@@ -4,6 +4,7 @@ import { FaTrash, FaUserCheck } from 'react-icons/fa6';
 import { IoPersonRemoveOutline } from 'react-icons/io5';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import { MdListAlt } from 'react-icons/md';
 
 const AllOrders = () => {
 
@@ -43,52 +44,55 @@ const AllOrders = () => {
     }
 
     return (
-        <div>
-            <h1>Manager</h1>
+        <div className='mx-auto md:h-full my-20'>
+            <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
+                <div className='flex justify-center text-7xl'><MdListAlt className='p-4 bg-gray-300 rounded-3xl' /></div>
+                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>All Orders : {orders.length}</h1>
 
-            <div className="overflow-x-auto">
-                <table className="table table-zebra">
-                    {/* head */}
-                    <thead className='text-center'>
-                        <tr>
-                            <th>No.</th>
-                            <th>Order ID</th>
-                            <th>User</th>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody className='text-center'>
+                <div className="overflow-x-auto">
+                    <table className="table table-zebra">
+                        {/* head */}
+                        <thead className='text-center'>
+                            <tr>
+                                <th>No.</th>
+                                <th>Order ID</th>
+                                <th>User</th>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody className='text-center'>
 
-                        {
-                            orders.map((order, index) => <tr key={order._id}>
-                                <th>{index + 1}</th>
-                                <td>{order._id}</td>
-                                <td>{order.firstName} {order.lastName}</td>
-                                <td>{order.productTitle}</td>
-                                <td>{order.orderQuantity}</td>
-                                <td>
-                                    <p className={`${order.status === 'approved' ? 'text-green-500' : order.status === 'rejected' ? 'text-red-500' : 'text-black'}`}>{order.status}</p>
-                                </td>
-                                <td>
-                                    <button onClick={() => handleApproval(order)} className='btn '>
-                                        <FaUserCheck />
-                                    </button>
-                                    <button onClick={() => handleRejection(order)} className='btn mx-2'>
-                                        <IoPersonRemoveOutline />
-                                    </button>
-                                    <button className='btn '>
-                                        <FaTrash></FaTrash>
-                                    </button>
-                                </td>
+                            {
+                                orders.map((order, index) => <tr key={order._id}>
+                                    <th>{index + 1}</th>
+                                    <td>{order._id}</td>
+                                    <td>{order.firstName} {order.lastName}</td>
+                                    <td>{order.productTitle}</td>
+                                    <td>{order.orderQuantity}</td>
+                                    <td>
+                                        <p className={`${order.status === 'approved' ? 'text-green-500' : order.status === 'rejected' ? 'text-red-500' : 'text-black'}`}>{order.status}</p>
+                                    </td>
+                                    <td className='flex justify-center items-center gap-2 '>
+                                        <button onClick={() => handleApproval(order)} className='btn '>
+                                            <FaUserCheck />
+                                        </button>
+                                        <button onClick={() => handleRejection(order)} className='btn'>
+                                            <IoPersonRemoveOutline />
+                                        </button>
+                                        <button className='btn '>
+                                            <FaTrash></FaTrash>
+                                        </button>
+                                    </td>
 
-                            </tr>)
-                        }
+                                </tr>)
+                            }
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

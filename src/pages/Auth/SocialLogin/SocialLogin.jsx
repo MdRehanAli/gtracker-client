@@ -42,8 +42,14 @@ const SocialLogin = () => {
                         navigate(location?.state || '/')
                     })
             })
-            .catch(error => {
-                toast.error(error.message);
+            .catch(() => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: "Failed Google Sign In",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
     }
 

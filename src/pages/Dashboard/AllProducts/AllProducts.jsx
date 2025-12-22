@@ -1,9 +1,64 @@
 import React from 'react';
+import { TbLayoutGrid } from 'react-icons/tb';
+import { useLoaderData } from 'react-router';
+import useAuth from '../../../hooks/useAuth';
 
 const AllProducts = () => {
+    const { user } = useAuth();
+
+    const products = useLoaderData();
+    // const { _id, image, name, category, largeDescription, minimumOrder, availableQuantity, price, paymentOptions, video } = products;
+
     return (
-        <div>
-            <h1>All Products: </h1>
+        <div className='mx-auto md:h-full my-20'>
+            <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
+                <div className='flex justify-center text-7xl'><TbLayoutGrid className='p-4 bg-gray-300 rounded-3xl' /></div>
+                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>All Products {products.length}</h1>
+
+                <div className="overflow-x-auto">
+                    <table className="table table-zebra text-center">
+                        {/* head */}
+                        <thead>
+                            <tr className=''>
+                                <th>No.</th>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th>Created By</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {
+                                products.map((product, index) => <tr key={product._id}>
+                                    <th>{index + 1}</th>
+                                    <td>
+                                        <div className="flex justify-center items-center gap-3">
+                                            <div className="avatar">
+                                                <div className="w-20 h-12 rounded-lg">
+                                                    <img className=''
+                                                        src={product.image}
+                                                        alt="Avatar Tailwind CSS Component" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>{product.name}</td>
+                                    <td>{product.price}</td>
+                                    <td>{product.category}</td>
+                                    <td>{product.displayName === undefined ? 'GTracker' : product.displayName}</td>
+                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+
+                                        <button className='btn btn-primary'>Show On Home</button>
+                                    </td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     );
 };

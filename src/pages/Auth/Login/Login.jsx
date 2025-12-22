@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import useAuth from '../../../hooks/useAuth';
 import Swal from 'sweetalert2';
-import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 const Login = () => {
@@ -38,7 +37,13 @@ const Login = () => {
                 navigate(location?.state || '/')
             })
             .catch(() => {
-                toast.error("Provide Correct Email and Password");
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: "Invalid Email & Password",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
     }
 

@@ -4,9 +4,10 @@ import { useQuery } from '@tanstack/react-query';
 import { FaUserShield } from 'react-icons/fa6';
 import { FiShieldOff } from 'react-icons/fi';
 import Swal from 'sweetalert2';
+import { FaUserCog } from 'react-icons/fa';
 
 const ManageUsers = () => {
-const [searchText, setSearchText] = useState('')
+    const [searchText, setSearchText] = useState('')
 
     const axiosSecure = useAxiosSecure();
     const { data: users = [], refetch } = useQuery({
@@ -79,74 +80,79 @@ const [searchText, setSearchText] = useState('')
     }
 
     return (
-        <div>
-            <h1>Manage users {users.length}</h1>
-            <label className="input">
-                <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g
-                        strokeLinejoin="round"
-                        strokeLinecap="round"
-                        strokeWidth="2.5"
-                        fill="none"
-                        stroke="currentColor"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.3-4.3"></path>
-                    </g>
-                </svg>
-                <input onChange={(e) => setSearchText(e.target.value)} type="search" className="grow" placeholder="Search Users" />
-            </label>
+        <div className='mx-auto md:h-full my-20'>
+            <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
+                <div className='flex justify-center text-7xl'><FaUserCog className='p-4 bg-gray-300 rounded-3xl' /></div>
+                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Manage users</h1>
+                <div className='flex justify-center'>
+                    <label className="input w-full md:w-1/2 h-14 mb-8">
+                        <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g
+                                strokeLinejoin="round"
+                                strokeLinecap="round"
+                                strokeWidth="2.5"
+                                fill="none"
+                                stroke="currentColor"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input onChange={(e) => setSearchText(e.target.value)} type="search" className="grow" placeholder="Search Users" />
+                    </label>
+                </div>
 
-            <div className="overflow-x-auto">
-                <table className="table table-zebra">
-                    {/* head */}
-                    <thead className='text-center'>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody className='text-center'>
+                <div className="overflow-x-auto">
+                    <table className="table table-zebra">
+                        {/* head */}
+                        <thead className='text-center'>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody className='text-center'>
 
-                        {
-                            users.map((user, index) => <tr key={user._id}>
-                                <th>{index + 1}</th>
-                                <td className='w-fit'>
-                                    <div className="flex items-center gap-3">
-                                        <div className="avatar">
-                                            <div className="rounded-2xl h-12 w-12">
-                                                <img
-                                                    src={user.photoURL}
-                                                    alt="Avatar Tailwind CSS Component" />
+                            {
+                                users.map((user, index) => <tr key={user._id}>
+                                    <th>{index + 1}</th>
+                                    <td className='w-fit'>
+                                        <div className="flex items-center gap-3">
+                                            <div className="avatar">
+                                                <div className="rounded-2xl h-12 w-12">
+                                                    <img
+                                                        src={user.photoURL}
+                                                        alt="Avatar Tailwind CSS Component" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="font-bold">{user.displayName}</div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div className="font-bold">{user.displayName}</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>{user.email}</td>
-                                <td>{user.role}</td>
-                                <td>
-                                    {user.role === 'admin' ?
-                                        <button onClick={() => handleRemoveAdmin(user)} className='btn'>
-                                            <FiShieldOff></FiShieldOff>
-                                        </button>
-                                        :
-                                        <button onClick={() => handleMakeAdmin(user)} className='btn'>
-                                            <FaUserShield></FaUserShield>
-                                        </button>
-                                    }
-                                </td>
+                                    </td>
+                                    <td>{user.email}</td>
+                                    <td>{user.role}</td>
+                                    <td>
+                                        {user.role === 'admin' ?
+                                            <button onClick={() => handleRemoveAdmin(user)} className='btn'>
+                                                <FiShieldOff></FiShieldOff>
+                                            </button>
+                                            :
+                                            <button onClick={() => handleMakeAdmin(user)} className='btn'>
+                                                <FaUserShield></FaUserShield>
+                                            </button>
+                                        }
+                                    </td>
 
-                            </tr>)
-                        }
+                                </tr>)
+                            }
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

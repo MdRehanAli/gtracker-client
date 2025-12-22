@@ -4,6 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
+import { BsCartPlus } from 'react-icons/bs';
 
 const MyOrder = () => {
     const { user } = useAuth();
@@ -65,50 +66,55 @@ const MyOrder = () => {
     }
 
     return (
-        <div>
-            <h1>All Order: {orders.length}</h1>
 
-            <div className="overflow-x-auto">
-                <table className="table table-zebra">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Order ID</th>
-                            <th>User</th>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+        <div className='mx-auto md:h-full my-20'>
+            <div className=' shadow-xl bg-gray-200 rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto'>
+                <div className='flex justify-center text-7xl'><BsCartPlus className='p-4 bg-gray-300 rounded-3xl' /></div>
+                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>My Order: {orders.length}</h1>
 
-                        {
-                            orders.map((order, index) => <tr key={order._id}>
-                                <th>{index + 1}</th>
-                                <td>{order._id}</td>
-                                <td>{order.firstName} {order.lastName}</td>
-                                <td>{order.productTitle}</td>
-                                <td>{order.orderQuantity}</td>
-                                <td>
-                                    {
-                                        order.payment_status === 'paid' ?
-                                            <span className='text-green-500'>Paid</span>
-                                            :
-                                            <button onClick={() => handlePayment(order)} className="btn btn-primary">Pay</button>
-                                    }
-                                </td>
-                                <td>{order.status}</td>
-                                <td>
-                                    <button className='btn btn-primary mr-2'>View</button>
-                                    <button onClick={() => handleCancelOrder(order._id)} className='btn btn-primary'>Cancel</button>
-                                </td>
-                            </tr>)
-                        }
-                    </tbody>
-                </table>
+
+                <div className="overflow-x-auto">
+                    <table className="table table-zebra text-center">
+                        {/* head */}
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Order ID</th>
+                                <th>User</th>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {
+                                orders.map((order, index) => <tr key={order._id}>
+                                    <th>{index + 1}</th>
+                                    <td>{order._id}</td>
+                                    <td>{order.firstName} {order.lastName}</td>
+                                    <td>{order.productTitle}</td>
+                                    <td>{order.orderQuantity}</td>
+                                    <td>
+                                        {
+                                            order.payment_status === 'paid' ?
+                                                <span className='text-green-500'>Paid</span>
+                                                :
+                                                <button onClick={() => handlePayment(order)} className="btn btn-primary">Pay</button>
+                                        }
+                                    </td>
+                                    <td>{order.status}</td>
+                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+                                        <button className='btn btn-primary mr-2'>View</button>
+                                        <button onClick={() => handleCancelOrder(order._id)} className='btn btn-primary'>Cancel</button>
+                                    </td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

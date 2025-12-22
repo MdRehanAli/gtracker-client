@@ -44,7 +44,8 @@ const AddProduct = () => {
                     image: image,
                     video: data.video,
                     paymentOptions: data.paymentOptions,
-                    email: user.email
+                    email: user.email,
+                    displayName: user.displayName
                 }
 
                 Swal.fire({
