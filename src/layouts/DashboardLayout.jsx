@@ -11,22 +11,46 @@ import { MdAddBox, MdAddShoppingCart, MdAssignment, MdEditNote, MdInventory, MdI
 import { TbClockQuestion, TbLayoutGrid, TbTruckDelivery } from "react-icons/tb";
 import { HiMiniPencilSquare } from 'react-icons/hi2';
 import { FiCheckSquare } from 'react-icons/fi';
+import useAuth from '../hooks/useAuth';
+import Swal from 'sweetalert2';
+import { toast } from 'react-toastify';
 
 
 const DashboardLayout = () => {
 
     const { role } = useRole();
+    const { user, signOutUser } = useAuth();
+    const handleLogOut = () => {
+        signOutUser()
+            .then(() => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Log Out Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
+    }
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 {/* Navbar */}
-                <nav className="navbar w-full bg-base-300">
-                    <label htmlFor="my-drawer-4" aria-label="open sidebar" className="btn btn-square btn-ghost">
-                        {/* Sidebar toggle icon */}
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor" className="my-1.5 inline-block size-4"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M9 4v16"></path><path d="M14 10l2 2l-2 2"></path></svg>
-                    </label>
-                    <div className="px-4">GTracker Dashboard</div>
+                <nav className=" w-full bg-base-300 flex justify-between items-center pr-5">
+                    <div className='navbar'>
+                        <label htmlFor="my-drawer-4" aria-label="open sidebar" className="btn btn-square btn-ghost">
+                            {/* Sidebar toggle icon */}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor" className="my-1.5 inline-block size-4"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M9 4v16"></path><path d="M14 10l2 2l-2 2"></path></svg>
+                        </label>
+                        <div className="px-4">GTracker Dashboard</div>
+                    </div>
+                    <div>
+                        <a onClick={handleLogOut} to='/' className="btn">LogOut</a>
+                    </div>
                 </nav>
                 {/* Page content here */}
                 <Outlet></Outlet>
