@@ -3,6 +3,8 @@ import { HiMiniPencilSquare } from 'react-icons/hi2';
 import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router';
 
 const ManageProducts = () => {
 
@@ -16,6 +18,39 @@ const ManageProducts = () => {
             return res.data;
         }
     })
+
+    const handleDeleteProduct = id => {
+        console.log(id);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                axiosSecure.delete(`all-products/${id}`)
+                    .then(res => {
+                        console.log(res.data);
+
+                        if (res.data.deletedCount) {
+                            refetch();
+
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Product has been deleted.",
+                                icon: "success"
+                            });
+
+                        }
+                    })
+            }
+        });
+    }
 
     return (
         <div className='mx-auto md:h-full my-20'>
@@ -56,8 +91,9 @@ const ManageProducts = () => {
                                     <td>{product.price}</td>
                                     <td>{product.paymentOptions}</td>
                                     <td>
-                                        <button className='btn btn-primary mr-2'>Update </button>
-                                        <button onClick={() => handleCancelOrder(product._id)} className='btn btn-primary'>Delete</button>
+                                        <Link to={`/dashboard/update-product/${product._id}`} className="btn btn-primary">Update Product</Link>
+                                        {/* <button onClick={() => handleUpdateProduct(product._id)} className='btn btn-primary mr-2'>Update </button> */}
+                                        <button onClick={() => handleDeleteProduct(product._id)} className='btn btn-primary'>Delete</button>
                                     </td>
                                 </tr>)
                             }

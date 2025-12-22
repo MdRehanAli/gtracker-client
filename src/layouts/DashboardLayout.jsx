@@ -48,7 +48,12 @@ const DashboardLayout = () => {
                         </label>
                         <div className="px-4">GTracker Dashboard</div>
                     </div>
-                    <div>
+                    <div className="flex gap-2">
+                        <div className="avatar avatar-online">
+                            <div className="ring-green-500 w-12 rounded-full ring-4">
+                                <img src={user?.photoURL} alt={user?.displayName} />
+                            </div>
+                        </div>
                         <a onClick={handleLogOut} to='/' className="btn">LogOut</a>
                     </div>
                 </nav>

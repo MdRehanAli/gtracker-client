@@ -1,90 +1,67 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { LiaHandsHelpingSolid } from 'react-icons/lia';
-import { MdAddShoppingCart } from 'react-icons/md';
-import Swal from 'sweetalert2';
-import useAxiosSecure from '../../../hooks/useAxiosSecure';
-import { useNavigate } from 'react-router';
-import { toast } from 'react-toastify';
-import axios from 'axios';
-import useAuth from '../../../hooks/useAuth';
+import { HiMiniPencilSquare } from 'react-icons/hi2';
+import { useLoaderData } from 'react-router';
 
-const AddProduct = () => {
+const UpdateProduct = () => {
+
+    const products = useLoaderData();
+    console.log(products);
+    const { _id, image, name, category, largeDescription, minimumOrder, availableQuantity, price, paymentOptions, video } = products;
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const navigate = useNavigate()
 
-    const axiosSecure = useAxiosSecure()
+    const handleUpdateProduct = id => {
+        const productUpdateInfo = {
+            name: products.name,
+            image: products.image,
+            largeDescription: products.largeDescription,
+            category: products.category,
+            price: products.price,
+            availableQuantity: products.availableQuantity,
+            minimumOrder: products.minimumOrder,
+            video: products.video,
+            paymentOptions: products.paymentOptions
+        }
 
-    const { user } = useAuth()
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
 
-    const handleOrderSubmit = (data) => {
-        const productImage = data.image[0];
-        console.log(data);
+                axiosSecure.patch(`all-products/${id}`, productUpdateInfo)
+                    .then(res => {
+                        console.log(res.data);
 
-        const formdata = new FormData();
-        formdata.append('image', productImage);
+                        if (res.data.modifiedCount) {
+                            refetch();
 
-        const image_API_URL = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_image_host_key}`
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Product has been deleted.",
+                                icon: "success"
+                            });
 
-        axios.post(image_API_URL, formdata)
-            .then(res => {
-
-                const image = res.data.data.url;
-
-                // Create user in the database 
-                const productInfo = {
-                    name: data.name,
-                    largeDescription: data.largeDescription,
-                    category: data.category,
-                    price: data.price,
-                    availableQuantity: data.availableQuantity,
-                    minimumOrder: data.minimumOrder,
-                    image: image,
-                    video: data.video,
-                    paymentOptions: data.paymentOptions,
-                    email: user.email
-                }
-
-                Swal.fire({
-                    title: "Are you sure?",
-                    text: "You won't be able to revert this!",
-                    icon: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
-                    confirmButtonText: "Confirm to Add Product"
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        axiosSecure.post('/all-products', productInfo)
-                            .then(res => {
-
-                                if (res.data.insertedId) {
-                                    navigate('/dashboard/manage-products')
-                                    Swal.fire({
-                                        position: "top-end",
-                                        icon: "success",
-                                        title: "Product Added. Show all products.",
-                                        showConfirmButton: false,
-                                        timer: 1500
-                                    });
-                                }
-                            })
-                    }
-                })
-            })
-            .catch(error => {
-                toast.error(error.message);
-            })
+                        }
+                    })
+            }
+        });
     }
+
 
     return (
         <div className='mx-auto md:h-full my-20'>
             <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
-                <div className='flex justify-center text-7xl'><MdAddShoppingCart className='p-4 bg-gray-300 rounded-3xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Add a New Product</h1>
-                <form onSubmit={handleSubmit(handleOrderSubmit)}>
+                <div className='flex justify-center text-7xl'><HiMiniPencilSquare className='p-4 bg-gray-300 rounded-3xl' /></div>
+                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Update Product</h1>
+                <form onSubmit={handleSubmit(handleUpdateProduct)}>
                     <fieldset className="fieldset flex flex-col md:flex-row md:gap-10">
 
                         <div className='flex-1'>
@@ -113,7 +90,6 @@ const AddProduct = () => {
                             <label className="text-black label mt-2">Price</label>
                             <input type="number" {...register('price', { required: true })} className="input w-full" placeholder="Price" />
                             {errors.price?.type === "required" && <p className='text-red-500'>Price is Required</p>}
-
 
                         </div>
 
@@ -147,7 +123,7 @@ const AddProduct = () => {
                             {errors.paymentOptions?.type === "required" && <p className='text-red-500'>Payment Options is Required</p>}
                         </div>
                     </fieldset>
-                    <button className="btn btn-primary mt-4 w-full">Submit Product</button>
+                    <button className="btn btn-primary mt-4 w-full">Update</button>
 
                 </form>
             </div>
@@ -155,4 +131,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;

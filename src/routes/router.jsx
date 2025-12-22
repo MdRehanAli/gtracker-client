@@ -30,7 +30,7 @@ import AddProduct from "../pages/Dashboard/AddProduct/AddProduct";
 import ManageProducts from "../pages/Dashboard/ManageProducts/ManageProducts";
 import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import TrackOrder from "../pages/Dashboard/TrackOrder/TrackOrder";
-// import ManageManagers from "../pages/Dashboard/ManageManagers/ManageManagers";
+import UpdateProduct from "../pages/Dashboard/UpdateProduct/UpdateProduct";
 
 const router = createBrowserRouter([
     {
@@ -134,6 +134,12 @@ const router = createBrowserRouter([
                 path: 'manage-products',
                 element: <ManagerRoute><ManageProducts></ManageProducts></ManagerRoute>
             },
+            {
+                path: 'update-product/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                element: <ManagerRoute><UpdateProduct></UpdateProduct></ManagerRoute>
+            },
+            // },
             {
                 path: 'pending-orders',
                 element: <ManagerRoute><PendingOrders></PendingOrders></ManagerRoute>
