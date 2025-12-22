@@ -102,11 +102,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'track-order',
-                element: TrackOrder
+                Component: TrackOrder
             },
             {
-                path: 'profile',
-                element: MyProfile
+                path: 'user-profile',
+                Component: MyProfile
             },
             {
                 path: 'payment/:orderId',

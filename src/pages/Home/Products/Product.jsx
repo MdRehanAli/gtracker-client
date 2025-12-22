@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Product = ({ product }) => {
     // console.log(product);
 
-    const { _id, image, name, category, description, largeDescription, availableQuantity, price } = product
+    const { _id, image, name, category, largeDescription, availableQuantity, price } = product
 
     return (
         <div className="card border shadow-xl rounded-2xl">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { LiaHandsHelpingSolid } from "react-icons/lia";
 import Swal from 'sweetalert2';
@@ -9,23 +9,32 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 const Order = () => {
     const products = useLoaderData();
     const { name, price, minimumOrder, availableQuantity, } = products;
+    const {
+        register,
+        handleSubmit,
+        watch,
+        setValue,
+        formState: { errors }
+    } = useForm();
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useAuth();
 
     const navigate = useNavigate()
 
     const axiosSecure = useAxiosSecure()
 
+    const orderQuantity = watch("orderQuantity");
+
+    useEffect(() => {
+        const qty = Number(orderQuantity) || 0;
+        const perUnitPrice = Number(price) || 0;
+
+        const totalPrice = qty * perUnitPrice;
+
+        setValue("orderPrice", totalPrice);
+    }, [orderQuantity, price, setValue]);
+
     const handleOrderSubmit = (data) => {
-        console.log(data);
-
-        const perPrice = parseFloat(data.price)
-        const quantity = data.orderQuantity;
-        // let totalPrice = 0;
-        const totalPrice = perPrice * quantity;
-        data.orderPrice = totalPrice;
-
 
         Swal.fire({
             title: "Are you sure?",
@@ -101,20 +110,41 @@ const Order = () => {
                         <div className='flex-1'>
                             {/* Order Quantity Field  */}
                             <label className="text-black label mt-2">Order Quantity</label>
-                            <input type="number" {...register('orderQuantity', { required: true, min: { minimumOrder }, max: { availableQuantity }, })} className="input w-full" placeholder="Order Quantity" />
-                            {errors.orderQuantity?.type === "required" && <p className='text-red-500'>Order Quantity is Required</p>}
-                            {errors.orderQuantity?.type === "min" && <p className='text-red-500'>Order Minimum {minimumOrder} Product</p>}
-                            {errors.orderQuantity?.type === "max" && <p className='text-red-500'>Order Maximum {availableQuantity} Product</p>}
+                            <input type="number" {...register('orderQuantity', {
+                                required: "Order quantity is required",
+                                min: {
+                                    value: minimumOrder,
+                                    message: `Minimum order quantity is ${minimumOrder}`
+                                },
+                                max: {
+                                    value: availableQuantity,
+                                    message: `Maximum available quantity is ${availableQuantity}`
+                                },
+                                valueAsNumber: true
+                            })}
+                                className="input w-full" placeholder="Order Quantity" />
+                            {errors.orderQuantity && (
+                                <p className="text-red-500">{errors.orderQuantity.message}</p>
+                            )}
 
                             {/* Order Price Field  */}
-                            <label className="text-black label mt-2">Order Price</label>
-                            <input type="number" {...register('orderPrice',)} className="input w-full" placeholder="Order Price" />
-                            {/* {errors.orderPrice?.type === "required" && <p className='text-red-500'>Order Price is Required</p>} */}
+                            <label className="label mt-2">Order Price</label>
+                            <input
+                                type="number"
+                                {...register('orderPrice', { required: true })}
+                                className="input w-full bg-gray-100 cursor-not-allowed"
+                                readOnly
+                            />
+                            {errors.orderPrice?.type === "required" && (
+                                <p className='text-red-500'>Order Price is Required</p>
+                            )}
+
 
                             {/* Contact Number Field  */}
                             <label className="text-black label mt-2">Contact Number</label>
-                            <input type="number" {...register('contactNumber', { required: true, })} className="input w-full" placeholder="Contact Number" />
+                            <input type="number" {...register('contactNumber', { required: true, minLength: 11 })} className="input w-full" placeholder="Contact Number" />
                             {errors.contactNumber?.type === "required" && <p className='text-red-500'>Contact Number is Required</p>}
+                            {errors.contactNumber?.type === "minLength" && <p className='text-red-500'>Contact Number at least 11 character.</p>}
 
                             {/* Delivery Address Field  */}
                             <label className="text-black label mt-2">Delivery Address</label>

@@ -82,7 +82,7 @@ const DashboardLayout = () => {
                                 </li>
 
                                 <li>
-                                    <NavLink to="/dashboard/profile" className="is-drawer-close:tooltip is-drawer-close:tooltip-right  text-lg mb-2" data-tip="My Profile">
+                                    <NavLink to="/dashboard/user-profile" className="is-drawer-close:tooltip is-drawer-close:tooltip-right  text-lg mb-2" data-tip="My Profile">
                                         <FaUserCircle className='text-2xl' />
                                         <span className="is-drawer-close:hidden">My Profile</span>
                                     </NavLink>

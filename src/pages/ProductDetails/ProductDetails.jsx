@@ -31,12 +31,7 @@ const ProductDetails = () => {
                     <p className='font-bold text-4xl'>${price}</p>
                     <p className=''><span className='font-bold'>Minimum Order: </span>{minimumOrder}</p>
                     <div className="card-actions justify-end">
-                        <p>Payment Options:</p>
-                        {
-                            paymentOptions.map((paymentOption, index) => <div key={index}>
-                                <button className="btn btn-primary btn-sm">{paymentOption}</button>
-                            </div>)
-                        }
+                        <p>Payment Options: {paymentOptions} </p>
                     </div>
                     <Link to={`/order/${_id}`} className="btn btn-primary my-10">Order Now</Link>
                 </div>
