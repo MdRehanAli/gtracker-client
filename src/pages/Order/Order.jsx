@@ -8,7 +8,7 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const Order = () => {
     const products = useLoaderData();
-    const { name, price, minimumOrder, availableQuantity, } = products;
+    const { name, price, minimumOrder, availableQuantity, image } = products;
     const {
         register,
         handleSubmit,
@@ -35,6 +35,7 @@ const Order = () => {
     }, [orderQuantity, price, setValue]);
 
     const handleOrderSubmit = (data) => {
+        data.image = image;
 
         Swal.fire({
             title: "Are you sure?",

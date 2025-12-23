@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { TbClockQuestion } from 'react-icons/tb';
+import { Link } from 'react-router';
 
 const PendingOrders = () => {
     const [selectedOrder, setSelectedOrder] = useState(null);
@@ -52,8 +53,10 @@ const PendingOrders = () => {
                                     <td>{order.productTitle}</td>
                                     <td>{order.orderQuantity}</td>
                                     <td>{order.createdAt}</td>
-                                    <td>
+                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
                                         <button onClick={() => openApproveModal(order)} className='btn btn-primary text-black'>Approve</button>
+                                        <button className='btn btn-primary text-black'>Reject</button>
+                                        <Link to={`/dashboard/order-details/${order._id}`} className='btn btn-primary text-black'>View</Link>
                                     </td>
                                 </tr>)
                             }
