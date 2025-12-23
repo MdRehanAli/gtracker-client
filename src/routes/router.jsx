@@ -42,17 +42,17 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch('http://localhost:5000/products'),
+                loader: () => fetch('https://gtracker-server.vercel.app/products'),
                 Component: Home
             },
             {
                 path: '/all-products',
-                loader: () => fetch('http://localhost:5000/all-products'),
+                loader: () => fetch('https://gtracker-server.vercel.app/all-products'),
                 Component: AllProduct,
             },
             {
                 path: '/products-details/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
             },
             {
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/order/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
                 element: <PrivateRoute><Order></Order></PrivateRoute>
             },
             {
@@ -104,7 +104,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'view-order/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/order/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/order/${params.id}`),
                 element: <ViewOrder></ViewOrder>
             },
             {
@@ -143,7 +143,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'update-product/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/all-products/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
                 element: <ManagerRoute><UpdateProduct></UpdateProduct></ManagerRoute>
             },
             // },
@@ -153,7 +153,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'order-details/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/order/${params.id}`),
+                loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/order/${params.id}`),
                 element: <PrivateRoute><OrderDetails></OrderDetails></PrivateRoute>
             },
             {
@@ -172,7 +172,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'all-products',
-                loader: () => fetch('http://localhost:5000/all-products'),
+                loader: () => fetch('https://gtracker-server.vercel.app/all-products'),
                 element: <AdminRoute><AllProducts></AllProducts></AdminRoute>
             },
             {
