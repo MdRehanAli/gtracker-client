@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const handleMessage = (data) => {
         console.log(data);
@@ -22,6 +22,8 @@ const Contact = () => {
             showConfirmButton: false,
             timer: 1500
         });
+
+        reset()
     }
 
     return (
@@ -106,7 +108,7 @@ const Contact = () => {
                                 {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                                 <label className="text-black label mt-2">Message</label>
-                                <textarea rows={5} cols={20} className="w-full bg-white" {...register('message', { required: true })}></textarea>
+                                <textarea rows={5} cols={20} className="w-full bg-white rounded-sm p-2 text-xl" {...register('message', { required: true })}></textarea>
                                 {errors.message?.type === "required" && <p className='text-red-500'>Message is Required</p>}
 
                                 <button className="btn btn-primary w-full mt-3">Send Message</button>
