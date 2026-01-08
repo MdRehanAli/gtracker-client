@@ -1,10 +1,8 @@
 import React from 'react';
 import { TbLayoutGrid } from 'react-icons/tb';
 import { useLoaderData } from 'react-router';
-import useAuth from '../../../hooks/useAuth';
 
 const AllProducts = () => {
-    const { user } = useAuth();
 
     const products = useLoaderData();
     // const { _id, image, name, category, largeDescription, minimumOrder, availableQuantity, price, paymentOptions, video } = products;

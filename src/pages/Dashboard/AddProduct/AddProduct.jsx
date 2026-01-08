@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { LiaHandsHelpingSolid } from 'react-icons/lia';
 import { MdAddShoppingCart } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';

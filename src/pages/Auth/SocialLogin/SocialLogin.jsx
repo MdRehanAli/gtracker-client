@@ -3,7 +3,6 @@ import { FcGoogle } from 'react-icons/fc';
 import useAuth from '../../../hooks/useAuth';
 import { useLocation, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
-import { toast } from 'react-toastify';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const SocialLogin = () => {

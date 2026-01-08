@@ -7,16 +7,12 @@ import Blogs from '../Blog/Blogs';
 import Statistics from '../Statistics/Statistics';
 import { Link } from 'react-router';
 import { Helmet } from 'react-helmet-async';
-// import { Link, useLoaderData } from 'react-router';
-
-// const productsPromise = fetch('/products.json').then(res => res.json())
 const worksPromise = fetch('/works.json').then(res => res.json())
 const reviewsPromise = fetch('/reviews.json').then(res => res.json())
 const blogsPromise = fetch('/blogs.json').then(res => res.json())
 
 const Home = () => {
 
-    // const products = useLoaderData()
     return (
         <div>
             <Helmet>
