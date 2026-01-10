@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             {
                 path: '/products-details/:id',
                 loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
-                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>
+                element: <ProductDetails></ProductDetails>
             },
             {
                 path: '/about-us',
