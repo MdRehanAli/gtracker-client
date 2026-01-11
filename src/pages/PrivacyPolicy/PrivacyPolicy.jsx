@@ -1,5 +1,13 @@
 import React from 'react';
+import { CiCircleInfo, CiUser } from 'react-icons/ci';
+import { FiDownload } from 'react-icons/fi';
 import { Link } from 'react-router';
+import { GoDatabase, GoShareAndroid, GoShieldCheck } from "react-icons/go";
+import { LuChartNoAxesCombined, LuCookie, LuUserSearch } from "react-icons/lu";
+import { FaAddressCard } from 'react-icons/fa6';
+import { IoMdCloudDone } from 'react-icons/io';
+import { BsKey } from 'react-icons/bs';
+import { MdLockOutline, MdOutlineStorage, MdOutlineVisibilityOff } from 'react-icons/md';
 
 const PrivacyPolicy = () => {
     return (
@@ -20,7 +28,7 @@ const PrivacyPolicy = () => {
                         <p className="text-slate-500 dark:text-[#ab9db9] text-lg">Last updated: May 24, 2024</p>
                     </div>
                     <button className="flex items-center gap-2 cursor-pointer rounded-lg h-11 px-6 bg-slate-200 dark:bg-[#302839] text-slate-900 dark:text-white text-sm font-bold transition-all hover:opacity-90">
-                        <span className="material-symbols-outlined text-xl">download</span>
+                        <span className="material-symbols-outlined text-xl"><FiDownload /></span>
                         <span>Download PDF</span>
                     </button>
                 </div>
@@ -35,27 +43,27 @@ const PrivacyPolicy = () => {
                             </div>
                             <nav className="flex flex-col gap-1">
                                 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/20 border-l-4 border-primary transition-all text-primary" href="#intro">
-                                    <span className="material-symbols-outlined text-xl">info</span>
+                                    <span className="material-symbols-outlined text-xl"><CiCircleInfo /></span>
                                     <span className="text-sm font-semibold">1. Introduction</span>
                                 </a>
                                 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#data-collection">
-                                    <span className="material-symbols-outlined text-xl">database</span>
+                                    <span className="material-symbols-outlined text-xl"><GoDatabase /></span>
                                     <span className="text-sm font-medium">2. Data Collection</span>
                                 </a>
                                 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#cookies">
-                                    <span className="material-symbols-outlined text-xl">cookie</span>
+                                    <span className="material-symbols-outlined text-xl"><LuCookie /></span>
                                     <span className="text-sm font-medium">3. Cookies Policy</span>
                                 </a>
                                 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#third-party">
-                                    <span className="material-symbols-outlined text-xl">share</span>
+                                    <span className="material-symbols-outlined text-xl"><GoShareAndroid /></span>
                                     <span className="text-sm font-medium">4. Third-Party Sharing</span>
                                 </a>
                                 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#security">
-                                    <span className="material-symbols-outlined text-xl">shield</span>
+                                    <span className="material-symbols-outlined text-xl"><GoShieldCheck /></span>
                                     <span className="text-sm font-medium">5. Data Security</span>
                                 </a>
                                 <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#user-rights">
-                                    <span className="material-symbols-outlined text-xl">person</span>
+                                    <span className="material-symbols-outlined text-xl"><CiUser /></span>
                                     <span className="text-sm font-medium">6. User Rights</span>
                                 </a>
                             </nav>
@@ -75,7 +83,7 @@ const PrivacyPolicy = () => {
                                 <span className="text-primary">1.</span> Introduction
                             </h2>
                             <div className="space-y-4 text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg">
-                                <p>Welcome to the <strong>Garments Production Tracker</strong>. We are committed to protecting your personal data and your right to privacy. This policy explains how we collect, use, and protect your information when you use our order and production tracking system.</p>
+                                <p>Welcome to the <strong>GTracker</strong>. We are committed to protecting your personal data and your right to privacy. This policy explains how we collect, use, and protect your information when you use our order and production tracking system.</p>
                                 <p>Our system is designed to streamline the garment manufacturing process, and to do so effectively, we must process certain information related to manufacturing partners, order details, and administrative users.</p>
                             </div>
                         </section>
@@ -88,7 +96,7 @@ const PrivacyPolicy = () => {
                             <div className="space-y-6">
                                 <div className="p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
                                     <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="material-symbols-outlined text-primary">person_search</span> Personal Data
+                                        <span className="material-symbols-outlined text-primary"><LuUserSearch /></span> Personal Data
                                     </h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start gap-3">
@@ -107,7 +115,7 @@ const PrivacyPolicy = () => {
                                 </div>
                                 <div className="p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
                                     <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="material-symbols-outlined text-primary">monitoring</span> Usage Data
+                                        <span className="material-symbols-outlined text-primary"><LuChartNoAxesCombined /></span> Usage Data
                                     </h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start gap-3">
@@ -146,14 +154,14 @@ const PrivacyPolicy = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary/50 transition-all group">
                                     <div className="size-12 bg-indigo-600/10 rounded-lg flex items-center justify-center text-indigo-500 mb-4 group-hover:scale-110 transition-transform">
-                                        <span className="material-symbols-outlined text-3xl">payments</span>
+                                        <span className="material-symbols-outlined text-3xl"><FaAddressCard /></span>
                                     </div>
                                     <h3 className="text-slate-900 dark:text-white text-lg font-bold mb-2">Stripe</h3>
                                     <p className="text-sm text-slate-500 dark:text-[#ab9db9]">We use Stripe for secure billing and payment processing of production orders. We do not store credit card details on our servers.</p>
                                 </div>
                                 <div className="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary/50 transition-all group">
                                     <div className="size-12 bg-orange-600/10 rounded-lg flex items-center justify-center text-orange-500 mb-4 group-hover:scale-110 transition-transform">
-                                        <span className="material-symbols-outlined text-3xl">cloud_done</span>
+                                        <span className="material-symbols-outlined text-3xl"><IoMdCloudDone /></span>
                                     </div>
                                     <h3 className="text-slate-900 dark:text-white text-lg font-bold mb-2">Firebase</h3>
                                     <p className="text-sm text-slate-500 dark:text-[#ab9db9]">Our database and real-time syncing are powered by Google Firebase. Data is stored in secure, encrypted cloud environments.</p>
@@ -170,19 +178,19 @@ const PrivacyPolicy = () => {
                                 <p>We implement industry-standard security measures to protect your garment production data. This includes:</p>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                                     <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                                        <span className="material-symbols-outlined text-primary">lock</span>
+                                        <span className="material-symbols-outlined text-primary"><MdLockOutline /></span>
                                         <span className="text-sm font-medium">SSL/TLS Encryption</span>
                                     </li>
                                     <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                                        <span className="material-symbols-outlined text-primary">key</span>
+                                        <span className="material-symbols-outlined text-primary"><BsKey /></span>
                                         <span className="text-sm font-medium">Multi-Factor Authentication</span>
                                     </li>
                                     <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                                        <span className="material-symbols-outlined text-primary">storage</span>
+                                        <span className="material-symbols-outlined text-primary"><MdOutlineStorage /></span>
                                         <span className="text-sm font-medium">Regular Data Backups</span>
                                     </li>
                                     <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
-                                        <span className="material-symbols-outlined text-primary">visibility_off</span>
+                                        <span className="material-symbols-outlined text-primary"><MdOutlineVisibilityOff /></span>
                                         <span className="text-sm font-medium">Internal Access Audits</span>
                                     </li>
                                 </ul>
@@ -195,7 +203,7 @@ const PrivacyPolicy = () => {
                                 <span className="text-primary">6.</span> User Rights
                             </h2>
                             <div className="space-y-4 text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg">
-                                <p>You have certain rights regarding your personal information, including the right to access, correct, or delete the data we hold about you. For the Garments Production Tracker, this specifically includes:</p>
+                                <p>You have certain rights regarding your personal information, including the right to access, correct, or delete the data we hold about you. For the GTracker, this specifically includes:</p>
                                 <div className="flex flex-col gap-3 mt-4">
                                     <div className="p-4 border border-l-4 border-primary/30 dark:border-primary/50 rounded-r-lg">
                                         <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1 uppercase tracking-wider">Access & Portability</h4>
