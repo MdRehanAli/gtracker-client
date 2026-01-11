@@ -4,8 +4,10 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import useAuth from '../../../hooks/useAuth';
 import Swal from 'sweetalert2';
-import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { FaEye, FaEyeSlash, FaRegUser } from 'react-icons/fa6';
 import { Helmet } from 'react-helmet-async';
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { GrUserSettings } from 'react-icons/gr';
 
 const Login = () => {
 
@@ -79,6 +81,28 @@ const Login = () => {
                     </fieldset>
                     <p className='my-2 text-center'>New to GTracker? Please <Link to='/register' state={location.state} className='font-bold underline text-red-500'>Register</Link></p>
                 </form>
+                <div>
+                    <p className="text-primary text-[11px] font-bold mb-4 uppercase tracking-[0.25em] text-center opacity-60">Demo Quick Access</p>
+                    {/* Fill Admin credentials  */}
+                    <div className="grid grid-cols-3 gap-3">
+                        <Link to="/dashboard" className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                            <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><MdOutlineAdminPanelSettings className='' /></div>
+                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">ADMIN</span>
+                        </Link>
+
+                        {/* Fill Manager Credential  */}
+                        <Link to="/dashboard" className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                            <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><GrUserSettings className='' /></div>
+                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">MANAGER</span>
+                        </Link>
+
+                        {/* Fill User Credential  */}
+                        <Link to="/dashboard" className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                            <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><FaRegUser className='' /></div>
+                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">BUYER</span>
+                        </Link>
+                    </div>
+                </div>
                 <SocialLogin></SocialLogin>
             </div>
         </div>
