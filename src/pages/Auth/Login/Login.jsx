@@ -11,7 +11,7 @@ import { GrUserSettings } from 'react-icons/gr';
 
 const Login = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, setValue, formState: { errors } } = useForm();
     const { signInUser } = useAuth();
 
     const location = useLocation();
@@ -22,6 +22,33 @@ const Login = () => {
         event.preventDefault();
         setShowPassword(!showPassword);
     }
+
+    const demoCredentials = {
+        admin: {
+            email: "gtracker@gmail.com",
+            password: "Gtracker"
+        },
+        manager: {
+            email: "manager@gmail.com",
+            password: "Manager"
+        },
+        user: {
+            email: "user@gmail.com",
+            password: "User123"
+        }
+    };
+
+    const handleDemoLogin = (role) => {
+        const credential = demoCredentials[role];
+
+        // Auto fill form
+        setValue("email", credential.email);
+        setValue("password", credential.password);
+
+        // Auto submit
+        handleLogin(credential);
+    };
+
 
     const handleLogin = (data) => {
         console.log("After LogIn Data: ", data);
@@ -81,29 +108,30 @@ const Login = () => {
                     </fieldset>
                     <p className='my-2 text-center'>New to GTracker? Please <Link to='/register' state={location.state} className='font-bold underline text-red-500'>Register</Link></p>
                 </form>
+                <SocialLogin></SocialLogin>
                 <div>
                     <p className="text-primary text-[11px] font-bold mb-4 uppercase tracking-[0.25em] text-center opacity-60">Demo Quick Access</p>
                     {/* Fill Admin credentials  */}
                     <div className="grid grid-cols-3 gap-3">
-                        <Link to="/dashboard" className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                        <button onClick={() => handleDemoLogin("admin")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
                             <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><MdOutlineAdminPanelSettings className='' /></div>
                             <span className="text-slate-300 text-[10px] font-bold tracking-wider">ADMIN</span>
-                        </Link>
+                        </button>
 
                         {/* Fill Manager Credential  */}
-                        <Link to="/dashboard" className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
                             <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><GrUserSettings className='' /></div>
                             <span className="text-slate-300 text-[10px] font-bold tracking-wider">MANAGER</span>
-                        </Link>
+                        </button>
 
                         {/* Fill User Credential  */}
-                        <Link to="/dashboard" className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                        <button onClick={() => handleDemoLogin("user")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
                             <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><FaRegUser className='' /></div>
-                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">BUYER</span>
-                        </Link>
+                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">USER</span>
+                        </button>
                     </div>
                 </div>
-                <SocialLogin></SocialLogin>
+
             </div>
         </div>
     );
