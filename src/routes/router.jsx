@@ -33,6 +33,8 @@ import TrackOrder from "../pages/Dashboard/TrackOrder/TrackOrder";
 import UpdateProduct from "../pages/Dashboard/UpdateProduct/UpdateProduct";
 import OrderDetails from "../pages/Dashboard/OrderDetails/OrderDetails";
 import ViewOrder from "../pages/Dashboard/ViewOrder/ViewOrder";
+import TermsAndConditions from "../pages/TermsAndConditions/TermsAndConditions";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 
 const router = createBrowserRouter([
     {
@@ -67,6 +69,14 @@ const router = createBrowserRouter([
                 path: '/order/:id',
                 loader: ({ params }) => fetch(`https://gtracker-server.vercel.app/all-products/${params.id}`),
                 element: <PrivateRoute><Order></Order></PrivateRoute>
+            },
+            {
+                path: '/terms',
+                Component: TermsAndConditions
+            },
+            {
+                path: '/policy',
+                Component: PrivacyPolicy
             },
             {
                 path: '/*',
