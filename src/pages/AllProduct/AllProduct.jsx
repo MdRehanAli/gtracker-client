@@ -6,12 +6,14 @@ import { Helmet } from 'react-helmet-async';
 const AllProduct = () => {
 
     return (
-        <div className='max-w-7xl mx-auto w-11/12'>
+        <div>
             <Helmet>
                 <title>GTracker | All Products</title>
             </Helmet>
             <Banner></Banner>
-            <Products></Products>
+            <div className='max-w-7xl mx-auto w-11/12'>
+                <Products></Products>
+            </div>
         </div>
     );
 };

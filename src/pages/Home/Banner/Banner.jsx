@@ -16,12 +16,12 @@ const Banner = () => {
 
     const banners = [banner1, banner2, banner3, banner4, banner5, banner6, banner7, banner8, banner9]
     return (
-        <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} className='rounded-2xl mt-10 mb-20'>
+        <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} className=' mt-10 mb-20'>
             {
-                banners.map((banner, index) => <div key={index} className='rounded-2xl bg-no-repeat bg-cover' style={{ backgroundImage: `url(${banner})` }}>
-                    <div className=' min-h-[500px] rounded-2xl p-5 md:p-20 bg-[#0000005c] text-white text-center flex flex-col items-center justify-center'>
+                banners.map((banner, index) => <div key={index} className=' bg-no-repeat bg-cover' style={{ backgroundImage: `url(${banner})` }}>
+                    <div className=' min-h-[500px] p-5 md:p-20 bg-[#0000005c] text-white text-center flex flex-col items-center justify-center'>
                         <h1 className='text-3xl md:text-7xl font-bold'>Discover the Best Products</h1>
-                        <p className='my-5'>GTracker is the world best software services for Garment Order & Production Tracker for small and medium factories. Reduce delays manage workflow from cutting to delivery.</p>
+                        <p className='my-5 md:w-1/2 text-center'>GTracker is the world best software services for Garment Order & Production Tracker for small and medium factories. Reduce delays manage workflow from cutting to delivery.</p>
                         <div className='flex justify-center items-center gap-5'>
                             <Link to="/all-products" className='btn btn-primary'>View Products</Link>
                             <a href="#how" className='btn btn-primary'>How it works</a>
