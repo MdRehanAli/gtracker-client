@@ -9,8 +9,8 @@ const OrderDetails = () => {
     const { contactNumber, createdAt, deliveryAddress, email, firstName, instructions, lastName, orderPrice, orderQuantity, price, productTitle, status, image, _id } = orders;
     return (
         <div className='my-20'>
-            <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
-                <div className='flex justify-center text-7xl'><MdScreenshotMonitor className='p-4 bg-gray-300 rounded-3xl' /></div>
+            <div className=' shadow-xl  rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
+                <div className='flex justify-center text-7xl'><MdScreenshotMonitor className='p-4  rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Order Details</h1>
 
                 <div className="card shadow-lg md:w-1/2 mx-auto mt-10">

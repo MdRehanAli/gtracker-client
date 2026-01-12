@@ -83,7 +83,7 @@ const Login = () => {
                 <title>GTracker | Login</title>
             </Helmet>
             <div className="card-body bg-base-100">
-                <h1 className='text-center text-2xl font-bold text-secondary mb-3'>Welcome to GTracker!</h1>
+                <h1 className='text-center text-2xl font-bold text-parimary mb-3'>Welcome to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">
                         {/* Email Field  */}

@@ -8,8 +8,8 @@ const ManagerDashboardHome = () => {
             <Helmet>
                 <title>GTracker | Manager DashBoard</title>
             </Helmet>
-            <div className=' shadow-xl bg-gray-200 rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto'>
-                <div className='flex justify-center text-7xl'><FcManager className='p-4 bg-gray-300 rounded-3xl' /></div>
+            <div className=' shadow-xl  rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto border'>
+                <div className='flex justify-center text-7xl'><FcManager className='p-4  rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Manager Dashboard</h1>
             </div>
         </div>
