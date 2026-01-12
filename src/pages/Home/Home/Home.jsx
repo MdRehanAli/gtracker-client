@@ -27,7 +27,6 @@ const Home = () => {
             <Connected></Connected>
             <ProductionStat></ProductionStat>
             <Supply></Supply>
-            <BestSeller></BestSeller>
             <div className='max-w-7xl mx-auto w-11/12'>
                 <Products></Products>
                 <div className='flex items-center justify-center mt-10'>
