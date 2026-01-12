@@ -4,7 +4,7 @@ import { FiDownload } from 'react-icons/fi';
 import { Link } from 'react-router';
 import { GoDatabase, GoShareAndroid, GoShieldCheck } from "react-icons/go";
 import { LuChartNoAxesCombined, LuCookie, LuUserSearch } from "react-icons/lu";
-import { FaAddressCard } from 'react-icons/fa6';
+import { FaAddressCard, FaRegCircle } from 'react-icons/fa6';
 import { IoMdCloudDone } from 'react-icons/io';
 import { BsKey } from 'react-icons/bs';
 import { MdLockOutline, MdOutlineStorage, MdOutlineVisibilityOff } from 'react-icons/md';
@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
                             <div className="mt-8 p-4 bg-primary/10 rounded-xl border border-primary/20">
                                 <h4 className="text-primary font-bold text-sm mb-2">Need help?</h4>
                                 <p className="text-xs text-slate-500 dark:text-[#ab9db9] leading-relaxed">If you have any questions about our privacy practices, contact our compliance team.</p>
-                                <a className="text-primary text-xs font-bold mt-2 inline-block hover:underline" href="mailto:privacy@garmentstracker.com">privacy@garmentstracker.com</a>
+                                <a className="text-primary text-xs font-bold mt-2 inline-block hover:underline" href="mailto:privacy@gtracker.com">privacy@gtracker.com</a>
                             </div>
                         </div>
                     </aside>
@@ -100,15 +100,15 @@ const PrivacyPolicy = () => {
                                     </h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start gap-3">
-                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm">circle</span>
+                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm"><FaRegCircle /></span>
                                             <span>Account details (Name, business email, and encrypted password).</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm">circle</span>
+                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm"><FaRegCircle /></span>
                                             <span>Shipping and delivery addresses for wholesale garment orders.</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm">circle</span>
+                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm"><FaRegCircle /></span>
                                             <span>Contact information for production managers and supply chain partners.</span>
                                         </li>
                                     </ul>
@@ -119,15 +119,15 @@ const PrivacyPolicy = () => {
                                     </h3>
                                     <ul className="space-y-3">
                                         <li className="flex items-start gap-3">
-                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm">circle</span>
+                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm"><FaRegCircle /></span>
                                             <span>Log data including IP addresses, browser types, and timestamp of logins.</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm">circle</span>
+                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm"><FaRegCircle /></span>
                                             <span>Audit trails of production status changes (e.g., from &quot;Cutting&quot; to &quot;Sewing&quot;).</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm">circle</span>
+                                            <span className="material-symbols-outlined text-primary mt-0.5 text-sm"><FaRegCircle /></span>
                                             <span>Device information used to access the tracker dashboard.</span>
                                         </li>
                                     </ul>

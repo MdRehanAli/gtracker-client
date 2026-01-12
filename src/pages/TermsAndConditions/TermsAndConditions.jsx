@@ -1,4 +1,9 @@
 import React from 'react';
+import { BiBlock } from 'react-icons/bi';
+import { FaAddressCard, FaArrowRight, FaRegCopyright, FaRegUser } from 'react-icons/fa6';
+import { GrUserSettings } from 'react-icons/gr';
+import { IoPersonOutline, IoPrintOutline } from 'react-icons/io5';
+import { MdOutlineDescription, MdOutlineGavel, MdOutlineInventory2, MdOutlinePayments } from 'react-icons/md';
 import { Link } from 'react-router';
 
 const TermsAndConditions = () => {
@@ -15,31 +20,31 @@ const TermsAndConditions = () => {
                         </div>
                         <nav className="flex flex-col gap-1">
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary border border-primary/30 group" href="#section-1">
-                                <span className="material-symbols-outlined text-primary text-[20px]">description</span>
+                                <span className="material-symbols-outlined text-primary text-[20px]"><MdOutlineDescription /></span>
                                 <p className="text-sm font-medium">1. Acceptance of Terms</p>
                             </a>
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-all" href="#section-2">
-                                <span className="material-symbols-outlined text-[20px]">person</span>
+                                <span className="material-symbols-outlined text-[20px]"><IoPersonOutline /></span>
                                 <p className="text-sm font-medium">2. User Accounts</p>
                             </a>
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-all" href="#section-3">
-                                <span className="material-symbols-outlined text-[20px]">inventory_2</span>
+                                <span className="material-symbols-outlined text-[20px]"><MdOutlineInventory2 /></span>
                                 <p className="text-sm font-medium">3. Product & Orders</p>
                             </a>
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-all" href="#section-4">
-                                <span className="material-symbols-outlined text-[20px]">payments</span>
+                                <span className="material-symbols-outlined text-[20px]"><MdOutlinePayments /></span>
                                 <p className="text-sm font-medium">4. Payment Terms</p>
                             </a>
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-all" href="#section-5">
-                                <span className="material-symbols-outlined text-[20px]">copyright</span>
+                                <span className="material-symbols-outlined text-[20px]"><FaRegCopyright /></span>
                                 <p className="text-sm font-medium">5. Intellectual Property</p>
                             </a>
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-all" href="#section-6">
-                                <span className="material-symbols-outlined text-[20px]">block</span>
+                                <span className="material-symbols-outlined text-[20px]"><BiBlock /></span>
                                 <p className="text-sm font-medium">6. Termination</p>
                             </a>
                             <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-all" href="#section-7">
-                                <span className="material-symbols-outlined text-[20px]">gavel</span>
+                                <span className="material-symbols-outlined text-[20px]"><MdOutlineGavel /></span>
                                 <p className="text-sm font-medium">7. Liability</p>
                             </a>
                         </nav>
@@ -48,7 +53,7 @@ const TermsAndConditions = () => {
                         <p className="text-slate-900 dark:text-white text-sm font-semibold mb-2">Need help?</p>
                         <p className="text-slate-600 dark:text-[#ab9db9] text-xs leading-relaxed mb-4">For any legal inquiries regarding our tracking system, please contact our support team.</p>
                         <Link to="/contact" className="text-primary text-xs font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                            CONTACT SUPPORT <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                            CONTACT SUPPORT <span className="material-symbols-outlined text-sm"><FaArrowRight /></span>
                         </Link>
                     </div>
                 </aside>
@@ -66,7 +71,7 @@ const TermsAndConditions = () => {
                                 </div>
                             </div>
                             <button className="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-[#302839] hover:bg-slate-300 dark:hover:bg-[#40354d] text-slate-900 dark:text-white text-sm font-medium rounded-lg transition-colors">
-                                <span className="material-symbols-outlined text-[18px]">print</span>
+                                <span className="material-symbols-outlined text-[18px]"><IoPrintOutline /></span>
                                 Print PDF
                             </button>
                         </div>
@@ -99,14 +104,14 @@ const TermsAndConditions = () => {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <div className="p-5 rounded-lg bg-slate-200 dark:bg-[#302839]/50 border border-slate-300 dark:border-[#40354d]">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <span className="material-symbols-outlined text-primary">admin_panel_settings</span>
+                                        <span className="material-symbols-outlined text-primary"><GrUserSettings /></span>
                                         <h3 className="text-slate-900 dark:text-white font-bold">Managers</h3>
                                     </div>
                                     <p className="text-sm text-slate-600 dark:text-[#ab9db9] leading-relaxed">Authorized to oversee production cycles, update inventory levels, manage supplier relationships, and generate system-wide reports.</p>
                                 </div>
                                 <div className="p-5 rounded-lg bg-slate-200 dark:bg-[#302839]/50 border border-slate-300 dark:border-[#40354d]">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <span className="material-symbols-outlined text-primary">shopping_cart</span>
+                                        <span className="material-symbols-outlined text-primary"><FaRegUser /></span>
                                         <h3 className="text-slate-900 dark:text-white font-bold">Buyers</h3>
                                     </div>
                                     <p className="text-sm text-slate-600 dark:text-[#ab9db9] leading-relaxed">Authorized to place purchase orders, track shipment status, and manage procurement profiles for organizational needs.</p>
@@ -149,11 +154,11 @@ const TermsAndConditions = () => {
                                 </p>
                                 <div className="mt-4 flex flex-wrap gap-4">
                                     <div className="flex items-center gap-3 bg-white dark:bg-[#141118] px-4 py-3 rounded-lg border border-slate-300 dark:border-[#302839]">
-                                        <span className="material-symbols-outlined text-primary">credit_card</span>
+                                        <span className="material-symbols-outlined text-primary"><FaAddressCard /></span>
                                         <span className="font-bold text-slate-900 dark:text-white">PayFast</span>
                                     </div>
                                     <div className="flex items-center gap-3 bg-white dark:bg-[#141118] px-4 py-3 rounded-lg border border-slate-300 dark:border-[#302839]">
-                                        <span className="material-symbols-outlined text-primary">payments</span>
+                                        <span className="material-symbols-outlined text-primary"><MdOutlinePayments /></span>
                                         <span className="font-bold text-slate-900 dark:text-white">Cash on Delivery (COD)</span>
                                     </div>
                                 </div>
