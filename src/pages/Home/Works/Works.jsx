@@ -7,7 +7,7 @@ const Works = ({ worksPromise }) => {
     const works = use(worksPromise)
 
     return (
-        <div id='how' className='my-20'>
+    <div id='how' className=' my-20 mx-auto w-11/12 max-w-7xl'>
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5 '><IoSettingsOutline className='p-4 bg-gray-300 rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>How It Works</h1>

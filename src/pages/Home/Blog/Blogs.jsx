@@ -7,7 +7,7 @@ const Blogs = ({ blogsPromise }) => {
     const blogs = use(blogsPromise);
 
     return (
-        <div className=''>
+        <div className='max-w-7xl mx-auto w-11/12'>
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5'><FaRegPenToSquare className='p-4 bg-gray-300 rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>Latest Blog & Articles</h1>

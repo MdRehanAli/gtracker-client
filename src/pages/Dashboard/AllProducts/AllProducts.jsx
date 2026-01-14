@@ -8,8 +8,8 @@ const AllProducts = () => {
     // const { _id, image, name, category, largeDescription, minimumOrder, availableQuantity, price, paymentOptions, video } = products;
 
     return (
-        <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl  rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
+        <div className=' md:h-full my-20'>
+            <div className=' shadow-xl  rounded-2xl py-10 p-5 md:p-10 mx-auto border'>
                 <div className='flex justify-center text-7xl'><TbLayoutGrid className='p-4  rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>All Products {products.length}</h1>
 

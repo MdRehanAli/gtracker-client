@@ -12,6 +12,14 @@ import Connected from '../Connected/Connected';
 import ProductionStat from '../ProductionStat/ProductionStat';
 import Supply from '../Supply/Supply';
 import BestSeller from '../BestSeller/BestSeller';
+import Pipeline from '../Pipeline/Pipeline';
+import Services from '../Services/Services';
+import Radial from '../Radial/Radial';
+import CTA from '../CTA/CTA';
+import FAQ from '../FAQ/FAQ';
+import Fabric from '../Fabric/Fabric';
+import WinterShowcase from '../WinterShowcase/WinterShowcase';
+import Join from '../Join/Join';
 const worksPromise = fetch('/works.json').then(res => res.json())
 const reviewsPromise = fetch('/reviews.json').then(res => res.json())
 const blogsPromise = fetch('/blogs.json').then(res => res.json())
@@ -25,19 +33,27 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <Connected></Connected>
-            <ProductionStat></ProductionStat>
-            <Supply></Supply>
-            <div className='max-w-7xl mx-auto w-11/12'>
+            <div className=''>
+                <ProductionStat></ProductionStat>
+                <Supply></Supply>
                 <Products></Products>
                 <div className='flex items-center justify-center mt-10'>
                     <Link to='all-products' className='btn btn-primary px-20'>View All Products</Link>
                 </div>
                 <Works worksPromise={worksPromise}></Works>
+                <Pipeline></Pipeline>
+                <Services></Services>
+                <Radial></Radial>
+                <FAQ></FAQ>
+                <Fabric></Fabric>
+                <WinterShowcase></WinterShowcase>
+                <Join></Join>
                 <Features></Features>
                 <Reviews reviewsPromise={reviewsPromise}></Reviews>
                 <Blogs blogsPromise={blogsPromise}></Blogs>
             </div>
             <Statistics></Statistics>
+            <CTA></CTA>
         </div>
     );
 };

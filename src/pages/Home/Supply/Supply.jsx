@@ -3,10 +3,10 @@ import { MdOutlineDynamicFeed, MdOutlineHub, MdOutlineInsights, MdOutlineVerifie
 
 const Supply = () => {
     return (
-        <section className="py-24 bg-slate-50 dark:bg-slate-800/50">
+        <section className="my-20">
             <div className="mx-auto max-w-7xl px-8">
                 <div className="mb-16 text-center">
-                    <h2 className="text-4xl font-black text-slate-900 dark:text-white">Supply Chain Ecosystem</h2>
+                    <h2 className="text-4xl font-black">Supply Chain Ecosystem</h2>
                     <p className="text-slate-600 dark:text-slate-400 mt-4 text-lg">Four pillars of modern garment manufacturing intelligence.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -11,7 +11,7 @@ const AllProduct = () => {
                 <title>GTracker | All Products</title>
             </Helmet>
             <Banner></Banner>
-            <div className='max-w-7xl mx-auto w-11/12'>
+            <div className=''>
                 <Products></Products>
             </div>
         </div>

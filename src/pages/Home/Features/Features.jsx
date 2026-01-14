@@ -5,7 +5,7 @@ import { FaRoute } from 'react-icons/fa6';
 
 const Features = () => {
     return (
-        <section className="py-32 bg-bg-dark">
+        <section className="my-20 bg-bg-dark">
             <div className="mx-auto max-w-7xl px-6 lg:px-20">
                 <div className="mb-20 text-center">
                     <div className='flex justify-center text-7xl mb-5 '><MdOutlineFeaturedPlayList className='p-4 bg-gray-300 rounded-3xl' /></div>

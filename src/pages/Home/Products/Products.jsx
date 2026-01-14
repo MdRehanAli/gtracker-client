@@ -8,7 +8,7 @@ const Products = () => {
     const products = useLoaderData();
 
     return (
-        <div className=''>
+        <div className='mx-auto w-11/12 max-w-7xl'>
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5 '><CiShoppingTag className='p-4 bg-gray-300 rounded-3xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>Our Products</h1>
