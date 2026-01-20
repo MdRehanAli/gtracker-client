@@ -3,8 +3,7 @@ import { MdOutlineDynamicFeed, MdOutlineHub, MdOutlineInsights, MdOutlineVerifie
 
 const Supply = () => {
     return (
-        <section className="my-20">
-            <div className="mx-auto max-w-7xl px-8">
+        <section className="my-20 mx-auto max-w-7xl w-11/12">
                 <div className="mb-16 text-center">
                     <h2 className="text-4xl font-black">Supply Chain Ecosystem</h2>
                     <p className="text-slate-600 dark:text-slate-400 mt-4 text-lg">Four pillars of modern garment manufacturing intelligence.</p>
@@ -31,7 +30,6 @@ const Supply = () => {
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">Predictive lead times based on historical throughput and seasonal patterns.</p>
                     </div>
                 </div>
-            </div>
         </section>
     );
 };
