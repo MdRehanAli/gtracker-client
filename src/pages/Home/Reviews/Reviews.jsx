@@ -16,8 +16,8 @@ const Reviews = ({ reviewsPromise }) => {
         <div className='my-20 mx-auto w-11/12 max-w-7xl'>
             <div className='text-center'>
                 <div className='flex justify-center text-7xl mb-5 '><FaQuoteLeft className='p-4 bg-gray-300 rounded-3xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold'>Customer Feedback</h1>
-                <p className='mt-3 mb-12'>Trusted by businesses and individuals, see how our service quality speaks through our customers.</p>
+                <h1 className='text-3xl md:text-4xl font-bold'>Customer Feedback</h1>
+                <p className='text-slate-600 dark:text-slate-400 mt-3 text-lg'>Trusted by businesses and individuals, see how our service quality speaks through our customers.</p>
             </div>
             <Swiper
                 loop={true}
