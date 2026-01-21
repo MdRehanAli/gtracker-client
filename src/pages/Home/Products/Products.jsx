@@ -10,10 +10,15 @@ const Products = () => {
     return (
         <div className='mx-auto w-11/12 max-w-7xl'>
             <div className='mb-12 text-center'>
-                {/* <div className='flex justify-center text-7xl mb-5 '><CiShoppingTag className='p-4 bg-gray-300 rounded-3xl' /></div> */}
-                <h1 className='text-3xl md:text-4xl font-bold text-primary'>Our Products</h1>
+                <div className='flex justify-center items-center gap-2 mb-5'>
+                    <div className='flex justify-center text-primary animate-[pulse_1s_linear_infinite] hover:animate-none '><CiShoppingTag className='text-3xl md:text-4xl font-bold' /></div>
+                    <h1 className='text-3xl md:text-4xl font-bold text-primary'>Our Products</h1>
+                </div>
                 <p className='text-secondary mt-3 text-lg'>All our latest product are here. You can easily buy products from here</p>
             </div>
+
+
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
                 {
                     products.map(product => <Product product={product} key={product._id}></Product>)

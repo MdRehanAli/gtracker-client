@@ -1,13 +1,15 @@
 import React from 'react';
+import { FaBalanceScaleRight } from "react-icons/fa";
 
 const ProductionStat = () => {
     return (
         <section className=" bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
-            <div className="md:p-20 p-10">
+            <div className="lg:p-20 md:p-10 p-5 py-10">
                 <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                        Production at Scale
-                    </h2>
+                    <div className='flex justify-center items-center gap-2 mb-5'>
+                        <div className='flex justify-center text-primary animate-[bounce_1s_linear_infinite] hover:animate-none '><FaBalanceScaleRight className='text-3xl md:text-4xl font-bold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Production at Scale</h1>
+                    </div>
                     <p className="text-secondary mt-3 text-lg">
                         Measurable performance across our global manufacturing ecosystem.
                     </p>
