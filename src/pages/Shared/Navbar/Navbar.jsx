@@ -73,7 +73,7 @@ const Navbar = () => {
                         user ?
                             <div className="flex gap-2">
                                 <div className="avatar avatar-online">
-                                    <div className="ring-green-500 w-12 rounded-full ring-4">
+                                    <div className="ring-primary w-10 rounded-full ring-2">
                                         <img src={user?.photoURL} alt={user?.displayName} />
                                     </div>
                                 </div>
