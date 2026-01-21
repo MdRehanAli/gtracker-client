@@ -34,7 +34,7 @@ const Contact = () => {
             <div>
                 <div className='text-center'>
                     <div className='flex justify-center text-7xl mb-5'><MdOutlinePermContactCalendar className='p-4 bg-gray-300 rounded-xl' /></div>
-                    <h1 className='text-3xl md:text-5xl font-bold'>Get in Touch With Us</h1>
+                    <h1 className='text-3xl md:text-4xl font-bold'>Get in Touch With Us</h1>
                     <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Have questions, need support, or want to collaborate? Our team is here to assist you with quick and reliable help, reach out anytime.</p>
                 </div>
             </div>
