@@ -14,7 +14,7 @@ const Statistics = () => {
                     <h1 className='text-xl font-bold text-secondary'>Do You Want Custom Project?</h1>
                     <h1 className='text-3xl md:text-5xl font-bold text-primary'>Contact Us</h1>
                     <p className='my-5 md:w-2/3 text-secondary'>GTracker is the world best software services for Garment Order & Production Tracker for small and medium factories. Reduce delays manage workflow from cutting to delivery.</p>
-                    <Link to="/all-products" className='btn btn-primary px-20'>Contact Us</Link>
+                    <Link to="/contact" className='btn btn-primary px-20'>Contact Us</Link>
                 </div>
             </div>
             <div className=' md:w-3/4 mx-auto -mt-24'>
