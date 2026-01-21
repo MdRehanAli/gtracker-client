@@ -19,6 +19,9 @@ const Navbar = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
+                    iconColor: "#0f172b",
+                    color: "#0f172b",
+                    background: "#7C3AED",
                     title: "Log Out Successfully",
                     showConfirmButton: false,
                     timer: 1500
@@ -30,16 +33,16 @@ const Navbar = () => {
     }
 
     const links = <>
-        <li><NavLink to='/' className="rounded-2xl font-semibold px-4">Home</NavLink></li>
-        <li><NavLink to='/all-products' className="rounded-2xl font-semibold px-4">All-Products</NavLink></li>
-        <li><NavLink to='/about-us' className="rounded-2xl font-semibold px-4">About Us</NavLink></li>
-        <li><NavLink to='/contact' className="rounded-2xl font-semibold px-4">Contact</NavLink></li>
+        <li><NavLink to='/' className="rounded-xl font-semibold px-4">Home</NavLink></li>
+        <li><NavLink to='/all-products' className="rounded-xl font-semibold px-4">All-Products</NavLink></li>
+        <li><NavLink to='/about-us' className="rounded-xl font-semibold px-4">About Us</NavLink></li>
+        <li><NavLink to='/contact' className="rounded-xl font-semibold px-4">Contact</NavLink></li>
         {
             user && <>
                 {role === 'user' &&
-                    <li><NavLink to='/dashboard/my-order' className="rounded-2xl font-semibold px-4">My Order</NavLink></li>
+                    <li><NavLink to='/dashboard/my-order' className="rounded-xl font-semibold px-4">My Order</NavLink></li>
                 }
-                <li><NavLink to='/dashboard' className="rounded-2xl font-semibold px-4">Dashboard</NavLink></li>
+                <li><NavLink to='/dashboard' className="rounded-xl font-semibold px-4">Dashboard</NavLink></li>
             </>
         }
     </>

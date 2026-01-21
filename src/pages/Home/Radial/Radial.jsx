@@ -4,7 +4,7 @@ import { MdOutlineForest, MdOutlineRecycling, MdOutlineSolarPower } from 'react-
 
 const Radial = () => {
     return (
-        <section className="my-20 py-24 bg-slate-50 dark:bg-slate-800 mx-auto max-w-7xl w-11/12 rounded-xl">
+        <section className="my-20 py-24 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
             <div className=" px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div className="order-2 lg:order-1">

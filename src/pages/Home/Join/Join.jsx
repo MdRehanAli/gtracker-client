@@ -2,7 +2,7 @@ import React from 'react';
 
 const Join = () => {
     return (
-        <section className="my-20 py-24 bg-slate-50 dark:bg-slate-800 mx-auto max-w-7xl w-11/12 rounded-xl">
+        <section className="my-20 py-24 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
             <div className=" px-8">
                 <div className="bg-gradient-to-r from-primary/30 to-accent dark:to-accent p-12 rounded-xl border border-primary/20 flex flex-col lg:flex-row items-center justify-between gap-12">
                     <div className="lg:w-1/2">

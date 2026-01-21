@@ -79,8 +79,8 @@ const AllOrders = () => {
 
     return (
         <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><MdListAlt className='p-4  rounded-3xl' /></div>
+            <div className=' shadow-xl rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
+                <div className='flex justify-center text-7xl'><MdListAlt className='p-4  rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>All Orders : {orders.length}</h1>
 
                 <div className="overflow-x-auto">

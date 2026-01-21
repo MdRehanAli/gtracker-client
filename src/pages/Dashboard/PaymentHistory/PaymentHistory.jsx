@@ -19,8 +19,8 @@ const PaymentHistory = () => {
 
     return (
         <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl  rounded-2xl p-5 py-10 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><FaRegCreditCard className='p-4  rounded-3xl' /></div>
+            <div className=' shadow-xl  rounded-xl p-5 py-10 md:p-10 w-11/12 mx-auto border'>
+                <div className='flex justify-center text-7xl'><FaRegCreditCard className='p-4  rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Payments History: {payments.length}</h1>
                 <div className="overflow-x-auto">
                     <table className="table table-zebra text-center">

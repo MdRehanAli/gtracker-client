@@ -19,31 +19,31 @@ const TermsAndConditions = () => {
                             <p className="text-slate-600 dark:text-[#ab9db9] text-sm font-normal leading-normal">Quick navigation</p>
                         </div>
                         <nav className="flex flex-col gap-1">
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary border border-primary/30 group" href="#section-1">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl bg-primary/20 text-primary border border-primary/30 group" href="#section-1">
                                 <span className="material-symbols-outlined text-primary text-[20px]"><MdOutlineDescription /></span>
                                 <p className="text-sm font-medium">1. Acceptance of Terms</p>
                             </a>
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-2">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-2">
                                 <span className="material-symbols-outlined text-[20px]"><IoPersonOutline /></span>
                                 <p className="text-sm font-medium">2. User Accounts</p>
                             </a>
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-3">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-3">
                                 <span className="material-symbols-outlined text-[20px]"><MdOutlineInventory2 /></span>
                                 <p className="text-sm font-medium">3. Product & Orders</p>
                             </a>
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-4">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-4">
                                 <span className="material-symbols-outlined text-[20px]"><MdOutlinePayments /></span>
                                 <p className="text-sm font-medium">4. Payment Terms</p>
                             </a>
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-5">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-5">
                                 <span className="material-symbols-outlined text-[20px]"><FaRegCopyright /></span>
                                 <p className="text-sm font-medium">5. Intellectual Property</p>
                             </a>
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-6">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-6">
                                 <span className="material-symbols-outlined text-[20px]"><BiBlock /></span>
                                 <p className="text-sm font-medium">6. Termination</p>
                             </a>
-                            <a className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-7">
+                            <a className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-slate-200 dark:hover:bg-[#302839] text-slate-600 dark:text-white/70 hover:text-accent dark:hover:text-white transition-all" href="#section-7">
                                 <span className="material-symbols-outlined text-[20px]"><MdOutlineGavel /></span>
                                 <p className="text-sm font-medium">7. Liability</p>
                             </a>
@@ -70,7 +70,7 @@ const TermsAndConditions = () => {
                                     <p className="text-slate-600 dark:text-[#ab9db9] text-sm font-medium">Last Updated: October 2023</p>
                                 </div>
                             </div>
-                            <button className="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-[#302839] hover:bg-slate-300 dark:hover:bg-[#40354d] text-accent text-sm font-medium rounded-lg transition-colors">
+                            <button className="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-[#302839] hover:bg-slate-300 dark:hover:bg-[#40354d] text-accent text-sm font-medium rounded-xl transition-colors">
                                 <span className="material-symbols-outlined text-[18px]"><IoPrintOutline /></span>
                                 Print PDF
                             </button>
@@ -102,14 +102,14 @@ const TermsAndConditions = () => {
                                 Access to the system is restricted to verified personnel categorized into two primary roles:
                             </p>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <div className="p-5 rounded-lg bg-slate-200 dark:bg-[#302839]/50 border border-slate-300 dark:border-[#40354d]">
+                                <div className="p-5 rounded-xl bg-slate-200 dark:bg-[#302839]/50 border border-slate-300 dark:border-[#40354d]">
                                     <div className="flex items-center gap-3 mb-2">
                                         <span className="material-symbols-outlined text-primary"><GrUserSettings /></span>
                                         <h3 className="text-accent font-bold">Managers</h3>
                                     </div>
                                     <p className="text-sm text-slate-600 dark:text-[#ab9db9] leading-relaxed">Authorized to oversee production cycles, update inventory levels, manage supplier relationships, and generate system-wide reports.</p>
                                 </div>
-                                <div className="p-5 rounded-lg bg-slate-200 dark:bg-[#302839]/50 border border-slate-300 dark:border-[#40354d]">
+                                <div className="p-5 rounded-xl bg-slate-200 dark:bg-[#302839]/50 border border-slate-300 dark:border-[#40354d]">
                                     <div className="flex items-center gap-3 mb-2">
                                         <span className="material-symbols-outlined text-primary"><FaRegUser /></span>
                                         <h3 className="text-accent font-bold">Buyers</h3>
@@ -153,11 +153,11 @@ const TermsAndConditions = () => {
                                     Payment for bulk orders and subscription services must be settled via one of our authorized payment gateways:
                                 </p>
                                 <div className="mt-4 flex flex-wrap gap-4">
-                                    <div className="flex items-center gap-3 bg-white dark:bg-[#141118] px-4 py-3 rounded-lg border border-slate-300 dark:border-[#302839]">
+                                    <div className="flex items-center gap-3 bg-white dark:bg-[#141118] px-4 py-3 rounded-xl border border-slate-300 dark:border-[#302839]">
                                         <span className="material-symbols-outlined text-primary"><FaAddressCard /></span>
                                         <span className="font-bold text-accent">PayFast</span>
                                     </div>
-                                    <div className="flex items-center gap-3 bg-white dark:bg-[#141118] px-4 py-3 rounded-lg border border-slate-300 dark:border-[#302839]">
+                                    <div className="flex items-center gap-3 bg-white dark:bg-[#141118] px-4 py-3 rounded-xl border border-slate-300 dark:border-[#302839]">
                                         <span className="material-symbols-outlined text-primary"><MdOutlinePayments /></span>
                                         <span className="font-bold text-accent">Cash on Delivery (COD)</span>
                                     </div>
@@ -212,10 +212,10 @@ const TermsAndConditions = () => {
                             <p className="text-white/80 text-sm">By clicking 'Accept', you confirm you have read and understood these terms.</p>
                         </div>
                         <div className="flex gap-4 w-full sm:w-auto">
-                            <button className="flex-1 sm:flex-none px-8 py-3 bg-white text-primary font-bold rounded-lg hover:bg-white/90 transition-all shadow-lg shadow-black/20">
+                            <button className="flex-1 sm:flex-none px-8 py-3 bg-white text-primary font-bold rounded-xl hover:bg-white/90 transition-all shadow-lg shadow-black/20">
                                 I Accept Terms
                             </button>
-                            <button className="flex-1 sm:flex-none px-8 py-3 bg-primary/20 text-white border border-white/30 font-bold rounded-lg hover:bg-primary/30 transition-all">
+                            <button className="flex-1 sm:flex-none px-8 py-3 bg-primary/20 text-white border border-white/30 font-bold rounded-xl hover:bg-primary/30 transition-all">
                                 Decline
                             </button>
                         </div>

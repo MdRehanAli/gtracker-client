@@ -9,8 +9,8 @@ const OrderDetails = () => {
     const { contactNumber, createdAt, deliveryAddress, email, firstName, instructions, lastName, orderPrice, orderQuantity, price, productTitle, status, image, _id } = orders;
     return (
         <div className='my-20'>
-            <div className=' shadow-xl  rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><MdScreenshotMonitor className='p-4  rounded-3xl' /></div>
+            <div className=' shadow-xl  rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
+                <div className='flex justify-center text-7xl'><MdScreenshotMonitor className='p-4  rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Order Details</h1>
 
                 <div className="card shadow-lg md:w-1/2 mx-auto mt-10">
@@ -18,9 +18,9 @@ const OrderDetails = () => {
                         <img
                             src={image}
                             alt={firstName}
-                            className='lg:w-1/2 rounded-2xl' />
+                            className='lg:w-1/2 rounded-xl' />
                     </figure>
-                    <div className="card-body text-center rounded-2xl">
+                    <div className="card-body text-center rounded-xl">
                         <div className='flex flex-col gap-3'>
                             <h2 className="text-2xl font-bold md:text-5xl">{productTitle}</h2>
                             <p className='text-xl'><span className='font-bold'>Ordered by: </span> {firstName} {lastName}</p>

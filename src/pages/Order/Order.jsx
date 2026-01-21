@@ -70,12 +70,12 @@ const Order = () => {
     return (
         <div className='max-w-7xl mx-auto w-11/12 my-20'>
             <div className='text-center'>
-                <div className='flex justify-center text-7xl mb-5'><LiaHandsHelpingSolid className='p-4 rounded-3xl' /></div>
+                <div className='flex justify-center text-7xl mb-5'><LiaHandsHelpingSolid className='p-4 rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>Place Your Order Today</h1>
                 <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Order high-quality garments with ease and confidence. Choose your preferred product, review the details, and complete the booking process in just a few steps for fast and reliable service.</p>
 
             </div>
-            <div className=' shadow-xl  rounded-2xl p-5 md:p-10 md:w-3/4 mx-auto border'>
+            <div className=' shadow-xl  rounded-xl p-5 md:p-10 md:w-3/4 mx-auto border'>
                 <form onSubmit={handleSubmit(handleOrderSubmit)}>
                     <fieldset className="fieldset flex flex-col md:flex-row md:gap-10">
 

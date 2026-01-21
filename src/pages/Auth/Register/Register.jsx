@@ -84,7 +84,7 @@ const Register = () => {
     }
 
     return (
-        <div className="card bg-base-100 w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl text-primary">
             <Helmet>
                 <title>GTracker | Registration</title>
             </Helmet>
@@ -95,23 +95,23 @@ const Register = () => {
 
                         {/* Name Field  */}
                         <label className="label">Name</label>
-                        <input type="text" {...register('name', { required: true, minLength: 3 })} className="input" placeholder="Name" />
+                        <input type="text" {...register('name', { required: true, minLength: 3 })} className="input w-full border border-primary" placeholder="Name" />
                         {errors.name?.type === "required" && <p className='text-red-500'>Name is Required</p>}
                         {errors.name?.type === "minLength" && <p className='text-red-500'>Name must have at least 3 Character</p>}
 
                         {/* Email Field  */}
                         <label className="label">Email</label>
-                        <input type="email" {...register('email', { required: true })} className="input" placeholder="Email" />
+                        <input type="email" {...register('email', { required: true })} className="input w-full border border-primary" placeholder="Email" />
                         {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                         {/* Photo Field  */}
                         <label className="label">Photo</label>
-                        <input type="file" {...register('photo', { required: true })} className="file-input" placeholder="Photo" />
+                        <input type="file" {...register('photo', { required: true })} className="file-input w-full border border-primary text-primary" placeholder="Photo" />
                         {errors.photo?.type === "required" && <p className='text-red-500'>Photo is Required</p>}
 
                         {/* Role Field  */}
                         <label className="label">Role</label>
-                        <select {...register('role', { required: true })} defaultValue="user" className="select">
+                        <select {...register('role', { required: true })} defaultValue="user" className="select w-full border border-primary">
                             <option disabled={true}>user</option>
                             <option value="manager">Manager</option>
                         </select>
@@ -122,8 +122,8 @@ const Register = () => {
                         <div className='flex items-center relative'>
                             <input type={showPassword ? "text" : "password"} {...register('password', {
                                 required: true, minLength: 6, pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/
-                            })} className="input" placeholder="Password" />
-                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
+                            })} className="input w-full" placeholder="Password" />
+                            <button onClick={handleShowPassword} className='absolute top-2 right-4 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
                         </div>
 
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required</p>}

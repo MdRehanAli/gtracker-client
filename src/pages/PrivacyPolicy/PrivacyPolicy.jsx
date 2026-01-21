@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
                         <h1 className="text-accent text-5xl font-black leading-tight tracking-tight">Privacy Policy</h1>
                         <p className="text-slate-500 dark:text-[#ab9db9] text-lg">Last updated: May 24, 2024</p>
                     </div>
-                    <button className="flex items-center gap-2 cursor-pointer rounded-lg h-11 px-6 bg-slate-200 dark:bg-[#302839] text-accent text-sm font-bold transition-all hover:opacity-90">
+                    <button className="flex items-center gap-2 cursor-pointer rounded-xl h-11 px-6 bg-slate-200 dark:bg-[#302839] text-accent text-sm font-bold transition-all hover:opacity-90">
                         <span className="material-symbols-outlined text-xl"><FiDownload /></span>
                         <span>Download PDF</span>
                     </button>
@@ -42,27 +42,27 @@ const PrivacyPolicy = () => {
                                 <p className="text-slate-500 dark:text-[#ab9db9] text-xs">Quickly jump to a section</p>
                             </div>
                             <nav className="flex flex-col gap-1">
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/20 border-l-4 border-primary transition-all text-primary" href="#intro">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary/20 border-l-4 border-primary transition-all text-primary" href="#intro">
                                     <span className="material-symbols-outlined text-xl"><CiCircleInfo /></span>
                                     <span className="text-sm font-semibold">1. Introduction</span>
                                 </a>
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#data-collection">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#data-collection">
                                     <span className="material-symbols-outlined text-xl"><GoDatabase /></span>
                                     <span className="text-sm font-medium">2. Data Collection</span>
                                 </a>
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#cookies">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#cookies">
                                     <span className="material-symbols-outlined text-xl"><LuCookie /></span>
                                     <span className="text-sm font-medium">3. Cookies Policy</span>
                                 </a>
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#third-party">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#third-party">
                                     <span className="material-symbols-outlined text-xl"><GoShareAndroid /></span>
                                     <span className="text-sm font-medium">4. Third-Party Sharing</span>
                                 </a>
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#security">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#security">
                                     <span className="material-symbols-outlined text-xl"><GoShieldCheck /></span>
                                     <span className="text-sm font-medium">5. Data Security</span>
                                 </a>
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#user-rights">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 dark:text-[#ab9db9] hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" href="#user-rights">
                                     <span className="material-symbols-outlined text-xl"><CiUser /></span>
                                     <span className="text-sm font-medium">6. User Rights</span>
                                 </a>
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
                             </h2>
                             <div className="text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg space-y-4">
                                 <p>We use cookies and similar tracking technologies (like local storage) to maintain your session and remember your dashboard preferences. This allows you to stay logged in and keep your customized production views active.</p>
-                                <p className="bg-primary/5 p-4 rounded-lg border-l-4 border-primary italic">Note: Disabling cookies may prevent certain features of the production tracker, such as real-time status updates, from functioning correctly.</p>
+                                <p className="bg-primary/5 p-4 rounded-xl border-l-4 border-primary italic">Note: Disabling cookies may prevent certain features of the production tracker, such as real-time status updates, from functioning correctly.</p>
                             </div>
                         </section>
 
@@ -153,14 +153,14 @@ const PrivacyPolicy = () => {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary/50 transition-all group">
-                                    <div className="size-12 bg-indigo-600/10 rounded-lg flex items-center justify-center text-indigo-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <div className="size-12 bg-indigo-600/10 rounded-xl flex items-center justify-center text-indigo-500 mb-4 group-hover:scale-110 transition-transform">
                                         <span className="material-symbols-outlined text-3xl"><FaAddressCard /></span>
                                     </div>
                                     <h3 className="text-accent text-lg font-bold mb-2">Stripe</h3>
                                     <p className="text-sm text-slate-500 dark:text-[#ab9db9]">We use Stripe for secure billing and payment processing of production orders. We do not store credit card details on our servers.</p>
                                 </div>
                                 <div className="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary/50 transition-all group">
-                                    <div className="size-12 bg-orange-600/10 rounded-lg flex items-center justify-center text-orange-500 mb-4 group-hover:scale-110 transition-transform">
+                                    <div className="size-12 bg-orange-600/10 rounded-xl flex items-center justify-center text-orange-500 mb-4 group-hover:scale-110 transition-transform">
                                         <span className="material-symbols-outlined text-3xl"><IoMdCloudDone /></span>
                                     </div>
                                     <h3 className="text-accent text-lg font-bold mb-2">Firebase</h3>
@@ -177,19 +177,19 @@ const PrivacyPolicy = () => {
                             <div className="space-y-4 text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg">
                                 <p>We implement industry-standard security measures to protect your garment production data. This includes:</p>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                    <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                    <li className="flex items-center gap-3 p-3 bg-accent/50 rounded-xl">
                                         <span className="material-symbols-outlined text-primary"><MdLockOutline /></span>
                                         <span className="text-sm font-medium">SSL/TLS Encryption</span>
                                     </li>
-                                    <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                    <li className="flex items-center gap-3 p-3 bg-accent/50 rounded-xl">
                                         <span className="material-symbols-outlined text-primary"><BsKey /></span>
                                         <span className="text-sm font-medium">Multi-Factor Authentication</span>
                                     </li>
-                                    <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                    <li className="flex items-center gap-3 p-3 bg-accent/50 rounded-xl">
                                         <span className="material-symbols-outlined text-primary"><MdOutlineStorage /></span>
                                         <span className="text-sm font-medium">Regular Data Backups</span>
                                     </li>
-                                    <li className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                                    <li className="flex items-center gap-3 p-3 bg-accent/50 rounded-xl">
                                         <span className="material-symbols-outlined text-primary"><MdOutlineVisibilityOff /></span>
                                         <span className="text-sm font-medium">Internal Access Audits</span>
                                     </li>

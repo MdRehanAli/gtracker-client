@@ -58,8 +58,8 @@ const UpdateProduct = () => {
 
     return (
         <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl bg-gray-200 rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
-                <div className='flex justify-center text-7xl'><HiMiniPencilSquare className='p-4 bg-gray-300 rounded-3xl' /></div>
+            <div className=' shadow-xl bg-gray-200 rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto'>
+                <div className='flex justify-center text-7xl'><HiMiniPencilSquare className='p-4 bg-gray-300 rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Update Product</h1>
                 <form onSubmit={handleSubmit(handleUpdateProduct)}>
                     <fieldset className="fieldset flex flex-col md:flex-row md:gap-10">

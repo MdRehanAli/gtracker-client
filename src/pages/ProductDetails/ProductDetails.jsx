@@ -10,7 +10,7 @@ const ProductDetails = () => {
     return (
         < div className='max-w-7xl mx-auto w-11/12 my-20'>
             <div className='text-center'>
-                <div className='flex justify-center text-7xl mb-5'><AiOutlineFileSearch className='p-4 bg-gray-300 rounded-3xl' /></div>
+                <div className='flex justify-center text-7xl mb-5'><AiOutlineFileSearch className='p-4 bg-gray-300 rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold'>Product Details</h1>
                 <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Explore complete information about this product, including specifications, pricing, available quantity, and ordering options everything you need to make the right choice with confidence.</p>
 
@@ -20,7 +20,7 @@ const ProductDetails = () => {
                     <img
                         src={image}
                         alt={name}
-                        className='lg:w-1/2 rounded-2xl' />
+                        className='lg:w-1/2 rounded-xl' />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>

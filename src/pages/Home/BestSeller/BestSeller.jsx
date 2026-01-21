@@ -12,7 +12,7 @@ const BestSeller = () => {
                             <button className="bg-primary/10 text-primary border border-primary/20 px-8 py-3 rounded-xl font-bold">Catalog 2024</button>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-accent border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -26,7 +26,7 @@ const BestSeller = () => {
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-accent border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -40,7 +40,7 @@ const BestSeller = () => {
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-accent border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -54,7 +54,7 @@ const BestSeller = () => {
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-accent border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"

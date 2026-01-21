@@ -2,7 +2,7 @@ import React from 'react';
 
 const Fabric = () => {
     return (
-        <section className="rounded-xl py-24 bg-slate-50 dark:bg-slate-800 mx-auto max-w-7xl w-11/12">
+        <section className="rounded-xl py-24 bg-accent mx-auto max-w-7xl w-11/12">
             <div className=" px-8">
                 <div className="flex justify-between items-center mb-16">
                     <h2 className="text-4xl font-black text-accent">Digital Fabric Library</h2>

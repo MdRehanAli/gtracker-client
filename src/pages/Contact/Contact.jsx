@@ -33,7 +33,7 @@ const Contact = () => {
             </Helmet>
             <div>
                 <div className='text-center'>
-                    <div className='flex justify-center text-7xl mb-5'><MdOutlinePermContactCalendar className='p-4 bg-gray-300 rounded-3xl' /></div>
+                    <div className='flex justify-center text-7xl mb-5'><MdOutlinePermContactCalendar className='p-4 bg-gray-300 rounded-xl' /></div>
                     <h1 className='text-3xl md:text-5xl font-bold'>Get in Touch With Us</h1>
                     <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Have questions, need support, or want to collaborate? Our team is here to assist you with quick and reliable help, reach out anytime.</p>
                 </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
                 <div className='md:w-1/2'>
 
-                    <div className=' bg-gray-300 p-8 md:px-12 md:py-12 rounded-2xl'>
+                    <div className=' bg-gray-300 p-8 md:px-12 md:py-12 rounded-xl'>
                         <form onSubmit={handleSubmit(handleMessage)}>
                             <fieldset className="fieldset">
                                 <label className="text-black label mt-4">Name</label>

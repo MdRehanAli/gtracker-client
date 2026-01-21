@@ -59,6 +59,9 @@ const Login = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
+                    iconColor: "#0f172b",
+                    color: "#0f172b",
+                    background: "#7C3AED",
                     title: "Login Successfully",
                     showConfirmButton: false,
                     timer: 1500
@@ -70,6 +73,9 @@ const Login = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "error",
+                    iconColor: "#0f172b",
+                    color: "#0f172b",
+                    background: "#7C3AED",
                     title: "Invalid Email & Password",
                     showConfirmButton: false,
                     timer: 1500
@@ -82,22 +88,22 @@ const Login = () => {
             <Helmet>
                 <title>GTracker | Login</title>
             </Helmet>
-            <div className="card-body bg-base-100">
+            <div className="card-body bg-base-100 text-primary">
                 <h1 className='text-center text-2xl font-bold text-primary mb-3'>Welcome to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">
                         {/* Email Field  */}
-                        <label className="label">Email</label>
-                        <input type="email" {...register('email', { required: true })} className="input" placeholder="Email" />
+                        <label className="label text-primary">Email</label>
+                        <input type="email" {...register('email', { required: true })} className="input w-full border border-primary" placeholder="Email" />
                         {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                         {/* Password Field  */}
-                        <label className="label">Password</label>
+                        <label className="label text-primary">Password</label>
                         <div className='flex items-center relative'>
                             <input type={showPassword ? "text" : "password"} {...register('password', {
                                 required: true, minLength: 6
-                            })} className="input" placeholder="Password" />
-                            <button onClick={handleShowPassword} className='absolute top-2 right-7 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
+                            })} className="input w-full border border-primary" placeholder="Password" />
+                            <button onClick={handleShowPassword} className='absolute top-2 right-4 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
                         </div>
 
                         {errors.password?.type === "required" && <p className='text-red-500'>Password is Required</p>}
@@ -113,21 +119,21 @@ const Login = () => {
                     <p className="text-primary text-[11px] font-bold mb-4 uppercase tracking-[0.25em] text-center opacity-60">Demo Quick Access</p>
                     {/* Fill Admin credentials  */}
                     <div className="grid grid-cols-3 gap-3">
-                        <button onClick={() => handleDemoLogin("admin")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
-                            <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><MdOutlineAdminPanelSettings className='' /></div>
-                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">ADMIN</span>
+                        <button onClick={() => handleDemoLogin("admin")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary hover:bg-primary/10 transition-all group bg-primary">
+                            <div className='text-accent group-hover:scale-110 transition-transform text-2xl'><MdOutlineAdminPanelSettings className='' /></div>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">ADMIN</span>
                         </button>
 
                         {/* Fill Manager Credential  */}
-                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
-                            <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><GrUserSettings className='' /></div>
-                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">MANAGER</span>
+                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary hover:bg-primary/10 transition-all group bg-primary">
+                            <div className='text-accent group-hover:scale-110 transition-transform text-2xl'><GrUserSettings className='' /></div>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">MANAGER</span>
                         </button>
 
                         {/* Fill User Credential  */}
-                        <button onClick={() => handleDemoLogin("user")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
-                            <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><FaRegUser className='' /></div>
-                            <span className="text-slate-300 text-[10px] font-bold tracking-wider">USER</span>
+                        <button onClick={() => handleDemoLogin("user")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md border  border-primary hover:bg-primary/10 transition-all group bg-primary">
+                            <div className='text-accent group-hover:scale-110 transition-transform text-2xl'><FaRegUser className='' /></div>
+                            <span className="text-secondary text-[10px] font-bold tracking-wider">USER</span>
                         </button>
                     </div>
                 </div>

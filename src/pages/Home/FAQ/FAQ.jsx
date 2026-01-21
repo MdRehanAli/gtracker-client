@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const FAQ = () => {
     return (
-        <section className="my-20 rounded-xl py-24 bg-slate-50 dark:bg-slate-800 max-w-7xl mx-auto w-11/12">
+        <section className="my-20 rounded-xl py-24 bg-accent max-w-7xl mx-auto w-11/12">
             <div className="mx-auto max-w-3xl px-8">
                 <h2 className="text-4xl font-black text-center mb-16 text-accent">Intelligence FAQ</h2>
                 <div className="space-y-4">

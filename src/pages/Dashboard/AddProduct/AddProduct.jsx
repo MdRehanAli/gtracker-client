@@ -81,8 +81,8 @@ const AddProduct = () => {
 
     return (
         <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl  rounded-2xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><MdAddShoppingCart className='p-4  rounded-3xl' /></div>
+            <div className=' shadow-xl  rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
+                <div className='flex justify-center text-7xl'><MdAddShoppingCart className='p-4  rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Add a New Product</h1>
                 <form onSubmit={handleSubmit(handleOrderSubmit)}>
                     <fieldset className="fieldset flex flex-col md:flex-row md:gap-10">
