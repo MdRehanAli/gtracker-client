@@ -9,30 +9,30 @@ const Radial = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div className="order-2 lg:order-1">
                         <div className="grid grid-cols-2 gap-8">
-                            <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
+                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><IoWaterOutline className="mb-4" /></span>
-                                <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">85%</h5>
+                                <h5 className="text-4xl font-black text-accent mb-2">85%</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Water Recycled</p>
                             </div>
-                            <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
+                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineSolarPower className="mb-4" /></span>
-                                <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">100%</h5>
+                                <h5 className="text-4xl font-black text-accent mb-2">100%</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Renewable Energy</p>
                             </div>
-                            <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
+                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineRecycling className="mb-4" /></span>
-                                <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">Zero</h5>
+                                <h5 className="text-4xl font-black text-accent mb-2">Zero</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Waste-to-Landfill</p>
                             </div>
-                            <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
+                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineForest className="mb-4" /></span>
-                                <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">Carbon</h5>
+                                <h5 className="text-4xl font-black text-accent mb-2">Carbon</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Neutral Facility</p>
                             </div>
                         </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                        <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white">Radical Circularity</h2>
+                        <h2 className="text-4xl font-black mb-6 text-accent">Radical Circularity</h2>
                         <p className="text-lg text-secondary mb-10 leading-relaxed">
                             Our 2030 vision is to become a closed-loop ecosystem. We track the carbon footprint of every SKU, offering brands a real-time ESG dashboard for their entire production volume.
                         </p>

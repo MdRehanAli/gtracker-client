@@ -11,23 +11,23 @@ import { MdLockOutline, MdOutlineStorage, MdOutlineVisibilityOff } from 'react-i
 
 const PrivacyPolicy = () => {
     return (
-        <div className="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+        <div className="bg-white dark:bg-background-dark text-accent dark:text-slate-100 antialiased">
 
             <main className="max-w-7xl mx-auto px-6 py-8">
                 {/* Breadcrumbs */}
                 <div className="flex flex-wrap gap-2 mb-6">
                     <Link className="text-slate-500 dark:text-[#ab9db9] text-sm font-medium hover:text-primary" to="/">Legal</Link>
                     <span className="text-slate-400 dark:text-[#ab9db9] text-sm font-medium">/</span>
-                    <span className="text-slate-900 dark:text-white text-sm font-medium">Privacy Policy</span>
+                    <span className="text-accent text-sm font-medium">Privacy Policy</span>
                 </div>
 
                 {/* Page Heading */}
                 <div className="flex flex-wrap justify-between items-end gap-6 mb-12 border-b border-slate-200 dark:border-slate-800 pb-8">
                     <div className="flex flex-col gap-2">
-                        <h1 className="text-slate-900 dark:text-white text-5xl font-black leading-tight tracking-tight">Privacy Policy</h1>
+                        <h1 className="text-accent text-5xl font-black leading-tight tracking-tight">Privacy Policy</h1>
                         <p className="text-slate-500 dark:text-[#ab9db9] text-lg">Last updated: May 24, 2024</p>
                     </div>
-                    <button className="flex items-center gap-2 cursor-pointer rounded-lg h-11 px-6 bg-slate-200 dark:bg-[#302839] text-slate-900 dark:text-white text-sm font-bold transition-all hover:opacity-90">
+                    <button className="flex items-center gap-2 cursor-pointer rounded-lg h-11 px-6 bg-slate-200 dark:bg-[#302839] text-accent text-sm font-bold transition-all hover:opacity-90">
                         <span className="material-symbols-outlined text-xl"><FiDownload /></span>
                         <span>Download PDF</span>
                     </button>
@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
                     <aside className="lg:w-72 flex-shrink-0">
                         <div className="sticky top-24 flex flex-col gap-6">
                             <div className="flex flex-col">
-                                <h3 className="text-slate-900 dark:text-white text-base font-bold">Table of Contents</h3>
+                                <h3 className="text-accent text-base font-bold">Table of Contents</h3>
                                 <p className="text-slate-500 dark:text-[#ab9db9] text-xs">Quickly jump to a section</p>
                             </div>
                             <nav className="flex flex-col gap-1">
@@ -79,7 +79,7 @@ const PrivacyPolicy = () => {
                     <article className="flex-1 max-w-[800px] space-y-12">
                         {/* 1. Introduction */}
                         <section className="scroll-mt-24" id="intro">
-                            <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-6 flex items-center gap-3">
+                            <h2 className="text-accent text-3xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-primary">1.</span> Introduction
                             </h2>
                             <div className="space-y-4 text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg">
@@ -90,12 +90,12 @@ const PrivacyPolicy = () => {
 
                         {/* 2. Data Collection */}
                         <section className="scroll-mt-24" id="data-collection">
-                            <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-6 flex items-center gap-3">
+                            <h2 className="text-accent text-3xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-primary">2.</span> Data Collection
                             </h2>
                             <div className="space-y-6">
                                 <div className="p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
-                                    <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
+                                    <h3 className="text-accent text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="material-symbols-outlined text-primary"><LuUserSearch /></span> Personal Data
                                     </h3>
                                     <ul className="space-y-3">
@@ -114,7 +114,7 @@ const PrivacyPolicy = () => {
                                     </ul>
                                 </div>
                                 <div className="p-6 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
-                                    <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
+                                    <h3 className="text-accent text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="material-symbols-outlined text-primary"><LuChartNoAxesCombined /></span> Usage Data
                                     </h3>
                                     <ul className="space-y-3">
@@ -137,7 +137,7 @@ const PrivacyPolicy = () => {
 
                         {/* 3. Cookies Policy */}
                         <section className="scroll-mt-24" id="cookies">
-                            <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-6 flex items-center gap-3">
+                            <h2 className="text-accent text-3xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-primary">3.</span> Cookies Policy
                             </h2>
                             <div className="text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg space-y-4">
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
 
                         {/* 4. Third-Party Sharing */}
                         <section className="scroll-mt-24" id="third-party">
-                            <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-6 flex items-center gap-3">
+                            <h2 className="text-accent text-3xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-primary">4.</span> Third-Party Sharing
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -156,14 +156,14 @@ const PrivacyPolicy = () => {
                                     <div className="size-12 bg-indigo-600/10 rounded-lg flex items-center justify-center text-indigo-500 mb-4 group-hover:scale-110 transition-transform">
                                         <span className="material-symbols-outlined text-3xl"><FaAddressCard /></span>
                                     </div>
-                                    <h3 className="text-slate-900 dark:text-white text-lg font-bold mb-2">Stripe</h3>
+                                    <h3 className="text-accent text-lg font-bold mb-2">Stripe</h3>
                                     <p className="text-sm text-slate-500 dark:text-[#ab9db9]">We use Stripe for secure billing and payment processing of production orders. We do not store credit card details on our servers.</p>
                                 </div>
                                 <div className="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-primary/50 transition-all group">
                                     <div className="size-12 bg-orange-600/10 rounded-lg flex items-center justify-center text-orange-500 mb-4 group-hover:scale-110 transition-transform">
                                         <span className="material-symbols-outlined text-3xl"><IoMdCloudDone /></span>
                                     </div>
-                                    <h3 className="text-slate-900 dark:text-white text-lg font-bold mb-2">Firebase</h3>
+                                    <h3 className="text-accent text-lg font-bold mb-2">Firebase</h3>
                                     <p className="text-sm text-slate-500 dark:text-[#ab9db9]">Our database and real-time syncing are powered by Google Firebase. Data is stored in secure, encrypted cloud environments.</p>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ const PrivacyPolicy = () => {
 
                         {/* 5. Data Security */}
                         <section className="scroll-mt-24" id="security">
-                            <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-6 flex items-center gap-3">
+                            <h2 className="text-accent text-3xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-primary">5.</span> Data Security
                             </h2>
                             <div className="space-y-4 text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg">
@@ -199,22 +199,22 @@ const PrivacyPolicy = () => {
 
                         {/* 6. User Rights */}
                         <section className="scroll-mt-24" id="user-rights">
-                            <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-6 flex items-center gap-3">
+                            <h2 className="text-accent text-3xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-primary">6.</span> User Rights
                             </h2>
                             <div className="space-y-4 text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg">
                                 <p>You have certain rights regarding your personal information, including the right to access, correct, or delete the data we hold about you. For the GTracker, this specifically includes:</p>
                                 <div className="flex flex-col gap-3 mt-4">
                                     <div className="p-4 border border-l-4 border-primary/30 dark:border-primary/50 rounded-r-lg">
-                                        <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1 uppercase tracking-wider">Access & Portability</h4>
+                                        <h4 className="font-bold text-accent text-sm mb-1 uppercase tracking-wider">Access & Portability</h4>
                                         <p className="text-sm">Request a copy of your production history and account data in a structured format.</p>
                                     </div>
                                     <div className="p-4 border border-l-4 border-primary/30 dark:border-primary/50 rounded-r-lg">
-                                        <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1 uppercase tracking-wider">Rectification</h4>
+                                        <h4 className="font-bold text-accent text-sm mb-1 uppercase tracking-wider">Rectification</h4>
                                         <p className="text-sm">Correct inaccurate or incomplete information regarding your business profile or orders.</p>
                                     </div>
                                     <div className="p-4 border border-l-4 border-primary/30 dark:border-primary/50 rounded-r-lg">
-                                        <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1 uppercase tracking-wider">Deletion (&quot;Right to be Forgotten&quot;)</h4>
+                                        <h4 className="font-bold text-accent text-sm mb-1 uppercase tracking-wider">Deletion (&quot;Right to be Forgotten&quot;)</h4>
                                         <p className="text-sm">Request the permanent removal of your account and personal identifiers from our tracking system.</p>
                                     </div>
                                 </div>

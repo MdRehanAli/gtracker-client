@@ -11,7 +11,7 @@ const CTA = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-6">
                     <button className="bg-white text-primary px-12 py-5 text-xl font-black rounded-xl hover:scale-105 transition-transform shadow-2xl">Book Custom Demo</button>
-                    <button className="bg-slate-900 text-white px-12 py-5 text-xl font-black rounded-xl border border-white/10 hover:bg-slate-800 transition-all">Talk to an Engineer</button>
+                    <button className="bg-accent text-white px-12 py-5 text-xl font-black rounded-xl border border-white/10 hover:bg-slate-800 transition-all">Talk to an Engineer</button>
                 </div>
             </div>
         </section>

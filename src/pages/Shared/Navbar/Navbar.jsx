@@ -44,7 +44,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div className="bg-white dark:bg-slate-900 text-primary selection:bg-primary selection:text-white antialiased sticky top-0 z-50 w-full border-b border-slate-200 dark:border-white/5 backdrop-blur-xl shadow-sm left-0">
+        <div className="bg-accent text-primary selection:bg-primary selection:text-white antialiased sticky top-0 z-50 w-full backdrop-blur-xl shadow-sm left-0">
             <div className="navbar max-w-7xl  mx-auto w-full">
                 <div className="navbar-start ">
                     <div className="dropdown">

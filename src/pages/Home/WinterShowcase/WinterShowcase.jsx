@@ -2,9 +2,9 @@ import React from 'react';
 
 const WinterShowcase = () => {
     return (
-        <section className="my-20 py-24 bg-white dark:bg-slate-900 mx-auto max-w-7xl w-11/12 rounded-xl">
+        <section className="my-20 py-24 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
             <div className=" px-8">
-                <h2 className="text-4xl font-black text-center mb-16 text-slate-900 dark:text-white">Winter 2024 Showcase</h2>
+                <h2 className="text-4xl font-black text-center mb-16 text-accent">Winter 2024 Showcase</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="aspect-[3/4] rounded-xl overflow-hidden">
                         <img

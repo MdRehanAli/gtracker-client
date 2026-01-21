@@ -2,17 +2,17 @@ import React from 'react';
 
 const BestSeller = () => {
     return (
-        <section className="py-24 bg-white dark:bg-slate-900">
+        <section className="py-24 bg-accent">
                     <div className="mx-auto max-w-7xl px-8">
                         <div className="flex justify-between items-end mb-16">
                             <div>
-                                <h2 className="text-4xl font-black text-slate-900 dark:text-white">Production Best Sellers</h2>
+                                <h2 className="text-4xl font-black text-accent">Production Best Sellers</h2>
                                 <p className="text-secondary mt-4">Top volume SKUs optimized for immediate scale-up.</p>
                             </div>
                             <button className="bg-primary/10 text-primary border border-primary/20 px-8 py-3 rounded-xl font-bold">Catalog 2024</button>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -21,12 +21,12 @@ const BestSeller = () => {
                                     />
                                 </div>
                                 <div className="p-8">
-                                    <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Technical Aero-Polo</h4>
+                                    <h4 className="font-bold text-lg mb-2 text-accent">Technical Aero-Polo</h4>
                                     <p className="text-sm text-secondary mb-6">High-performance athletic mesh.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -35,12 +35,12 @@ const BestSeller = () => {
                                     />
                                 </div>
                                 <div className="p-8">
-                                    <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Grid-Lock Cargo</h4>
+                                    <h4 className="font-bold text-lg mb-2 text-accent">Grid-Lock Cargo</h4>
                                     <p className="text-sm text-secondary mb-6">Reinforced tactical streetwear.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -49,12 +49,12 @@ const BestSeller = () => {
                                     />
                                 </div>
                                 <div className="p-8">
-                                    <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Luxury 450GSM Hoodie</h4>
+                                    <h4 className="font-bold text-lg mb-2 text-accent">Luxury 450GSM Hoodie</h4>
                                     <p className="text-sm text-secondary mb-6">Brushed heavyweight cotton.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
-                            <div className="group bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-white/5 rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                            <div className="group bg-slate-50 dark:bg-slate-800 border border-primary rounded-xl overflow-hidden hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                                 <div className="aspect-[4/5] relative overflow-hidden">
                                     <img
                                         alt="Product"
@@ -63,7 +63,7 @@ const BestSeller = () => {
                                     />
                                 </div>
                                 <div className="p-8">
-                                    <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Bio-Tech Windshell</h4>
+                                    <h4 className="font-bold text-lg mb-2 text-accent">Bio-Tech Windshell</h4>
                                     <p className="text-sm text-secondary mb-6">Eco-certified water resistance.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>

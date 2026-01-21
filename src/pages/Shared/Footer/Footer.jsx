@@ -6,26 +6,26 @@ const Footer = () => {
     return (
         <div>
 
-            <footer className="bg-white dark:bg-slate-900 mt-20 md:py-20 py-10">
+            <footer className="bg-accent mt-20 md:py-20 py-10">
                 <div className="mx-auto max-w-7xl w-11/12">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
                         <div className="col-span-1 md:col-span-2 space-y-5">
                             <div className="flex justify-center md:justify-start gap-2">
                                 <p className="text-2xl font-bold text-primary">GTracker</p>
                             </div>
-                            <p className="text-zinc-500 md:max-w-sm leading-relaxed text-lg">
+                            <p className="text-secondary md:max-w-sm leading-relaxed text-lg">
                                 The intelligence layer for modern textile manufacturing. Empowering production managers with precision data since 2018.
                             </p>
                             <div className="flex gap-4">
                                 <nav className='flex justify-center md:justify-start w-full'>
                                     <div className="grid grid-flow-col gap-5 text-4xl ">
-                                        <a className='hover:text-primary'>
+                                        <a className='text-primary hover:scale-105 hover:opacity-80'>
                                             <FaXTwitter />
                                         </a>
-                                        <a className='hover:text-primary'>
+                                        <a className='text-primary hover:scale-105 hover:opacity-80'>
                                             <FaGithub />
                                         </a>
-                                        <a className='hover:text-primary'>
+                                        <a className='text-primary hover:scale-105 hover:opacity-80'>
                                             <FaFacebook></FaFacebook>
                                         </a>
                                     </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-4">Products</h4>
-                            <ul className="space-y-2 text-base font-semibold text-zinc-500">
+                            <ul className="space-y-2 text-base font-semibold text-secondary">
                                 <li><Link className="hover:text-primary" to="all-products">All Products</Link></li>
                                 <li><Link className="hover:text-primary" to="/dashboard">Dashboard</Link></li>
                                 {/* <li><Link className="hover:text-primary" to="#">Quality Assurance</Link></li>
