@@ -83,7 +83,7 @@ const Login = () => {
                 <title>GTracker | Login</title>
             </Helmet>
             <div className="card-body bg-base-100">
-                <h1 className='text-center text-2xl font-bold text-parimary mb-3'>Welcome to GTracker!</h1>
+                <h1 className='text-center text-2xl font-bold text-primary mb-3'>Welcome to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">
                         {/* Email Field  */}
@@ -104,7 +104,7 @@ const Login = () => {
                         {errors.password?.type === "minLength" && <p className='text-red-500'>Password must have at least 6 Character</p>}
 
                         <div><a className="link link-hover">Forgot password?</a></div>
-                        <button className="btn btn-neutral mt-4">Login</button>
+                        <button className="btn btn-primary mt-4">Login</button>
                     </fieldset>
                     <p className='my-2 text-center'>New to GTracker? Please <Link to='/register' state={location.state} className='font-bold underline text-red-500'>Register</Link></p>
                 </form>

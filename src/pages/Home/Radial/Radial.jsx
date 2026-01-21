@@ -12,28 +12,28 @@ const Radial = () => {
                             <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><IoWaterOutline className="mb-4" /></span>
                                 <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">85%</h5>
-                                <p className="text-xs font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400">Water Recycled</p>
+                                <p className="text-xs font-bold uppercase tracking-widest text-secondary">Water Recycled</p>
                             </div>
                             <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineSolarPower className="mb-4" /></span>
                                 <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">100%</h5>
-                                <p className="text-xs font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400">Renewable Energy</p>
+                                <p className="text-xs font-bold uppercase tracking-widest text-secondary">Renewable Energy</p>
                             </div>
                             <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineRecycling className="mb-4" /></span>
                                 <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">Zero</h5>
-                                <p className="text-xs font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400">Waste-to-Landfill</p>
+                                <p className="text-xs font-bold uppercase tracking-widest text-secondary">Waste-to-Landfill</p>
                             </div>
                             <div className="p-8 bg-white dark:bg-slate-900 rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineForest className="mb-4" /></span>
                                 <h5 className="text-4xl font-black text-slate-900 dark:text-white mb-2">Carbon</h5>
-                                <p className="text-xs font-bold uppercase tracking-widest text-slate-600 dark:text-slate-400">Neutral Facility</p>
+                                <p className="text-xs font-bold uppercase tracking-widest text-secondary">Neutral Facility</p>
                             </div>
                         </div>
                     </div>
                     <div className="order-1 lg:order-2">
                         <h2 className="text-4xl font-black mb-6 text-slate-900 dark:text-white">Radical Circularity</h2>
-                        <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+                        <p className="text-lg text-secondary mb-10 leading-relaxed">
                             Our 2030 vision is to become a closed-loop ecosystem. We track the carbon footprint of every SKU, offering brands a real-time ESG dashboard for their entire production volume.
                         </p>
                         <button className="bg-primary px-10 py-5 text-white font-black rounded-xl shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">View ESG Report</button>

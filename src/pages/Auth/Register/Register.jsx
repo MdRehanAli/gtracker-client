@@ -89,7 +89,7 @@ const Register = () => {
                 <title>GTracker | Registration</title>
             </Helmet>
             <div className="card-body">
-                <h1 className='text-center text-2xl font-bold text-parimary mb-3'>Register to GTracker!</h1>
+                <h1 className='text-center text-2xl font-bold text-primary mb-3'>Register to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <fieldset className="fieldset">
 
@@ -130,7 +130,7 @@ const Register = () => {
                         {errors.password?.type === "minLength" && <p className='text-red-500'>Password must have at least 6 Character</p>}
                         {errors.password?.type === "pattern" && <p className='text-red-500'>Password must have at least an Uppercase and a Lowercase Character</p>}
 
-                        <button className="btn btn-neutral mt-4">Register</button>
+                        <button className="btn btn-primary mt-4">Register</button>
                     </fieldset>
                     <p className='mt-2 text-center'>Already have an Account? Please <Link to='/login' state={location.state} className='font-bold underline text-red-500'>Login</Link></p>
                 </form>

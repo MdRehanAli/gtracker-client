@@ -7,7 +7,7 @@ const BestSeller = () => {
                         <div className="flex justify-between items-end mb-16">
                             <div>
                                 <h2 className="text-4xl font-black text-slate-900 dark:text-white">Production Best Sellers</h2>
-                                <p className="text-slate-600 dark:text-slate-400 mt-4">Top volume SKUs optimized for immediate scale-up.</p>
+                                <p className="text-secondary mt-4">Top volume SKUs optimized for immediate scale-up.</p>
                             </div>
                             <button className="bg-primary/10 text-primary border border-primary/20 px-8 py-3 rounded-xl font-bold">Catalog 2024</button>
                         </div>
@@ -22,7 +22,7 @@ const BestSeller = () => {
                                 </div>
                                 <div className="p-8">
                                     <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Technical Aero-Polo</h4>
-                                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">High-performance athletic mesh.</p>
+                                    <p className="text-sm text-secondary mb-6">High-performance athletic mesh.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ const BestSeller = () => {
                                 </div>
                                 <div className="p-8">
                                     <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Grid-Lock Cargo</h4>
-                                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Reinforced tactical streetwear.</p>
+                                    <p className="text-sm text-secondary mb-6">Reinforced tactical streetwear.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ const BestSeller = () => {
                                 </div>
                                 <div className="p-8">
                                     <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Luxury 450GSM Hoodie</h4>
-                                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Brushed heavyweight cotton.</p>
+                                    <p className="text-sm text-secondary mb-6">Brushed heavyweight cotton.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ const BestSeller = () => {
                                 </div>
                                 <div className="p-8">
                                     <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Bio-Tech Windshell</h4>
-                                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Eco-certified water resistance.</p>
+                                    <p className="text-sm text-secondary mb-6">Eco-certified water resistance.</p>
                                     <button className="w-full bg-primary py-3 rounded-xl text-sm font-bold text-white">Order Sample</button>
                                 </div>
                             </div>

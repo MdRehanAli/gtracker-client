@@ -44,7 +44,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white antialiased sticky top-0 z-50 w-full border-b border-slate-200 dark:border-white/5 backdrop-blur-xl shadow-sm left-0">
+        <div className="bg-white dark:bg-slate-900 text-primary selection:bg-primary selection:text-white antialiased sticky top-0 z-50 w-full border-b border-slate-200 dark:border-white/5 backdrop-blur-xl shadow-sm left-0">
             <div className="navbar max-w-7xl  mx-auto w-full">
                 <div className="navbar-start ">
                     <div className="dropdown">
@@ -57,7 +57,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost text-xl">GTracker</Link>
+                    <Link to="/" className="btn btn-ghost text-2xl font-bold text-primary">GTracker</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -78,7 +78,7 @@ const Navbar = () => {
                             </div>
                             :
                             <div className='flex gap-2'>
-                                <Link to='/login' className="btn">Login</Link>
+                                <Link to='/login' className="btn btn-primary">Login</Link>
                                 {/* <Link to='/register' className="btn">Register</Link> */}
                             </div>
                     }

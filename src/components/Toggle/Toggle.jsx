@@ -9,7 +9,7 @@ const Toggle = () => {
 
                 {/* sun icon */}
                 <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off p-2 bg-[#7c3aed30] h-10 w-10 rounded-full fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24">
                     <path
@@ -18,7 +18,7 @@ const Toggle = () => {
 
                 {/* moon icon */}
                 <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on p-2 bg-[#7c3aed30] rounded-full h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24">
                     <path

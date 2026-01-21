@@ -11,8 +11,8 @@ const Products = () => {
         <div className='mx-auto w-11/12 max-w-7xl'>
             <div className='mb-12 text-center'>
                 {/* <div className='flex justify-center text-7xl mb-5 '><CiShoppingTag className='p-4 bg-gray-300 rounded-3xl' /></div> */}
-                <h1 className='text-3xl md:text-4xl font-bold'>Our Products</h1>
-                <p className='text-slate-600 dark:text-slate-400 mt-3 text-lg'>All our latest product are here. You can easily buy products from here</p>
+                <h1 className='text-3xl md:text-4xl font-bold text-primary'>Our Products</h1>
+                <p className='text-secondary mt-3 text-lg'>All our latest product are here. You can easily buy products from here</p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
                 {
