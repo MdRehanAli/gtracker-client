@@ -1,10 +1,23 @@
 import React from 'react';
+import { GiThermometerCold } from 'react-icons/gi';
 
 const WinterShowcase = () => {
     return (
-        <section className="my-20 py-24 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
-            <div className=" px-8">
-                <h2 className="text-4xl font-black text-center mb-16 text-accent">Winter 2024 Showcase</h2>
+        <section className="my-20 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
+            <div className="lg:p-20 md:p-10 p-5 py-10">
+                <div className='mb-12 text-center'>
+                    <div className='flex justify-center items-center gap-2 mb-5'>
+                        <div className='flex justify-center text-primary animate-[spin_2s_linear_infinite] hover:[animation-play-state:paused]'>
+                            <GiThermometerCold className='text-3xl md:text-4xl font-extrabold' />
+                        </div>
+                        <h2 className='text-3xl md:text-4xl font-bold text-primary'>
+                            Winter 2026 Showcase
+                        </h2>
+                    </div>
+                    <p className="text-secondary mt-3 text-lg">
+                        Showcasing winter-ready apparel built with advanced manufacturing intelligence.
+                    </p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="aspect-[3/4] rounded-xl overflow-hidden">
                         <img
