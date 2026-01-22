@@ -1,25 +1,28 @@
 import React from 'react';
+import { CiLocationOn } from 'react-icons/ci';
+import { FaQuoteLeft, FaRegCalendarAlt } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa6';
 
 const Review = ({ review }) => {
 
     const { name, photo, reviews, location, ratings, date } = review;
 
     return (
-        <div className="card border shadow-xl rounded-xl max-w-[400px] bg-gray-300">
-            <figure className="px-10 pt-10 pb-2 avatar w-1/2">
+        <div className=" p-5 md:p-10 border border-primary/50 shadow-xl rounded-xl max-w-[400px] bg-accent">
+            <figure className="avatar flex justify-center mb-5">
                 <img
                     src={photo}
-                    alt={name} 
-                    className="ring-green-500 ring-offset-green-300 ring-2 ring-offset-2 rounded-full w-1/2" />
+                    alt={name}
+                    className="ring-primary ring-offset-primary ring-2 ring-offset-2 rounded-full w-1/4" />
             </figure>
-            <div className="card-body items-center text-center">
-                <h2 className="card-title text-2xl">{name}</h2>
-                <p className='text-justify'><span className='font-bold ml-8'>Review:</span> {reviews}</p>
-                <p>Location: {location}</p>
-                <div className=" mt-2 flex justify-between gap-10">
-                    <p>Date: {date}</p>
-                    <p>Ratings: {ratings}</p>
+            <div className="flex flex-col gap-2 items-center text-center">
+                <h2 className="text-2xl font-bold text-primary">{name}</h2>
+                <p className='my-5 text-secondary font-bold italic'><span className='font-bold my-8'><FaQuoteLeft className='inline mb-4 mr-2' /></span> {reviews}</p>
+                <div className="flex justify-between w-full">
+                    <p className='text-secondary'><FaRegCalendarAlt className='inline mr-2' /> {date}</p>
+                    <p className='text-secondary'><FaStar className='inline mr-2 text-primary' /> {ratings}</p>
                 </div>
+                <p className='text-secondary'><CiLocationOn className='inline mr-2' /> {location}</p>
             </div>
         </div>
     );

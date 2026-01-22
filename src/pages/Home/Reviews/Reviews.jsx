@@ -13,10 +13,12 @@ const Reviews = ({ reviewsPromise }) => {
     const reviews = use(reviewsPromise);
 
     return (
-        <div className='my-20 mx-auto w-11/12 max-w-7xl'>
-            <div className='text-center'>
-                <div className='flex justify-center text-7xl mb-5 '><FaQuoteLeft className='p-4 bg-gray-300 rounded-xl' /></div>
-                <h1 className='text-3xl md:text-4xl font-bold'>Customer Feedback</h1>
+        <div className='mx-auto w-11/12 max-w-7xl my-20'>
+            <div className='text-center mb-12'>
+                <div className='flex justify-center items-center gap-2 mb-5'>
+                    <div className='flex justify-center text-primary animate-[pulse_1s_linear_infinite] hover:animate-none '><FaQuoteLeft className='text-3xl md:text-4xl font-bold' /></div>
+                    <h1 className='text-3xl md:text-4xl font-bold text-primary'>Customer Feedback</h1>
+                </div>
                 <p className='text-secondary mt-3 text-lg'>Trusted by businesses and individuals, see how our service quality speaks through our customers.</p>
             </div>
             <Swiper
