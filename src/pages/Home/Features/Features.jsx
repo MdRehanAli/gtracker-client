@@ -16,21 +16,21 @@ const Features = () => {
             <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
                 <div className="group space-y-6 p-5 md:p-10 bg-accent rounded-xl bg-surface/20 border border-white/5 hover:border-primary/50 transition-all">
                     <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                        <span className="material-symbols-outlined text-3xl"><AiOutlineThunderbolt /></span>
+                        <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><AiOutlineThunderbolt /></span>
                     </div>
                     <h3 className="text-2xl font-bold text-primary">High Speed Production</h3>
                     <p className="text-secondary leading-relaxed">Optimized workflows that reduce manufacturing lead times by up to 35% through smart AI-driven scheduling.</p>
                 </div>
                 <div className="group space-y-6 p-5 md:p-10 bg-accent rounded-xl bg-surface/20 border border-white/5 hover:border-primary/50 transition-all">
                     <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                        <span className="material-symbols-outlined text-3xl"><MdOutlineVerified /></span>
+                        <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdOutlineVerified /></span>
                     </div>
                     <h3 className="text-2xl font-bold text-primary">Uncompromising Quality</h3>
                     <p className="text-secondary leading-relaxed">Multi-stage inspection checkpoints with digital logs for every garment in the production line.</p>
                 </div>
                 <div className="group space-y-6 p-5 md:p-10 bg-accent rounded-xl bg-surface/20 border border-white/5 hover:border-primary/50 transition-all">
                     <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                        <span className="material-symbols-outlined text-3xl"><FaRoute /></span>
+                        <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FaRoute /></span>
                     </div>
                     <h3 className="text-2xl font-bold text-primary">End-to-End Trackability</h3>
                     <p className="text-secondary leading-relaxed">Monitor every single stitch from the moment of raw material intake to final logistics dispatch.</p>

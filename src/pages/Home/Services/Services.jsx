@@ -24,28 +24,28 @@ const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl"><MdPrecisionManufacturing /></span>
+                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdPrecisionManufacturing /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">OEM Solutions</h4>
                         <p className="text-sm text-secondary">Scale your existing designs with our industrial-grade production capacity.</p>
                     </div>
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl"><MdArchitecture /></span>
+                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdArchitecture /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">ODM Design</h4>
                         <p className="text-sm text-secondary">Leverage our in-house designers to create trend-leading technical collections.</p>
                     </div>
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl"><FaBarcode /></span>
+                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FaBarcode /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">Private Label</h4>
                         <p className="text-sm text-secondary">Complete branding services including custom tags, packaging, and trims.</p>
                     </div>
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl"><FiPackage /></span>
+                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FiPackage /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">DTC Fulfillment</h4>
                         <p className="text-sm text-secondary">Ship individual orders directly from factory floor to global consumers.</p>

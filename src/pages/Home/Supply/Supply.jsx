@@ -14,22 +14,22 @@ const Supply = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transform duration-200 hover:scale-105">
-                    <span className="text-5xl text-primary mb-6"><MdOutlineDynamicFeed className='mb-6' /></span>
+                    <span className="text-5xl text-primary mb-6"><MdOutlineDynamicFeed className='mb-6 animate-[pulse_1s_linear_infinite] hover:animate-none' /></span>
                     <h3 className="text-xl font-extrabold mb-4 text-primary">Live Operations</h3>
                     <p className="text-secondary leading-relaxed text-sm">Real-time status of every sewing line and station across multiple global facilities.</p>
                 </div>
                 <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transform duration-200 hover:scale-105">
-                    <span className="material-symbols-outlined text-5xl text-primary mb-6"><MdOutlineVerified className='mb-6' /></span>
+                    <span className="material-symbols-outlined text-5xl text-primary mb-6"><MdOutlineVerified className='mb-6 animate-[spin_3s_linear_infinite] hover:animate-none' /></span>
                     <h3 className="text-xl font-extrabold mb-4 text-primary">Quality Shield</h3>
                     <p className="text-secondary leading-relaxed text-sm">Automated QC gates using computer vision to detect 0.1mm defects instantly.</p>
                 </div>
                 <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transform duration-200 hover:scale-105">
-                    <span className="material-symbols-outlined text-5xl text-primary mb-6"><MdOutlineHub className='mb-6' /></span>
+                    <span className="material-symbols-outlined text-5xl text-primary mb-6"><MdOutlineHub className='mb-6 animate-[spin_3s_linear_infinite] hover:animate-none' /></span>
                     <h3 className="text-xl font-extrabold mb-4 text-primary">Global Nodes</h3>
                     <p className="text-secondary leading-relaxed text-sm">Unified control center for logistics, from raw yarn arrival to final port delivery.</p>
                 </div>
                 <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transform duration-200 hover:scale-105">
-                    <span className="material-symbols-outlined text-5xl text-primary mb-6"><MdOutlineInsights className='mb-6' /></span>
+                    <span className="material-symbols-outlined text-5xl text-primary mb-6"><MdOutlineInsights className='mb-6 animate-[pulse_2s_linear_infinite] hover:animate-none' /></span>
                     <h3 className="text-xl font-extrabold mb-4 text-primary">AI Prediction</h3>
                     <p className="text-secondary leading-relaxed text-sm">Predictive lead times based on historical throughput and seasonal patterns.</p>
                 </div>

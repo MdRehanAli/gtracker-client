@@ -25,22 +25,22 @@ const Radial = () => {
                     <div className="order-2 lg:order-1">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4"><IoWaterOutline className="mb-4" /></span>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4 animate-[pulse_1s_linear_infinite] hover:animate-none"><IoWaterOutline className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">85%</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Water Recycled</p>
                             </div>
                             <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineSolarPower className="mb-4" /></span>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4 animate-[pulse_1s_linear_infinite] hover:animate-none"><MdOutlineSolarPower className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Renewable Energy</p>
                             </div>
                             <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineRecycling className="mb-4" /></span>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4 animate-[pulse_1s_linear_infinite] hover:animate-none"><MdOutlineRecycling className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">Zero</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Waste-to-Landfill</p>
                             </div>
                             <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
-                                <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineForest className="mb-4" /></span>
+                                <span className="material-symbols-outlined text-primary text-4xl mb-4 animate-[pulse_1s_linear_infinite] hover:animate-none"><MdOutlineForest className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">Carbon</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Neutral Facility</p>
                             </div>
