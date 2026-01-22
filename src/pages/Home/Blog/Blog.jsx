@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaRegCalendarAlt } from 'react-icons/fa';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 const Blog = ({ blog }) => {
@@ -6,19 +7,19 @@ const Blog = ({ blog }) => {
     const { title, date, image, description } = blog;
 
     return (
-        <div className="card border shadow-xl rounded-xl">
-            <figure className="px-10 pt-10 pb-2 avatar">
+        <div className="border border-primary/50 shadow-xl rounded-xl  flex flex-col gap-2">
+            <figure className="">
                 <img
                     src={image}
                     alt="Image"
-                    className="rounded-xl" />
+                    className="rounded-t-xl" />
             </figure>
-            <div className="card-body">
-                <h2 className="card-title text-2xl">{title}</h2>
-                <p className='text-left'>Date: {date}</p>
-                <p className='text-justify'><span className='font-bold ml-8'>Description:</span> {description}</p>
+            <div className="px-5 md:px-10 my-5 flex flex-col gap-2">
+                <h2 className="text-xl font-bold text-center text-primary">{title}</h2>
+                <p className='text-left text-secondary'><FaRegCalendarAlt className='inline mr-2' /> {date}</p>
+                <p className='text-justify text-secondary'><span className='font-bold ml-8'></span> {description}</p>
                 <div className=" mt-2 flex justify-between gap-10">
-                    <button className="btn btn-ghost">Read More <FaArrowRightLong /></button>
+                    <button className="text-primary font-bold">Read More <FaArrowRightLong className='inline font-bold'/></button>
                 </div>
             </div>
         </div>

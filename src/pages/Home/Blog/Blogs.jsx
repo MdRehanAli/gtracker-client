@@ -7,12 +7,19 @@ const Blogs = ({ blogsPromise }) => {
     const blogs = use(blogsPromise);
 
     return (
-        <div id="blogs" className='max-w-7xl mx-auto w-11/12'>
-            <div className='text-center'>
-                <div className='flex justify-center text-7xl mb-5'><FaRegPenToSquare className='p-4 bg-gray-300 rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold'>Latest Blog & Articles</h1>
-                <p className='mt-3 mb-12'>Explore insights, tips, and the latest updates from the world of textiles and fabric technology.</p>
-
+        <div id="blogs" className='max-w-7xl mx-auto w-11/12 my-20'>
+            <div className='text-center mb-12'>
+                <div className='flex justify-center items-center gap-2 mb-5'>
+                    <div className='flex justify-center text-primary animate-[ping_2s_linear_infinite] hover:[animation-play-state:paused]'>
+                        <FaRegPenToSquare className='text-3xl md:text-4xl font-extrabold' />
+                    </div>
+                    <h2 className='text-3xl md:text-4xl font-bold text-primary'>
+                        Latest Blog & Articles
+                    </h2>
+                </div>
+                <p className="text-secondary mt-3 text-lg">
+                    Explore insights, tips, and the latest updates from the world of textiles and fabric technology.
+                </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {

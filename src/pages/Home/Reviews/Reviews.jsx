@@ -16,7 +16,7 @@ const Reviews = ({ reviewsPromise }) => {
         <div className='mx-auto w-11/12 max-w-7xl my-20'>
             <div className='text-center mb-12'>
                 <div className='flex justify-center items-center gap-2 mb-5'>
-                    <div className='flex justify-center text-primary animate-[pulse_1s_linear_infinite] hover:animate-none '><FaQuoteLeft className='text-3xl md:text-4xl font-bold' /></div>
+                    <div className='flex justify-center text-primary animate-[pulse_2s_linear_infinite] hover:animate-none '><FaQuoteLeft className='text-3xl md:text-4xl font-bold mb-4' /></div>
                     <h1 className='text-3xl md:text-4xl font-bold text-primary'>Customer Feedback</h1>
                 </div>
                 <p className='text-secondary mt-3 text-lg'>Trusted by businesses and individuals, see how our service quality speaks through our customers.</p>
