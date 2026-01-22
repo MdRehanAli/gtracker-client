@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
                                 <p className="text-slate-500 dark:text-[#ab9db9] text-xs">Quickly jump to a section</p>
                             </div>
                             <nav className="flex flex-col gap-1">
-                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary/20 border-l-4 border-primary transition-all text-primary" href="#intro">
+                                <a className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary/20 border-l-4 border-primary/50 transition-all text-primary" href="#intro">
                                     <span className="material-symbols-outlined text-xl"><CiCircleInfo /></span>
                                     <span className="text-sm font-semibold">1. Introduction</span>
                                 </a>
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
                             </h2>
                             <div className="text-slate-600 dark:text-[#ab9db9] leading-relaxed text-lg space-y-4">
                                 <p>We use cookies and similar tracking technologies (like local storage) to maintain your session and remember your dashboard preferences. This allows you to stay logged in and keep your customized production views active.</p>
-                                <p className="bg-primary/5 p-4 rounded-xl border-l-4 border-primary italic">Note: Disabling cookies may prevent certain features of the production tracker, such as real-time status updates, from functioning correctly.</p>
+                                <p className="bg-primary/5 p-4 rounded-xl border-l-4 border-primary/50 italic">Note: Disabling cookies may prevent certain features of the production tracker, such as real-time status updates, from functioning correctly.</p>
                             </div>
                         </section>
 

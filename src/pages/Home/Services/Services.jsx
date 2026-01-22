@@ -14,36 +14,36 @@ const Services = () => {
                             <GrServices className='text-3xl md:text-4xl font-extrabold' />
                         </div>
                         <h2 className='text-3xl md:text-4xl font-bold text-primary'>
-                            Manufacturing Services
+                            Manufacturing
                         </h2>
                     </div>
                     <p className="text-secondary mt-3 text-lg">
-                        End-to-end apparel manufacturing services, from design engineering to global fulfillment.
+                        End-to-end apparel manufacturing services to global fulfillment.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="p-10 rounded-xl bg-accent border border-primary hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                    <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                             <span className="material-symbols-outlined text-3xl"><MdPrecisionManufacturing /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">OEM Solutions</h4>
                         <p className="text-sm text-secondary">Scale your existing designs with our industrial-grade production capacity.</p>
                     </div>
-                    <div className="p-10 rounded-xl bg-accent border border-primary hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                    <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                             <span className="material-symbols-outlined text-3xl"><MdArchitecture /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">ODM Design</h4>
                         <p className="text-sm text-secondary">Leverage our in-house designers to create trend-leading technical collections.</p>
                     </div>
-                    <div className="p-10 rounded-xl bg-accent border border-primary hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                    <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                             <span className="material-symbols-outlined text-3xl"><FaBarcode /></span>
                         </div>
                         <h4 className="text-xl font-bold mb-4 text-primary">Private Label</h4>
                         <p className="text-sm text-secondary">Complete branding services including custom tags, packaging, and trims.</p>
                     </div>
-                    <div className="p-10 rounded-xl bg-accent border border-primary hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
+                    <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
                         <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
                             <span className="material-symbols-outlined text-3xl"><FiPackage /></span>
                         </div>

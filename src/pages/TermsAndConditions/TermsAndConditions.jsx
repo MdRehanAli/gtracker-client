@@ -80,7 +80,7 @@ const TermsAndConditions = () => {
                     <div className="bg-slate-100 dark:bg-[#1f1a26] border border-slate-200 dark:border-[#302839] rounded-xl p-6 md:p-10 space-y-10 shadow-xl shadow-black/20">
                         {/* Section 1 */}
                         <section className="scroll-mt-28" id="section-1">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">1. Acceptance of Terms</h2>
                             </div>
                             <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed">
@@ -95,7 +95,7 @@ const TermsAndConditions = () => {
 
                         {/* Section 2 */}
                         <section className="scroll-mt-28" id="section-2">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">2. User Accounts</h2>
                             </div>
                             <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed mb-6">
@@ -123,7 +123,7 @@ const TermsAndConditions = () => {
 
                         {/* Section 3 */}
                         <section className="scroll-mt-28" id="section-3">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">3. Product Listings & Orders</h2>
                             </div>
                             <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed">
@@ -145,10 +145,10 @@ const TermsAndConditions = () => {
 
                         {/* Section 4 */}
                         <section className="scroll-mt-28" id="section-4">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">4. Payment Terms</h2>
                             </div>
-                            <div className="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-6">
+                            <div className="bg-primary/5 border border-primary/50 p-6 rounded-xl mb-6">
                                 <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed">
                                     Payment for bulk orders and subscription services must be settled via one of our authorized payment gateways:
                                 </p>
@@ -172,7 +172,7 @@ const TermsAndConditions = () => {
 
                         {/* Section 5 */}
                         <section className="scroll-mt-28" id="section-5">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">5. Intellectual Property</h2>
                             </div>
                             <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed">
@@ -184,7 +184,7 @@ const TermsAndConditions = () => {
 
                         {/* Section 6 */}
                         <section className="scroll-mt-28" id="section-6">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">6. Termination</h2>
                             </div>
                             <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed">
@@ -196,7 +196,7 @@ const TermsAndConditions = () => {
 
                         {/* Section 7 */}
                         <section className="scroll-mt-28" id="section-7">
-                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary pl-4">
+                            <div className="flex items-center gap-4 mb-4 border-l-4 border-primary/50 pl-4">
                                 <h2 className="text-accent tracking-tight text-2xl font-bold leading-tight">7. Limitation of Liability</h2>
                             </div>
                             <p className="text-slate-700 dark:text-[#d1c9d8] text-base font-normal leading-relaxed italic border-l-2 border-slate-400 dark:border-[#40354d] pl-6 py-2">

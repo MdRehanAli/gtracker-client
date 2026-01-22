@@ -106,7 +106,7 @@ const Register = () => {
 
                         {/* Photo Field  */}
                         <label className="label">Photo</label>
-                        <input type="file" {...register('photo', { required: true })} className="file-input w-full border border-primary text-primary" placeholder="Photo" />
+                        <input type="file" {...register('photo', { required: true })} className="file-input w-full border border-primary/50 text-primary" placeholder="Photo" />
                         {errors.photo?.type === "required" && <p className='text-red-500'>Photo is Required</p>}
 
                         {/* Role Field  */}

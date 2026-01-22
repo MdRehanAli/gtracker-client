@@ -11,7 +11,7 @@ const WinterShowcase = () => {
                             <GiThermometerCold className='text-3xl md:text-4xl font-extrabold' />
                         </div>
                         <h2 className='text-3xl md:text-4xl font-bold text-primary'>
-                            Winter 2026 Showcase
+                            Winter Showcase
                         </h2>
                     </div>
                     <p className="text-secondary mt-3 text-lg">

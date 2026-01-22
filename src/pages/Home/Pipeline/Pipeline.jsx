@@ -8,7 +8,7 @@ const Pipeline = () => {
                 <div className='mb-12 text-center'>
                     <div className='flex justify-center items-center gap-2 mb-5'>
                         <div className='flex justify-center text-primary animate-[ping_2s_linear_infinite] hover:animate-none '><GrDeploy className='text-3xl md:text-4xl font-extrabold' /></div>
-                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>The Deployment Pipeline</h1>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary text-nowrap'>Workflow</h1>
                     </div>
                     <p className="text-secondary mt-3 text-lg">A structured, technology-driven workflow from design validation to final dispatch.</p>
                 </div>

@@ -51,7 +51,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="mt-10 border-t border-zinc-900 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="mt-10 border-t border-primary/50 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
                         <p className="text-sm text-zinc-600 font-medium">Copyright © {new Date().getFullYear()} - All right reserved.</p>
                         <div className="flex flex-col md:flex-row justify-center items-center gap-5 text-sm text-zinc-600 font-bold uppercase tracking-widest">
                             <Link className="hover:text-primary" to="/policy">Privacy Policy</Link>

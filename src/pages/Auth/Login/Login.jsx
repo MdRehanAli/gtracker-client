@@ -119,19 +119,19 @@ const Login = () => {
                     <p className="text-primary text-[11px] font-bold mb-4 uppercase tracking-[0.25em] text-center opacity-60">Demo Quick Access</p>
                     {/* Fill Admin credentials  */}
                     <div className="grid grid-cols-3 gap-3">
-                        <button onClick={() => handleDemoLogin("admin")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary hover:bg-primary/10 transition-all group bg-primary">
+                        <button onClick={() => handleDemoLogin("admin")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
                             <div className='text-accent group-hover:scale-110 transition-transform text-2xl'><MdOutlineAdminPanelSettings className='' /></div>
                             <span className="text-secondary text-[10px] font-bold tracking-wider">ADMIN</span>
                         </button>
 
                         {/* Fill Manager Credential  */}
-                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary hover:bg-primary/10 transition-all group bg-primary">
+                        <button onClick={() => handleDemoLogin("manager")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md  border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
                             <div className='text-accent group-hover:scale-110 transition-transform text-2xl'><GrUserSettings className='' /></div>
                             <span className="text-secondary text-[10px] font-bold tracking-wider">MANAGER</span>
                         </button>
 
                         {/* Fill User Credential  */}
-                        <button onClick={() => handleDemoLogin("user")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md border  border-primary hover:bg-primary/10 transition-all group bg-primary">
+                        <button onClick={() => handleDemoLogin("user")} className="flex flex-col items-center justify-center gap-2 p-3 rounded-md border  border-primary/50 hover:bg-primary/10 transition-all group bg-primary">
                             <div className='text-accent group-hover:scale-110 transition-transform text-2xl'><FaRegUser className='' /></div>
                             <span className="text-secondary text-[10px] font-bold tracking-wider">USER</span>
                         </button>

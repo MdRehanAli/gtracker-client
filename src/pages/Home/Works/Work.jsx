@@ -6,7 +6,7 @@ const Work = ({ work }) => {
     const { name, description, image } = work;
 
     return (
-        <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/10 transform duration-200 hover:scale-105 flex flex-col gap-2">
+        <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transform duration-200 hover:scale-105 flex flex-col gap-2">
             <figure className="flex justify-center">
                 <img
                     src={image}

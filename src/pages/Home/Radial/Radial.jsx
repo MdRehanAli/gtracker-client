@@ -18,28 +18,28 @@ const Radial = () => {
                         </h2>
                     </div>
                     <p className="text-secondary mt-3 text-lg">
-                        A future where every garment is traceable, efficient, and sustainably produced.
+                        A future traceable, efficient, and sustainably produced.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <div className="order-2 lg:order-1">
-                        <div className="grid grid-cols-2 gap-8">
-                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><IoWaterOutline className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">85%</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Water Recycled</p>
                             </div>
-                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
+                            <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineSolarPower className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Renewable Energy</p>
                             </div>
-                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
+                            <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineRecycling className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">Zero</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Waste-to-Landfill</p>
                             </div>
-                            <div className="p-8 bg-accent rounded-xl border border-primary/20">
+                            <div className="p-5 md:p-10 bg-accent rounded-xl border border-primary/20">
                                 <span className="material-symbols-outlined text-primary text-4xl mb-4"><MdOutlineForest className="mb-4" /></span>
                                 <h5 className="text-3xl md:text-4xl font-bold text-primary mb-2">Carbon</h5>
                                 <p className="text-xs font-bold uppercase tracking-widest text-secondary">Neutral Facility</p>
@@ -47,11 +47,13 @@ const Radial = () => {
                         </div>
                     </div>
                     <div className="order-1 lg:order-2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Radical Circularity</h2>
-                        <p className="text-lg text-secondary mb-10 leading-relaxed">
+                        <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6 text-center md:text-left">Radical Circularity</h2>
+                        <p className="text-lg text-justify text-secondary mb-10 leading-relaxed">
                             Our 2030 vision is to become a closed-loop ecosystem. We track the carbon footprint of every SKU, offering brands a real-time ESG dashboard for their entire production volume.
                         </p>
-                        <a href="#blogs" className="btn btn-primary">View recent Article</a>
+                        <div className='flex items-center justify-center md:justify-start'>
+                            <a href="#blogs" className="btn btn-primary">View recent Article</a>
+                        </div>
                     </div>
                 </div>
             </div>

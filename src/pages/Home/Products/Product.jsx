@@ -8,7 +8,7 @@ const Product = ({ product }) => {
     const { _id, image, name, category, largeDescription, availableQuantity, price } = product
 
     return (
-        <div className="flex flex-col rounded-xl group transition-all hover:scale-105 duration-200  bg-accent border border-accent hover:border-primary hover:shadow-lg hover:shadow-primary/10">
+        <div className="flex flex-col rounded-xl group transition-all hover:scale-105 duration-200  bg-accent border border-accent hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
             <figure className=" relative overflow-hidden rounded-t-xl">
                 <img
                     src={image}

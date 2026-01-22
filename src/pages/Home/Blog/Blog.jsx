@@ -12,7 +12,7 @@ const Blog = ({ blog }) => {
                 <img
                     src={image}
                     alt="Image"
-                    className="rounded-t-xl" />
+                    className="rounded-t-xl w-full" />
             </figure>
             <div className="px-5 md:px-10 my-5 flex flex-col gap-2">
                 <h2 className="text-xl font-bold text-center text-primary">{title}</h2>
