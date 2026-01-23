@@ -15,18 +15,20 @@ const AboutUs = () => {
             </Helmet>
             <Banner></Banner>
             <div className='max-w-7xl mx-auto w-11/12 my-20'>
-                <div className='text-center'>
-                    <div className='flex justify-center text-7xl mb-5'><IoIosInformationCircleOutline className='p-4 bg-gray-300 rounded-xl' /></div>
-                    <h1 className='text-3xl md:text-5xl font-bold'>About GTracker</h1>
-                    <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Discover who we are, what we stand for, and how we're transforming the textile and apparel industry with smart, innovative technology designed for seamless production and business growth.</p>
+                <div className='text-center mb-12'>
+                    <div className='flex justify-center items-center gap-2 mb-5'>
+                        <div className='flex justify-center text-primary animate-[spin_2s_linear_infinite_reverse] hover:animate-none '><IoIosInformationCircleOutline className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>About GTracker</h1>
+                    </div>
+                    <p className="text-secondary mt-3 text-lg">Discover who we are, what we stand for, and how we're transforming the industry</p>
                 </div>
                 <div className='flex flex-col lg:flex-row justify-between items-start gap-10'>
                     <div className='mx-auto'>
                         <div className=''>
-                            <img className='rounded-xl' src={about1} alt="About 1" />
+                            <img className='rounded-xl animate-[pulse_1s_linear_infinite] hover:animate-none' src={about1} alt="About 1" />
                         </div>
                         <div className='relative -top-5'>
-                            <img className='rounded-xl w-2/3 mx-auto' src={about2} alt="About 2" />
+                            <img className='rounded-xl w-2/3 mx-auto animate-[pulse_1s_linear_infinite_reverse] hover:animate-none' src={about2} alt="About 2" />
                         </div>
                     </div>
                     <div className='w-full'>
