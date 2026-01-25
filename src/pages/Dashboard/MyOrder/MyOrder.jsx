@@ -26,8 +26,11 @@ const MyOrder = () => {
             title: "Are you sure?",
             text: "You won't be able to revert this!",
             icon: "warning",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            confirmButtonColor: "#0f172b",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
@@ -43,7 +46,10 @@ const MyOrder = () => {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
-                                icon: "success"
+                                icon: "success",
+                                iconColor: "#7C3AED",
+                                color: "#0f172b",
+                                background: "#7C3AED",
                             });
 
                         }
