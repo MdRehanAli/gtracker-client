@@ -88,7 +88,7 @@ const Register = () => {
             <Helmet>
                 <title>GTracker | Registration</title>
             </Helmet>
-            <div className="card-body">
+            <div className="card-body p-8">
                 <h1 className='text-center text-2xl font-bold text-primary mb-3'>Register to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <fieldset className="fieldset">

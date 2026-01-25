@@ -88,7 +88,7 @@ const Login = () => {
             <Helmet>
                 <title>GTracker | Login</title>
             </Helmet>
-            <div className="card-body bg-base-100 text-primary border border-primary/50 rounded-xl">
+            <div className="card-body p-8 text-primary border border-primary/50 rounded-xl">
                 <h1 className='text-center text-2xl font-bold text-primary mb-3'>Welcome to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">

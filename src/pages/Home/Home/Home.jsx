@@ -33,13 +33,13 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <Connected></Connected>
+            <ProductionStat></ProductionStat>
+            <Products></Products>
+            <div className='flex items-center justify-center mt-10 mb-20'>
+                <Link to='all-products' className='btn btn-primary px-20'>View All Products</Link>
+            </div>
             <div className=''>
-                <ProductionStat></ProductionStat>
                 <Supply></Supply>
-                <Products></Products>
-                <div className='flex items-center justify-center mt-10'>
-                    <Link to='all-products' className='btn btn-primary px-20'>View All Products</Link>
-                </div>
                 <Works worksPromise={worksPromise}></Works>
                 <Pipeline></Pipeline>
                 <Services></Services>

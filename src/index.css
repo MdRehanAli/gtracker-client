@@ -12,6 +12,7 @@
   --color-primary: #7C3AED;
   --color-secondary: #90a1b9;
   --color-accent: #0f172b;
+  --color-info: #021526;
 }
 
 @plugin "daisyui/theme" {
@@ -20,6 +21,7 @@
   --color-primary: #7C3AED;
   --color-secondary: #90a1b9;
   --color-accent: #0f172b;
+  --color-info: #ffffff;
 }
 /* .btn-primary {
   @apply bg-gradient-to-r from-[#d1d5dc] via-[#99a1af] to-[#6a7282] border-none text-black font-bold shadow-md shadow-[#00000070]

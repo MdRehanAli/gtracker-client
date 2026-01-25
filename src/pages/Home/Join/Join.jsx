@@ -30,11 +30,11 @@ const Join = () => {
                     </div>
                     <form onSubmit={handleMessage} className="flex md:flex-row flex-col w-full lg:max-w-md gap-4">
                         <input
-                            className="w-full bg-accent border border-primary/50 rounded-lg px-6 py-4 focus:border-primary/50 text-primary placeholder-primary/50"
+                            className="input w-full bg-accent border border-primary/50 rounded-lg  outline-primary text-primary placeholder-primary/50 py-6"
                             placeholder="work@company.com"
                             type="email"
                         />
-                        <button className="bg-primary text-white font-bold px-10 py-4 rounded-lg shadow-lg shadow-primary/25 hover:opacity-80 hover:shadow-primary/40 transition-all whitespace-nowrap">Join With US</button>
+                        <button className="bg-primary text-white font-bold btn rounded-lg shadow-lg shadow-primary/25 hover:opacity-80 hover:shadow-primary/40 transition-all whitespace-nowrap py-6">Join With US</button>
                     </form>
                 </div>
             </div>
