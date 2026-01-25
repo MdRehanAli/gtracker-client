@@ -28,6 +28,9 @@ const AllOrders = () => {
                         position: "top-end",
                         icon: "success",
                         title: `Manager status is set to ${status}.`,
+                        iconColor: "#0f172b",
+                        color: "#0f172b",
+                        background: "#7C3AED",
                         showConfirmButton: false,
                         timer: 1500
                     });
@@ -52,7 +55,10 @@ const AllOrders = () => {
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
+            confirmButtonColor: "#0f172b",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
@@ -68,7 +74,12 @@ const AllOrders = () => {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Order has been deleted.",
-                                icon: "success"
+                                icon: "success",
+                                iconColor: "#0f172b",
+                                color: "#0f172b",
+                                background: "#7C3AED",
+                                showConfirmButton: false,
+                                timer: 1500
                             });
 
                         }
@@ -79,10 +90,14 @@ const AllOrders = () => {
 
     return (
         <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
-            <div className=' shadow-xl rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><MdListAlt className='p-4  rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>All Orders : {orders.length}</h1>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
 
+                <div className="mb-12 text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                        <div className='flex justify-center text-primary animate-[bounce_2s_linear_infinite] hover:animate-none '><MdListAlt className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>All Orders : {orders.length}</h1>
+                    </div>
+                </div>
                 <div className="overflow-x-auto">
                     <table className="table table-zebra">
                         {/* head */}
@@ -110,14 +125,17 @@ const AllOrders = () => {
                                         <p className={`${order.status === 'approved' ? 'text-green-500' : order.status === 'rejected' ? 'text-red-500' : 'text-yellow-500'}`}>{order.status}</p>
                                     </td>
                                     <td className='flex justify-center items-center gap-2 '>
-                                        <button onClick={() => handleApproval(order)} className='btn '>
-                                            <FaUserCheck />
+                                        <button onClick={() => handleApproval(order)} className='btn btn-primary '>
+                                            <FaUserCheck className='text-green-500' />
+                                            <span className='text-green-500'>Approve</span>
                                         </button>
-                                        <button onClick={() => handleRejection(order)} className='btn'>
-                                            <IoPersonRemoveOutline />
+                                        <button onClick={() => handleRejection(order)} className='btn  btn-primary mr-2'>
+                                            <IoPersonRemoveOutline className='text-yellow-500' />
+                                            <span className='text-yellow-500'>Reject</span>
                                         </button>
-                                        <button onClick={()=> handleDeleteOrder(order._id)} className='btn '>
-                                            <FaTrash></FaTrash>
+                                        <button onClick={() => handleDeleteOrder(order._id)} className='btn btn-primary'>
+                                            <FaTrash className='text-red-500'></FaTrash>
+                                            <span className='text-red-500'>Delete</span>
                                         </button>
                                     </td>
 

@@ -26,7 +26,10 @@ const ManageUsers = () => {
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
+            confirmButtonColor: "#0f172b",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, Make Admin!"
         }).then((result) => {
@@ -38,6 +41,9 @@ const ManageUsers = () => {
                             Swal.fire({
                                 position: "top-end",
                                 icon: "success",
+                                iconColor: "#0f172b",
+                                color: "#0f172b",
+                                background: "#7C3AED",
                                 title: `${user.displayName} marked as an Admin.`,
                                 showConfirmButton: false,
                                 timer: 1500
@@ -57,7 +63,10 @@ const ManageUsers = () => {
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
+            confirmButtonColor: "#0f172b",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, Remove Admin!"
         }).then((result) => {
@@ -69,6 +78,9 @@ const ManageUsers = () => {
                             Swal.fire({
                                 position: "top-end",
                                 icon: "success",
+                                iconColor: "#0f172b",
+                                color: "#0f172b",
+                                background: "#7C3AED",
                                 title: `${user.displayName} removed from admin.`,
                                 showConfirmButton: false,
                                 timer: 1500
@@ -82,10 +94,15 @@ const ManageUsers = () => {
     return (
         <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
             <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
-                <div className='flex justify-center text-7xl'><FaUserCog className='p-4 rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Manage users</h1>
+                <div className="mb-12 text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                        <div className='flex justify-center text-primary animate-[pulse_2s_linear_infinite] hover:animate-none '><FaUserCog className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Manage users</h1>
+                    </div>
+                </div>
+
                 <div className='flex justify-center'>
-                    <label className="input w-full md:w-1/2 h-14 mb-8">
+                    <label className="input w-full md:w-1/2 h-14 mb-8 outline-primary border-primary/50 text-primary bg-accent">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g
                                 strokeLinejoin="round"

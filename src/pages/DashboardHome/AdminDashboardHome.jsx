@@ -8,9 +8,13 @@ const AdminDashboardHome = () => {
             <Helmet>
                 <title>GTracker | Admin DashBoard</title>
             </Helmet>
-            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
-                <div className='flex justify-center text-7xl'><RiAdminFill className='p-4 bg-gray-300 rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Admin Dashboard</h1>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20 '>
+                <div className="mb-12 text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                        <div className='flex justify-center text-primary animate-[pulse_1s_linear_infinite_reverse] hover:animate-none '><RiAdminFill className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Admin Dashboard</h1>
+                    </div>
+                </div>
             </div>
         </div>
     );

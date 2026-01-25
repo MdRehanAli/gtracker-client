@@ -51,8 +51,11 @@ const AddProduct = () => {
                     title: "Are you sure?",
                     text: "You won't be able to revert this!",
                     icon: "warning",
+                    iconColor: "#0f172b",
+                    color: "#0f172b",
+                    background: "#7C3AED",
+                    confirmButtonColor: "#0f172b",
                     showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
                     cancelButtonColor: "#d33",
                     confirmButtonText: "Confirm to Add Product"
                 }).then((result) => {
@@ -65,6 +68,9 @@ const AddProduct = () => {
                                     Swal.fire({
                                         position: "top-end",
                                         icon: "success",
+                                        iconColor: "#0f172b",
+                                        color: "#0f172b",
+                                        background: "#7C3AED",
                                         title: "Product Added. Show all products.",
                                         showConfirmButton: false,
                                         timer: 1500
