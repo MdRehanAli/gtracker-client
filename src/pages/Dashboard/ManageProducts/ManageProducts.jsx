@@ -131,7 +131,7 @@ const ManageProducts = () => {
                                     <td>{product.name}</td>
                                     <td>{product.price}</td>
                                     <td>{product.paymentOptions}</td>
-                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+                                    <td className='flex justify-center items-center gap-2'>
                                         <Link to={`/dashboard/update-product/${product._id}`} className="btn btn-primary">Update</Link>
                                         {/* <button onClick={() => handleUpdateProduct(product._id)} className='btn btn-primary mr-2'>Update </button> */}
                                         <button onClick={() => handleDeleteProduct(product._id)} className='btn btn-primary'>Delete</button>

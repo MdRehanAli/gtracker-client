@@ -44,7 +44,7 @@ const ApprovedOrders = () => {
                                     <td>{order.productTitle}</td>
                                     <td>{order.orderQuantity}</td>
                                     <td>{order.createdAt}</td>
-                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+                                    <td className='flex justify-center items-center gap-2'>
                                         <button onClick={() => openApproveModal(order)} className='btn btn-primary text-black'>Add Tracking</button>
                                         <button onClick={() => openApproveModal(order)} className='btn btn-primary text-black'>View Tracking</button>
                                     </td>

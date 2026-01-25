@@ -47,7 +47,7 @@ const AllProducts = () => {
                                     <td>{product.price}</td>
                                     <td>{product.category}</td>
                                     <td>{product.displayName === undefined ? 'GTracker' : product.displayName}</td>
-                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+                                    <td className='flex justify-center items-center gap-2'>
 
                                         <button className='btn btn-primary'>Show On Home</button>
                                     </td>

@@ -116,7 +116,7 @@ const MyOrder = () => {
                                         }
                                     </td>
                                     <td>{order.status}</td>
-                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+                                    <td className='flex justify-center items-center gap-2'>
                                         <Link to={`/dashboard/view-order/${order._id}`} className='btn btn-primary mr-2'>View</Link>
                                         <button onClick={() => handleCancelOrder(order._id)} className='btn btn-primary'>Cancel</button>
                                     </td>

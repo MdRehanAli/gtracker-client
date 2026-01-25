@@ -25,9 +25,14 @@ const PendingOrders = () => {
 
     return (
         <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
-            <div className=' shadow-xl  rounded-xl p-5 py-10 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><TbClockQuestion className='p-4 rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Pending Orders : {orders.length}</h1>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
+                <div className="mb-12 text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                        <div className='flex justify-center text-primary animate-[ping_2s_linear_infinite] hover:animate-none '><TbClockQuestion className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Pending Orders : {orders.length}</h1>
+                    </div>
+                </div>
+
 
                 <div className="overflow-x-auto">
                     <table className="table table-zebra">
@@ -53,7 +58,7 @@ const PendingOrders = () => {
                                     <td>{order.productTitle}</td>
                                     <td>{order.orderQuantity}</td>
                                     <td>{order.createdAt}</td>
-                                    <td className='flex justify-center items-center gap-2 flex-wrap'>
+                                    <td className='flex justify-center items-center gap-2'>
                                         <button onClick={() => openApproveModal(order)} className='btn btn-primary text-black'>Approve</button>
                                         <button className='btn btn-primary text-black'>Reject</button>
                                         <Link to={`/dashboard/order-details/${order._id}`} className='btn btn-primary text-black'>View</Link>
