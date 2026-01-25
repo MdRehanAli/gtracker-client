@@ -84,11 +84,11 @@ const Register = () => {
     }
 
     return (
-        <div className="border border-primary/20 hover:border-primary rounded-xl w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl text-primary">
+        <div className="border border-primary/20 hover:border-primary rounded-xl w-11/12 max-w-sm mx-auto my-20 shrink-0 shadow-2xl text-primary">
             <Helmet>
                 <title>GTracker | Registration</title>
             </Helmet>
-            <div className="card-body p-8">
+            <div className="card-body p-8 text-primary border border-primary/50 rounded-xl">
                 <h1 className='text-center text-2xl font-bold text-primary mb-3'>Register to GTracker!</h1>
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <fieldset className="fieldset">

@@ -84,7 +84,7 @@ const Login = () => {
     }
 
     return (
-        <div className="border border-primary/20 hover:border-primary rounded-xl w-full max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
+        <div className="border border-primary/20 hover:border-primary rounded-xl w-11/12 max-w-sm mx-auto my-20 shrink-0 shadow-2xl">
             <Helmet>
                 <title>GTracker | Login</title>
             </Helmet>

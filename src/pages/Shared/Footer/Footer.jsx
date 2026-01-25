@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
                         <div className="col-span-1 md:col-span-2 space-y-5">
                             <div className="flex justify-center md:justify-start gap-2">
-                                <p className="text-2xl font-bold text-primary">GTracker</p>
+                                <Link to="/" className="text-2xl font-bold text-primary">GTracker</Link>
                             </div>
                             <p className="text-secondary md:max-w-sm leading-relaxed text-lg">
                                 The intelligence layer for modern textile manufacturing. Empowering production managers with precision data since 2018.
