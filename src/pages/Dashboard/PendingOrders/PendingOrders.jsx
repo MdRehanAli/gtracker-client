@@ -18,10 +18,10 @@ const PendingOrders = () => {
         }
     })
 
-    const openApproveModal = order => {
-        setSelectedOrder(order);
-        orderModalRef.current.showModal()
-    }
+    // const openApproveModal = order => {
+    //     setSelectedOrder(order);
+    //     orderModalRef.current.showModal()
+    // }
 
     return (
         <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
