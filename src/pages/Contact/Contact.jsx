@@ -18,6 +18,9 @@ const Contact = () => {
         Swal.fire({
             position: "center",
             icon: "success",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
             title: "Your Message has been send",
             showConfirmButton: false,
             timer: 1500
@@ -92,11 +95,11 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' bg-primary rounded-xl flex-1 w-full'>
+                <div className=' bg-accent rounded-xl flex-1 w-full'>
                     <div className='bg-linear-to-r from-primary/30 to-accent p-5 md:px-10 md:py-10 rounded-xl'>
                         <form className='' onSubmit={handleSubmit(handleMessage)}>
                             <fieldset className="fieldset">
-                                <label className="text-accent label mt-4">Name</label>
+                                <label className="text-primary label mt-4">Name</label>
                                 <div className='flex justify-between items-center gap-5'>
                                     <div className='flex-1'>
                                         <input type="text" {...register('firstName', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary" placeholder="First Name" />
@@ -108,11 +111,11 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <label className="text-accent label mt-2">Email</label>
+                                <label className="text-primary label mt-2">Email</label>
                                 <input type="email" {...register('email', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary" placeholder="Email" />
                                 {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
-                                <label className="text-accent label mt-2">Message</label>
+                                <label className="text-primary label mt-2">Message</label>
                                 <textarea rows={5} cols={20} className=" placeholder-primary bg-accent border border-primary w-full rounded-sm p-2" placeholder='Enter a message' {...register('message', { required: true })}></textarea>
                                 {errors.message?.type === "required" && <p className='text-red-500'>Message is Required</p>}
 

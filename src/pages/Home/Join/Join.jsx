@@ -1,6 +1,25 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Join = () => {
+
+    const handleMessage = (e) => {
+        e.preventDefault();
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
+            title: "Your Message has been send",
+            showConfirmButton: false,
+            timer: 1500
+        });
+
+        e.reset()
+    }
+
     return (
         <section className="my-20 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
             <div className="">
@@ -9,7 +28,7 @@ const Join = () => {
                         <h3 className="text-3xl md:text-4xl font-bold mb-4 text-primary md:text-left text-center">Stay Ahead of the Curve</h3>
                         <p className="text-secondary font-medium">Monthly reports on textile innovation, logistics updates, and factory-floor data trends.</p>
                     </div>
-                    <form className="flex md:flex-row flex-col w-full lg:max-w-md gap-4">
+                    <form onSubmit={handleMessage} className="flex md:flex-row flex-col w-full lg:max-w-md gap-4">
                         <input
                             className="w-full bg-accent border border-primary/50 rounded-lg px-6 py-4 focus:border-primary/50 text-primary placeholder-primary/50"
                             placeholder="work@company.com"

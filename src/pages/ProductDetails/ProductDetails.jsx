@@ -19,7 +19,7 @@ const ProductDetails = () => {
                 </div>
                 <p className='text-secondary mt-3 text-lg'>Explore complete information about this product, including specifications, pricing, available quantity, and ordering options everything you need to make the right choice with confidence.</p>
             </div>
-            <div className='bg-primary rounded-xl'>
+            <div className='bg-accent rounded-xl'>
                 <div className="flex md:flex-row flex-col justify-between items-center gap-5 md:gap-10 bg-linear-to-r from-primary/30 to-accent p-5 md:p-10 rounded-xl text-secondary">
                     <figure className='flex-1 w-full'>
                         <img
