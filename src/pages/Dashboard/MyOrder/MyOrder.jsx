@@ -74,7 +74,7 @@ const MyOrder = () => {
 
     return (
 
-        <div className='mx-auto md:h-full my-20'>
+        <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
             <Helmet>
                 <title>GTracker | User DashBoard</title>
             </Helmet>

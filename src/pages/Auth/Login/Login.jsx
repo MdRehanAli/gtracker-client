@@ -94,7 +94,7 @@ const Login = () => {
                     <fieldset className="fieldset">
                         {/* Email Field  */}
                         <label className="label text-primary">Email</label>
-                        <input type="email" {...register('email', { required: true })} className="input w-full border border-primary" placeholder="Email" />
+                        <input type="email" {...register('email', { required: true })} className="input w-full border border-primary outline-primary" placeholder="Email" />
                         {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                         {/* Password Field  */}
@@ -102,7 +102,7 @@ const Login = () => {
                         <div className='flex items-center relative'>
                             <input type={showPassword ? "text" : "password"} {...register('password', {
                                 required: true, minLength: 6
-                            })} className="input w-full border border-primary" placeholder="Password" />
+                            })} className="input w-full border border-primary outline-primary" placeholder="Password" />
                             <button onClick={handleShowPassword} className='absolute top-2 right-4 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
                         </div>
 

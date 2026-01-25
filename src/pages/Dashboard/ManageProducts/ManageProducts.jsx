@@ -37,8 +37,11 @@ const ManageProducts = () => {
             title: "Are you sure?",
             text: "You won't be able to revert this!",
             icon: "warning",
+            iconColor: "#0f172b",
+            color: "#0f172b",
+            background: "#7C3AED",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            confirmButtonColor: "#0f172b",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
@@ -54,7 +57,13 @@ const ManageProducts = () => {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your Product has been deleted.",
-                                icon: "success"
+                                icon: "success",
+                                position: "top-end",
+                                iconColor: "#0f172b",
+                                color: "#0f172b",
+                                background: "#7C3AED",
+                                showConfirmButton: false,
+                                timer: 1500
                             });
 
                         }
@@ -64,13 +73,16 @@ const ManageProducts = () => {
     }
 
     return (
-        <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl rounded-xl p-5 py-10 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><HiMiniPencilSquare className='p-4 rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Manage Products</h1>
-
+        <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
+                <div className="mb-12 text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                        <div className='flex justify-center text-primary animate-[bounce_2s_linear_infinite] hover:animate-none '><HiMiniPencilSquare className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Manage Products</h1>
+                    </div>
+                </div>
                 <div className='flex justify-center'>
-                    <label className="input w-full md:w-1/2 h-14 mb-8">
+                    <label className="input w-full border border-primary bg-accent outline-primary text-primary md:w-1/2 h-14 mb-8">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g
                                 strokeLinejoin="round"

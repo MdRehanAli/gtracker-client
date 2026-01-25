@@ -80,8 +80,8 @@ const ManageUsers = () => {
     }
 
     return (
-        <div className='mx-auto md:h-full my-20'>
-            <div className=' shadow-xl  rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
+        <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
                 <div className='flex justify-center text-7xl'><FaUserCog className='p-4 rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Manage users</h1>
                 <div className='flex justify-center'>

@@ -95,23 +95,23 @@ const Register = () => {
 
                         {/* Name Field  */}
                         <label className="label">Name</label>
-                        <input type="text" {...register('name', { required: true, minLength: 3 })} className="input w-full border border-primary" placeholder="Name" />
+                        <input type="text" {...register('name', { required: true, minLength: 3 })} className="input w-full border border-primary outline-primary" placeholder="Name" />
                         {errors.name?.type === "required" && <p className='text-red-500'>Name is Required</p>}
                         {errors.name?.type === "minLength" && <p className='text-red-500'>Name must have at least 3 Character</p>}
 
                         {/* Email Field  */}
                         <label className="label">Email</label>
-                        <input type="email" {...register('email', { required: true })} className="input w-full border border-primary" placeholder="Email" />
+                        <input type="email" {...register('email', { required: true })} className="input w-full border border-primary outline-primary" placeholder="Email" />
                         {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                         {/* Photo Field  */}
                         <label className="label">Photo</label>
-                        <input type="file" {...register('photo', { required: true })} className="file-input w-full border border-primary/50 text-primary" placeholder="Photo" />
+                        <input type="file" {...register('photo', { required: true })} className="file-input w-full border border-primary outline-primary text-primary" placeholder="Photo" />
                         {errors.photo?.type === "required" && <p className='text-red-500'>Photo is Required</p>}
 
                         {/* Role Field  */}
                         <label className="label">Role</label>
-                        <select {...register('role', { required: true })} defaultValue="user" className="select w-full border border-primary">
+                        <select {...register('role', { required: true })} defaultValue="user" className="select w-full border border-primary outline-primary">
                             <option disabled={true}>user</option>
                             <option value="manager">Manager</option>
                         </select>
@@ -122,7 +122,7 @@ const Register = () => {
                         <div className='flex items-center relative'>
                             <input type={showPassword ? "text" : "password"} {...register('password', {
                                 required: true, minLength: 6, pattern: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/
-                            })} className="input w-full" placeholder="Password" />
+                            })} className="input w-full  border border-primary outline-primary" placeholder="Password" />
                             <button onClick={handleShowPassword} className='absolute top-2 right-4 text-xl text-primary'>{showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</button>
                         </div>
 

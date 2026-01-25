@@ -1,6 +1,11 @@
 import React from 'react';
 import { MdScreenshotMonitor } from 'react-icons/md';
+import { MdOutlineProductionQuantityLimits, MdOutlineScale } from 'react-icons/md';
 import { Link, useLoaderData } from 'react-router';
+import { BsCartCheck } from "react-icons/bs";
+import { TbShoppingCartPin } from "react-icons/tb";
+import { IoCallOutline, IoTimeOutline } from 'react-icons/io5';
+import { GrStatusGood } from 'react-icons/gr';
 
 const OrderDetails = () => {
 
@@ -8,32 +13,35 @@ const OrderDetails = () => {
     console.log(orders);
     const { contactNumber, createdAt, deliveryAddress, email, firstName, instructions, lastName, orderPrice, orderQuantity, price, productTitle, status, image, _id } = orders;
     return (
-        <div className='my-20'>
-            <div className=' shadow-xl  rounded-xl py-10 p-5 md:p-10 w-11/12 mx-auto border'>
-                <div className='flex justify-center text-7xl'><MdScreenshotMonitor className='p-4  rounded-xl' /></div>
-                <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>Order Details</h1>
-
-                <div className="card shadow-lg md:w-1/2 mx-auto mt-10">
-                    <figure>
+        <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
+                <div className="mb-12 text-center">
+                    <div className='flex justify-center items-center gap-2'>
+                        <div className='flex justify-center text-primary animate-[ping_2s_linear_infinite] hover:animate-none '><MdScreenshotMonitor className='text-3xl md:text-4xl font-extrabold' /></div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Order Details</h1>
+                    </div>
+                </div>
+                <div className="flex flex-col md:flex-row gap-5 md:gap-10">
+                    <figure className='w-full flex-1'>
                         <img
                             src={image}
                             alt={firstName}
-                            className='lg:w-1/2 rounded-xl' />
+                            className='rounded-xl w-full' />
                     </figure>
-                    <div className="card-body text-center rounded-xl">
-                        <div className='flex flex-col gap-3'>
-                            <h2 className="text-2xl font-bold md:text-5xl">{productTitle}</h2>
-                            <p className='text-xl'><span className='font-bold'>Ordered by: </span> {firstName} {lastName}</p>
-                            <p className='text-xl'><span className='font-bold'>Delivery Address: </span> {deliveryAddress}</p>
+                    <div className="flex-1 text-center rounded-xl">
+                        <div className='flex flex-col gap-2 md:text-left text-center'>
+                            <h2 className="text-3xl md:text-4xl font-bold text-primary">{productTitle}</h2>
+                            <p className='font-bold text-xl'><span className='font-bold'><BsCartCheck className='inline text-primary mr-1' /> </span> {firstName} {lastName}</p>
+                            <p className='font-bold text-xl'><span className='font-bold'><TbShoppingCartPin className='inline text-primary mr-1' /> </span> {deliveryAddress}</p>
 
-                            <p className='text-xl'><span className='font-bold'>Contact: </span> {contactNumber}</p>
-                            <p className='font-bold text-xl'>Price per Unit: ${price}</p>
-                            <p className='text-xl'><span className='font-bold'>Quantity: </span>{orderQuantity}</p>
-                            <p className='text-4xl'>Total Price: <span className='font-bold'>${orderPrice}</span></p>
+                            <p className='text-xl font-bold'><span><IoCallOutline className='inline text-primary mr-1' /> </span> {contactNumber}</p>
+                            <p className='font-bold text-xl'><MdOutlineScale className='inline text-primary mr-1' /> ${price}</p>
+                            <p className='text-xl font-bold'><span className='font-bold'><MdOutlineProductionQuantityLimits className='inline text-primary mr-1' /> </span>{orderQuantity}</p>
+                            <p className='text-5xl font-bold text-center text-primary'>${orderPrice}</p>
                             <div className="card-actions justify-end">
-                                <p><span className='font-bold'>Order Status:</span> {status} </p>
+                                <p><span className='font-bold'><GrStatusGood className='inline text-primary mr-1' /></span> {status} </p>
                             </div>
-                            <p><span className='font-bold'>Ordered At: </span> {new Date(createdAt).toLocaleString("en-GB", {
+                            <p><span className='font-bold'><IoTimeOutline className='inline text-primary mr-1' /> </span> {new Date(createdAt).toLocaleString("en-GB", {
                                 day: "2-digit",
                                 month: "short",
                                 year: "numeric",
@@ -46,7 +54,7 @@ const OrderDetails = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 
