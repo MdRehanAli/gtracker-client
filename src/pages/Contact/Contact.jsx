@@ -102,21 +102,21 @@ const Contact = () => {
                                 <label className="text-primary label mt-4">Name</label>
                                 <div className='flex justify-between items-center gap-5'>
                                     <div className='flex-1'>
-                                        <input type="text" {...register('firstName', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary" placeholder="First Name" />
+                                        <input type="text" {...register('firstName', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary outline-primary" placeholder="First Name" />
                                         {errors.firstName?.type === "required" && <p className='text-red-500'>First Name is Required</p>}
                                     </div>
                                     <div className='flex-1'>
-                                        <input type="text" {...register('lastName', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary" placeholder="Last Name" />
+                                        <input type="text" {...register('lastName', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary outline-primary" placeholder="Last Name" />
                                         {errors.lastName?.type === "required" && <p className='text-red-500'>Last Name is Required</p>}
                                     </div>
                                 </div>
 
                                 <label className="text-primary label mt-2">Email</label>
-                                <input type="email" {...register('email', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary" placeholder="Email" />
+                                <input type="email" {...register('email', { required: true })} className="input w-full placeholder-primary bg-accent border border-primary outline-primary" placeholder="Email" />
                                 {errors.email?.type === "required" && <p className='text-red-500'>Email is Required</p>}
 
                                 <label className="text-primary label mt-2">Message</label>
-                                <textarea rows={5} cols={20} className=" placeholder-primary bg-accent border border-primary w-full rounded-sm p-2" placeholder='Enter a message' {...register('message', { required: true })}></textarea>
+                                <textarea rows={5} cols={20} className=" placeholder-primary bg-accent border border-primary w-full rounded-sm p-2 outline-primary" placeholder='Enter a message' {...register('message', { required: true })}></textarea>
                                 {errors.message?.type === "required" && <p className='text-red-500'>Message is Required</p>}
 
                                 <button className="btn btn-primary w-full mt-3">Send Message</button>
