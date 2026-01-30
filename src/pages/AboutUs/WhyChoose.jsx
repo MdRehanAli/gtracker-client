@@ -10,19 +10,41 @@ const WhyChoose = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 flex-1 gap-10'>
                 <div className='flex flex-col items-center justify-center gap-5'>
-                    <p className='inline-block rounded-full border-4 border-primary p-8 py-10 text-xl font-bold text-primary'>95%</p>
+
+                    <div className="radial-progress text-primary"
+                        style={{ "--value": "95", "--size": "110px", "--thickness": "5px" } /* as React.CSSProperties */}
+                        aria-valuenow={70} role="progressbar"
+                    >
+                        95%
+                    </div>
+
                     <p className='text-secondary'>Factory Experience</p>
                 </div>
                 <div className='flex flex-col items-center justify-center gap-5'>
-                    <p className='inline-block rounded-full border-4 border-primary p-8 py-10 text-xl font-bold text-primary'>97%</p>
+                    <div className="radial-progress text-primary"
+                        style={{ "--value": "97", "--size": "110px", "--thickness": "5px" } /* as React.CSSProperties */}
+                        aria-valuenow={70} role="progressbar"
+                    >
+                        97%
+                    </div>
                     <p className='text-secondary'>Textile Material</p>
                 </div>
                 <div className='flex flex-col items-center justify-center gap-5'>
-                    <p className='inline-block rounded-full border-4 border-primary p-8 py-10 text-xl font-bold text-primary'>98%</p>
+                    <div className="radial-progress text-primary"
+                        style={{ "--value": "98", "--size": "110px", "--thickness": "5px" } /* as React.CSSProperties */}
+                        aria-valuenow={70} role="progressbar"
+                    >
+                        98%
+                    </div>
                     <p className='text-secondary'>Worker Skills</p>
                 </div>
                 <div className='flex flex-col items-center justify-center gap-5'>
-                    <p className='inline-block rounded-full border-4 border-primary p-8 py-10 text-xl font-bold text-primary'>93%</p>
+                    <div className="radial-progress text-primary"
+                        style={{ "--value": "94", "--size": "110px", "--thickness": "5px" } /* as React.CSSProperties */}
+                        aria-valuenow={70} role="progressbar"
+                    >
+                        94%
+                    </div>
                     <p className='text-secondary'>Machinery & Equipment</p>
                 </div>
             </div>
