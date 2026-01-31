@@ -78,7 +78,7 @@ const MyOrder = () => {
             <Helmet>
                 <title>GTracker | User DashBoard</title>
             </Helmet>
-            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-10'>
                 <div className='flex justify-center text-7xl'><BsCartPlus className='p-4 rounded-xl' /></div>
                 <h1 className='text-3xl md:text-5xl font-bold text-center my-5'>My Order: {orders.length}</h1>
 

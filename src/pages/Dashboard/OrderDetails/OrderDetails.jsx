@@ -14,7 +14,7 @@ const OrderDetails = () => {
     const { contactNumber, createdAt, deliveryAddress, email, firstName, instructions, lastName, orderPrice, orderQuantity, price, productTitle, status, image, _id } = orders;
     return (
         <div className='mx-auto my-20 bg-accent w-11/12 rounded-xl'>
-            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-20'>
+            <div className=' shadow-xl bg-linear-to-r from-primary/30 to-accent rounded-xl py-10 p-5 md:p-10'>
                 <div className="mb-12 text-center">
                     <div className='flex justify-center items-center gap-2'>
                         <div className='flex justify-center text-primary animate-[ping_2s_linear_infinite] hover:animate-none '><MdScreenshotMonitor className='text-3xl md:text-4xl font-extrabold' /></div>
