@@ -79,17 +79,6 @@ const router = createBrowserRouter([
                 Component: PrivacyPolicy
             },
             {
-                path: '/*',
-                Component: ErrorPage
-            },
-        ]
-    },
-    {
-        path: '/',
-        Component: AuthLayout,
-        hydrateFallbackElement: <Loading></Loading>,
-        children: [
-            {
                 path: '/login',
                 Component: Login
             },
@@ -97,8 +86,27 @@ const router = createBrowserRouter([
                 path: '/register',
                 Component: Register
             },
+            {
+                path: '/*',
+                Component: ErrorPage
+            },
         ]
     },
+    // {
+    //     path: '/',
+    //     Component: AuthLayout,
+    //     hydrateFallbackElement: <Loading></Loading>,
+    //     children: [
+    //         {
+    //             path: '/login',
+    //             Component: Login
+    //         },
+    //         {
+    //             path: '/register',
+    //             Component: Register
+    //         },
+    //     ]
+    // },
     {
         path: 'dashboard',
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,

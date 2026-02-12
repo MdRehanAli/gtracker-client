@@ -5,7 +5,7 @@ import Footer from '../pages/Shared/Footer/Footer';
 
 const AuthLayout = () => {
     return (
-        <div>
+        <div className='bg-info'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
