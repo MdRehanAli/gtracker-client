@@ -20,7 +20,7 @@
   /* default: true; */
   --color-primary: #5400ee;
   --color-secondary: #90a1b9;
-  --color-accent: #0f172b;
+  --color-accent: #ffffff;
   --color-info: #ffffff;
 }
 
@@ -31,14 +31,6 @@
 .btn-primary:hover {
   @apply opacity-80
 } */
-
-.btn-primary {
-  @apply bg-primary border-none dark:text-slate-300 font-bold shadow-md shadow-[#00000070]
-}
-
-.btn-primary:hover {
-  @apply opacity-80
-}
 
 * {
   font-family: "Inter", sans-serif;

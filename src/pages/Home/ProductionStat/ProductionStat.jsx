@@ -3,7 +3,7 @@ import { FaBalanceScaleRight } from "react-icons/fa";
 
 const ProductionStat = () => {
     return (
-        <section className=" bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
+        <section className=" bg-accent mx-auto max-w-7xl w-11/12 rounded-xl mb-20">
             <div className="lg:p-20 md:p-10 p-5 py-10">
                 <div className="mb-12 text-center">
                     <div className='flex justify-center items-center gap-2 mb-5'>
