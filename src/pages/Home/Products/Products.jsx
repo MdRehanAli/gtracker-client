@@ -17,8 +17,6 @@ const Products = () => {
                 <p className='text-secondary mt-3 text-lg'>All our latest product are here. You can easily buy products from here.</p>
             </div>
 
-
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
                 {
                     products.map(product => <Product product={product} key={product._id}></Product>)
