@@ -16,7 +16,6 @@
   --color-info: #021526;
 }
 
-/* Color for light theme  */
 @plugin "daisyui/theme" {
   name: "light";
   /* default: true; */
