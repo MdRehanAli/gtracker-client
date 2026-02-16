@@ -6,7 +6,6 @@
   themes: dark --default, synthwave, cyberpunk, light;
 }
 
-/* Color for dark theme  */
 @plugin "daisyui/theme" {
   name: "dark";
   default: true;
