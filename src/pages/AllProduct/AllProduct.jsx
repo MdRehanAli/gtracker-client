@@ -11,7 +11,7 @@ const AllProduct = () => {
                 <title>GTracker | All Products</title>
             </Helmet>
             <Banner></Banner>
-            <div className=''>
+            <div>
                 <Products></Products>
             </div>
         </div>
