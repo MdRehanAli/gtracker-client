@@ -32,7 +32,7 @@ const AdminDashboardHome = () => {
                     </div>
                     <div className='p-4 border border-primary rounded-xl flex flex-col gap-2 text-primary'>
                         <GrServices className='text-3xl animate-[pulse_1s_linear_infinite_reverse] hover:animate-none'/>
-                        <h1 className='text-4xl mt-4 font-semibold'>25</h1>
+                        <h1 className='text-4xl mt-4 font-semibold'>38</h1>
                         <p>Total Category of Services</p>
                     </div>
                     <div className='p-4 border border-primary rounded-xl flex flex-col gap-2 text-primary'>
