@@ -37,7 +37,7 @@ const AdminDashboardHome = () => {
                     </div>
                     <div className='p-4 border border-primary rounded-xl flex flex-col gap-2 text-primary'>
                         <FaRegUser className='text-3xl animate-[pulse_1s_linear_infinite_reverse] hover:animate-none'/>
-                        <h1 className='text-4xl mt-4 font-semibold'>3036</h1>
+                        <h1 className='text-4xl mt-4 font-semibold'>2336</h1>
                         <p>Visitors Last Month</p>
                     </div>
                 </div>
