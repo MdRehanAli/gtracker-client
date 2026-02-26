@@ -1,8 +1,23 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
 const Connected = () => {
     return (
         <section className="my-20 py-16 bg-accent border-y border-primary">
+            <div className='relative overflow-hidden'>
+                <motion.div
+                    animate={{
+                        x: 1100,
+                        scale: 0.5
+                    }}
+                    transition={{
+                        duration: 3,
+                        delay:1
+                    }}
+                >
+                    <h1>GTracker</h1>
+                </motion.div>
+            </div>
             <div className="overflow-hidden whitespace-nowrap">
                 <div className="flex animate-[ticker_10s_linear_infinite] items-center gap-24">
                     <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Urban_Stitch</span>
