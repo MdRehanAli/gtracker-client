@@ -3,52 +3,82 @@ import { FaBarcode } from 'react-icons/fa6';
 import { MdArchitecture, MdPrecisionManufacturing } from 'react-icons/md';
 import { FiPackage } from "react-icons/fi";
 import { GrServices } from 'react-icons/gr';
+import FlyInMotion from '../../../components/Motion/FlyInMotion';
 
 const Services = () => {
     return (
         <section className="my-20 bg-accent mx-auto max-w-7xl w-11/12 rounded-xl">
             <div className='lg:p-20 md:p-10 p-5 py-10'>
                 <div className="mb-12 text-center">
-                    <div className='flex justify-center items-center gap-2 mb-5'>
-                        <div className='flex justify-center text-primary animate-[spin_2s_linear_infinite] hover:[animation-play-state:paused]'>
-                            <GrServices className='text-3xl md:text-4xl font-extrabold' />
+                    <FlyInMotion index={1}>
+                        <div className='flex justify-center items-center gap-2 mb-5'>
+                            <div className='flex justify-center text-primary animate-[spin_2s_linear_infinite] hover:[animation-play-state:paused]'>
+                                <GrServices className='text-3xl md:text-4xl font-extrabold' />
+                            </div>
+                            <div>
+                                <h1 className='text-3xl md:text-4xl font-bold text-primary text-nowrap'>Manufacturing</h1>
+                                <div className='h-px w-26 md:w-32 bg-primary flex mx-auto animate-[ping_3s_linear_infinite] hover:animate-none'></div>
+                            </div>
                         </div>
-                        <h2 className='text-3xl md:text-4xl font-bold text-primary'>
-                            Manufacturing
-                        </h2>
-                    </div>
-                    <p className="text-secondary mt-3 text-lg">
-                        End-to-end apparel manufacturing services to global fulfillment.
-                    </p>
+                    </FlyInMotion>
+                    <FlyInMotion index={3}>
+                        <p className="text-secondary mt-3 text-lg">
+                            End-to-end apparel manufacturing services to global fulfillment.
+                        </p>
+                    </FlyInMotion>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
-                        <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdPrecisionManufacturing /></span>
-                        </div>
-                        <h4 className="text-xl font-bold mb-4 text-primary">OEM Solutions</h4>
-                        <p className="text-sm text-secondary">Scale your existing designs with our industrial-grade production capacity.</p>
+                        <FlyInMotion index={5}>
+                            <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
+                                <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdPrecisionManufacturing /></span>
+                            </div>
+                        </FlyInMotion>
+                        <FlyInMotion index={7}>
+                            <h4 className="text-xl font-bold mb-4 text-primary">OEM Solutions</h4>
+                        </FlyInMotion>
+                        <FlyInMotion index={9}>
+                            <p className="text-sm text-secondary">Scale your existing designs with our industrial-grade production capacity.</p>
+                        </FlyInMotion>
                     </div>
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
-                        <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdArchitecture /></span>
-                        </div>
-                        <h4 className="text-xl font-bold mb-4 text-primary">ODM Design</h4>
-                        <p className="text-sm text-secondary">Leverage our in-house designers to create trend-leading technical collections.</p>
+                        <FlyInMotion index={5}>
+                            <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
+                                <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><MdArchitecture /></span>
+                            </div>
+                        </FlyInMotion>
+                        <FlyInMotion index={7}>
+                            <h4 className="text-xl font-bold mb-4 text-primary">ODM Design</h4>
+                        </FlyInMotion>
+                        <FlyInMotion index={9}>
+                            <p className="text-sm text-secondary">Leverage our in-house designers to create trend-leading technical collections.</p>
+                        </FlyInMotion>
                     </div>
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
-                        <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FaBarcode /></span>
-                        </div>
-                        <h4 className="text-xl font-bold mb-4 text-primary">Private Label</h4>
-                        <p className="text-sm text-secondary">Complete branding services including custom tags, packaging, and trims.</p>
+                        <FlyInMotion index={5}>
+                            <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
+                                <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FaBarcode /></span>
+                            </div>
+                        </FlyInMotion>
+                        <FlyInMotion index={7}>
+                            <h4 className="text-xl font-bold mb-4 text-primary">Private Label</h4>
+                        </FlyInMotion>
+                        <FlyInMotion index={9}>
+                            <p className="text-sm text-secondary">Complete branding services including custom tags, packaging, and trims.</p>
+                        </FlyInMotion>
                     </div>
                     <div className="p-5 md:p-10 rounded-xl bg-accent border border-primary/50 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all hover:-translate-y-2">
-                        <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
-                            <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FiPackage /></span>
-                        </div>
-                        <h4 className="text-xl font-bold mb-4 text-primary">DTC Fulfillment</h4>
-                        <p className="text-sm text-secondary">Ship individual orders directly from factory floor to global consumers.</p>
+                        <FlyInMotion index={5}>
+                            <div className="h-14 w-14 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-6">
+                                <span className="material-symbols-outlined text-3xl animate-[pulse_1s_linear_infinite] hover:animate-none"><FiPackage /></span>
+                            </div>
+                        </FlyInMotion>
+                        <FlyInMotion index={7}>
+                            <h4 className="text-xl font-bold mb-4 text-primary">DTC Fulfillment</h4>
+                        </FlyInMotion>
+                        <FlyInMotion index={9}>
+                            <p className="text-sm text-secondary">Ship individual orders directly from factory floor to global consumers.</p>
+                        </FlyInMotion>
                     </div>
                 </div>
             </div>
