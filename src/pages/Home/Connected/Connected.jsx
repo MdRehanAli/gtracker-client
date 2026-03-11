@@ -1,41 +1,31 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import FlyInMotion from '../../../components/Motion/FlyInMotion';
+import FlySideMotion from '../../../components/Motion/FlySideMotion';
 
 const Connected = () => {
     return (
         <section className="my-20 py-16 bg-accent border-y border-primary">
-            <div className='relative overflow-hidden'>
-                <motion.div
-                    animate={{
-                        x: 1100,
-                        scale: 0.5
-                    }}
-                    transition={{
-                        duration: 3,
-                        delay:1
-                    }}
-                >
-                    <h1>GTracker</h1>
-                </motion.div>
-            </div>
-            <div className="overflow-hidden whitespace-nowrap">
-                <div className="flex animate-[ticker_10s_linear_infinite] items-center gap-24">
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Urban_Stitch</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Elite_Tek_Apparel</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Modern_Fabric_Systems</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Global_Wear_Logistics</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Eco_Thread_Corp</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Loom_Intelligence</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Velocity_Garments</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Urban_Stitch</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Elite_Tek_Apparel</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Modern_Fabric_Systems</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Global_Wear_Logistics</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Eco_Thread_Corp</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Loom_Intelligence</span>
-                    <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Velocity_Garments</span>
+            <FlySideMotion index={4}>
+                <div className="overflow-hidden whitespace-nowrap">
+                    <div className="flex animate-[ticker_10s_linear_infinite] items-center gap-24">
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Urban_Stitch</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Elite_Tek_Apparel</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Modern_Fabric_Systems</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Global_Wear_Logistics</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Eco_Thread_Corp</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Loom_Intelligence</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Velocity_Garments</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Urban_Stitch</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Elite_Tek_Apparel</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Modern_Fabric_Systems</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Global_Wear_Logistics</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Eco_Thread_Corp</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Loom_Intelligence</span>
+                        <span className="text-2xl md:text-4xl font-black text-primary tracking-tighter uppercase">Velocity_Garments</span>
+                    </div>
                 </div>
-            </div>
+            </FlySideMotion>
         </section>
     );
 };

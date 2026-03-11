@@ -27,7 +27,7 @@ const blogsPromise = fetch('/blogs.json').then(res => res.json())
 const Home = () => {
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             <Helmet>
                 <title>GTracker | Home</title>
             </Helmet>
