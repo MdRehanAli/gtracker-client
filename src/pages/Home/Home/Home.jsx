@@ -20,6 +20,7 @@ import FAQ from '../FAQ/FAQ';
 import Fabric from '../Fabric/Fabric';
 import WinterShowcase from '../WinterShowcase/WinterShowcase';
 import Join from '../Join/Join';
+import FlyInMotion from '../../../components/Motion/FlyInMotion';
 const worksPromise = fetch('/works.json').then(res => res.json())
 const reviewsPromise = fetch('/reviews.json').then(res => res.json())
 const blogsPromise = fetch('/blogs.json').then(res => res.json())
@@ -35,9 +36,11 @@ const Home = () => {
             <Connected></Connected>
             <ProductionStat></ProductionStat>
             <Products></Products>
-            <div className='flex items-center justify-center mt-10 mb-20'>
-                <Link to='all-products' className='btn btn-primary px-20'>View All Products</Link>
-            </div>
+            <FlyInMotion index={7}>
+                <div className='flex items-center justify-center mt-10 mb-20'>
+                    <Link to='all-products' className='btn btn-primary px-20'>View All Products</Link>
+                </div>
+            </FlyInMotion>
             <div className=''>
                 <Supply></Supply>
                 <Works worksPromise={worksPromise}></Works>
