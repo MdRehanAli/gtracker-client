@@ -12,7 +12,10 @@ const Products = () => {
             <div className='mb-12 text-center'>
                 <div className='flex justify-center items-center gap-2 mb-5'>
                     <div className='flex justify-center text-primary animate-[pulse_1s_linear_infinite] hover:animate-none '><CiShoppingTag className='text-3xl md:text-4xl font-bold' /></div>
-                    <h1 className='text-3xl md:text-4xl font-bold text-primary'>Our Products</h1>
+                    <div>
+                        <h1 className='text-3xl md:text-4xl font-bold text-primary text-nowrap'>Our Products</h1>
+                        <div className='h-px w-24 md:w-30 bg-primary flex mx-auto animate-[ping_3s_linear_infinite] hover:animate-none'></div>
+                    </div>
                 </div>
                 <p className='text-secondary mt-3 text-lg'>All our latest product are here. You can easily buy products from here.</p>
             </div>
