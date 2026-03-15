@@ -7,6 +7,7 @@ import { MdOutlineMarkUnreadChatAlt } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import { useForm } from 'react-hook-form';
 import { Helmet } from 'react-helmet-async';
+import FlyInMotion from '../../components/Motion/FlyInMotion';
 
 const Contact = () => {
 
@@ -36,60 +37,97 @@ const Contact = () => {
             </Helmet>
             <div>
                 <div className='text- mb-12'>
-                    {/* <div className='flex justify-center text-7xl mb-5'><MdOutlinePermContactCalendar className='p-4 bg-accent rounded-xl' /></div>
-                    <h1 className='text-3xl md:text-4xl font-bold'>Get in Touch With Us</h1>
-                    <p className='mt-3 mb-12 md:w-2/3 mx-auto'>Have questions, need support, or want to collaborate? Our team is here to assist you with quick and reliable help, reach out anytime.</p> */}
-
-                    <div className='flex justify-center items-center gap-2 mb-5'>
-                        <div className='flex justify-center text-primary animate-[spin_2s_linear_infinite] hover:animate-none '><MdOutlinePermContactCalendar className='text-3xl md:text-4xl font-extrabold' /></div>
-                        <h1 className='text-3xl md:text-4xl font-bold text-primary'>Get in Touch With Us</h1>
-                    </div>
-                    <p className="text-secondary mt-3 text-lg">Have questions, need support, or want to collaborate? Our team is here to assist you with quick and reliable help, reach out anytime.</p>
+                    <FlyInMotion index={1}>
+                        <div className='flex justify-center items-center gap-2 mb-5'>
+                            <div className='flex justify-center text-primary animate-[spin_2s_linear_infinite] hover:animate-none '><MdOutlinePermContactCalendar className='text-3xl md:text-4xl font-extrabold' /></div>
+                            <div>
+                                <h1 className='text-3xl md:text-4xl font-bold text-primary text-nowrap'>Get in Touch With Us</h1>
+                                <div className='h-px w-36 md:w-42 bg-primary flex mx-auto animate-[ping_3s_linear_infinite] hover:animate-none'></div>
+                            </div>
+                        </div>
+                    </FlyInMotion>
+                    <FlyInMotion index={3}>
+                        <p className="text-secondary mt-3 text-lg">Have questions, need support, or want to collaborate? Our team is here to assist you with quick and reliable help, reach out anytime.</p>
+                    </FlyInMotion>
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row justify-between items-center gap-16'>
                 <div className='flex-1'>
-                    <h1 className='text-3xl md:text-4xl font-bold mb-8 md:mb-14 text-center text-primary'>Contact US</h1>
+                    <FlyInMotion index={3}>
+                        <h1 className='text-3xl md:text-4xl font-bold mb-8 md:mb-14 text-center text-primary'>Contact US</h1>
+                    </FlyInMotion>
                     <div className="flex justify-center items-center gap-5 mx-auto w-11/12">
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                             <div className='flex items-center gap-2'>
-                                <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
-                                    <BiLogoGmail className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
-                                </div>
+                                <FlyInMotion index={3}>
+                                    <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
+                                        <BiLogoGmail className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
+                                    </div>
+                                </FlyInMotion>
                                 <div className='flex gap-2 flex-col pl-4'>
-                                    <h2 className='font-bold text-xl text-primary'>Email</h2>
-                                    <p className='text-secondary'>To reach out us send mail</p>
-                                    <p className='text-secondary/50 font-bold'>gtracker24@gmail.com</p>
+                                    <FlyInMotion index={3}>
+                                        <h2 className='font-bold text-xl text-primary'>Email</h2>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={5}>
+                                        <p className='text-secondary'>To reach out us send mail</p>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={7}>
+                                        <p className='text-secondary/50 font-bold'>gtracker24@gmail.com</p>
+                                    </FlyInMotion>
                                 </div>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
-                                    <MdOutlineMarkUnreadChatAlt className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
-                                </div>
+                                <FlyInMotion index={3}>
+                                    <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
+                                        <MdOutlineMarkUnreadChatAlt className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
+                                    </div>
+                                </FlyInMotion>
                                 <div className='flex gap-2 flex-col pl-4'>
-                                    <h2 className='font-bold text-xl text-primary'>Live chat</h2>
-                                    <p className='text-secondary'>We are very friendly here to help.</p>
-                                    <p className='text-secondary/50 font-bold'>Start new chat</p>
+                                    <FlyInMotion index={3}>
+                                        <h2 className='font-bold text-xl text-primary'>Live chat</h2>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={5}>
+                                        <p className='text-secondary'>We are very friendly here to help.</p>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={7}>
+                                        <p className='text-secondary/50 font-bold'>Start new chat</p>
+                                    </FlyInMotion>
                                 </div>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
-                                    <FaLocationDot className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
-                                </div>
+                                <FlyInMotion index={3}>
+                                    <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
+                                        <FaLocationDot className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
+                                    </div>
+                                </FlyInMotion>
                                 <div className='flex gap-2 flex-col pl-4'>
-                                    <h2 className='font-bold text-xl text-primary'>Address</h2>
-                                    <p className='text-secondary'>We are currently staying in</p>
-                                    <p className='text-secondary/50 font-bold'>Dhaka, Bangladesh</p>
+                                    <FlyInMotion index={3}>
+                                        <h2 className='font-bold text-xl text-primary'>Address</h2>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={5}>
+                                        <p className='text-secondary'>We are currently staying in</p>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={7}>
+                                        <p className='text-secondary/50 font-bold'>Dhaka, Bangladesh</p>
+                                    </FlyInMotion>
                                 </div>
                             </div>
                             <div className='flex items-center gap-2'>
-                                <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
-                                    <IoCall className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
-                                </div>
+                                <FlyInMotion index={3}>
+                                    <div className='bg-primary w-fit p-3 rounded-full hover:scale-105'>
+                                        <IoCall className='text-4xl text-accent hover:scale-110 hover:opacity-80' />
+                                    </div>
+                                </FlyInMotion>
                                 <div className='flex gap-2 flex-col pl-4'>
-                                    <h2 className='font-bold text-xl text-primary'>Phone</h2>
-                                    <p className='text-secondary'>Call us for order/booking.</p>
-                                    <p className='text-secondary/50 font-bold'>01854-465273</p>
+                                    <FlyInMotion index={3}>
+                                        <h2 className='font-bold text-xl text-primary'>Phone</h2>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={5}>
+                                        <p className='text-secondary'>Call us for order/booking.</p>
+                                    </FlyInMotion>
+                                    <FlyInMotion index={7}>
+                                        <p className='text-secondary/50 font-bold'>01854-465273</p>
+                                    </FlyInMotion>
                                 </div>
                             </div>
                         </div>
